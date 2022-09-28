@@ -132,7 +132,44 @@ public class MainWindowController: NSWindowController
 
     @IBAction
     private func format( _ sender: Any? )
-    {}
+    {
+        self.saveState()
+
+        guard let cacheDirectory = self.cacheDirectory,
+              let config         = self.configCacheFile,
+              let code           = self.codeCacheFile
+        else
+        {
+            self.displayError( title: "No Caches Directory", message: "The application's caches directory does not exists, or failed to be created." )
+
+            return
+        }
+
+        let exec = "/opt/homebrew/bin/uncrustify"
+
+        guard FileManager.default.fileExists( atPath: exec )
+        else
+        {
+            self.displayError( title: "Cannot find Uncrustify", message: "The Uncrustify executable was not found in: \( exec )" )
+
+            return
+        }
+
+        let temp        = cacheDirectory.appendingPathComponent( "format.txt" )
+        let task        = Process()
+        task.launchPath = exec
+        task.arguments  =
+            [
+                "-c", config.path,
+                "-f", code.path,
+                "-o", temp.path,
+            ]
+
+        task.launch()
+        task.waitUntilExit()
+
+        self.code = ( try? self.readFile( url: temp ) ) ?? ""
+    }
 
     private func configureTextView( _ view: NSTextView )
     {
