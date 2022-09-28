@@ -271,6 +271,7 @@
 				0572ACFD28E47BCF000AFC79 /* Sources */,
 				0572ACFE28E47BCF000AFC79 /* Frameworks */,
 				0572ACFF28E47BCF000AFC79 /* Resources */,
+				0572AD5B28E4D85B000AFC79 /* Swift Format */,
 			);
 			buildRules = (
 			);
@@ -326,6 +327,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0572AD5B28E4D85B000AFC79 /* Swift Format */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Format";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -z \"$CI\" ] && [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n    make -f $SRCROOT/Submodules/cgl/Makefile xs-mit\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0572ACFD28E47BCF000AFC79 /* Sources */ = {

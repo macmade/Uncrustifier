@@ -1,10 +1,10 @@
 /*******************************************************************************
  * The MIT License (MIT)
  *
- * Copyright (c) 2022 Jean-David Gadina - www.xs-labs.com
+ * Copyright (c) 2022, Jean-David Gadina - www.xs-labs.com
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
+ * of this software and associated documentation files (the Software), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
@@ -13,7 +13,7 @@
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
  *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * THE SOFTWARE IS PROVIDED AS IS, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
@@ -34,18 +34,18 @@ public extension NSWindowController
         panel.canChooseDirectories          = false
         panel.canDownloadUbiquitousContents = true
         panel.canCreateDirectories          = false
-        
+
         self.displayPanel( panel )
         {
             completion( $0 == .OK ? panel.url : nil )
         }
     }
-    
+
     func saveFile( data: Data, name: String?, extension ext: String? )
     {
         let panel                  = NSSavePanel()
         panel.canCreateDirectories = true
-        
+
         if let ext = ext, let type = UTType( filenameExtension: ext )
         {
             panel.nameFieldStringValue = name ?? ""
@@ -62,10 +62,10 @@ public extension NSWindowController
             {
                 panel.nameFieldStringValue = name
             }
-            
+
             panel.allowsOtherFileTypes = true
         }
-        
+
         self.displayPanel( panel )
         {
             guard $0 == .OK, let url = panel.url
@@ -73,17 +73,18 @@ public extension NSWindowController
             {
                 return
             }
-            
+
             do
             {
                 try data.write( to: url )
             }
-            catch let error
+            catch
             {
                 self.displayError( error )
             }
         }
     }
+
     func displayPanel( _ panel: NSSavePanel, completion: @escaping ( NSApplication.ModalResponse ) -> Void )
     {
         if let window = self.window
@@ -95,31 +96,30 @@ public extension NSWindowController
             completion( panel.runModal() )
         }
     }
-    
+
     func displayError( message: String )
     {
         self.displayError( title: "Error", message: message )
     }
-    
+
     func displayError( title: String, message: String )
     {
         let alert             = NSAlert()
         alert.messageText     = title
         alert.informativeText = message
-        
+
         alert.addButton( withTitle: "OK" )
-        
+
         self.displayAlert( alert )
     }
-    
+
     func displayError( _ error: Error )
     {
         self.displayAlert( NSAlert( error: error ) )
     }
-    
+
     func displayAlert( _ alert: NSAlert )
     {
-        
         if let window = self.window
         {
             alert.beginSheetModal( for: window )
