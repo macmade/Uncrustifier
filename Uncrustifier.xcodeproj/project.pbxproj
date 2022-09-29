@@ -188,6 +188,7 @@
 		057AAF5B28E5FE22004CB733 /* Highlightr.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Highlightr.xcodeproj; path = Submodules/Highlightr/Highlightr.xcodeproj; sourceTree = "<group>"; };
 		057AAF6A28E610D4004CB733 /* ThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
 		057AAF6C28E61128004CB733 /* ThemeWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThemeWindowController.xib; sourceTree = "<group>"; };
+		057AAF6E28E616AC004CB733 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +206,7 @@
 		0572ACF828E47BCF000AFC79 = {
 			isa = PBXGroup;
 			children = (
+				057AAF6E28E616AC004CB733 /* README.md */,
 				057AAF5B28E5FE22004CB733 /* Highlightr.xcodeproj */,
 				0572AD1B28E4D6B5000AFC79 /* xcconfig */,
 				057AAF1C28E581E8004CB733 /* uncrustify-build */,

@@ -10,7 +10,9 @@ Uncrustifier
 
 ### About
 
-Playground for Uncrustify.
+Configuration editor for [Uncrustify](https://github.com/uncrustify/uncrustify).
+
+![Screenshot](Assets/Screenshot.png "Screenshot")
 
 License
 -------
