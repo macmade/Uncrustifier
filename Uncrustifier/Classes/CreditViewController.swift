@@ -24,43 +24,53 @@
 
 import Cocoa
 
-@main
-public class ApplicationDelegate: NSObject, NSApplicationDelegate
+public class CreditViewController: NSViewController
 {
-    private let mainWindowController    = MainWindowController()
-    private let aboutWindowController   = AboutWindowController()
-    private let creditsWindowController = CreditsWindowController()
+    @objc public private( set ) dynamic var credit:      Credit
+    @objc private               dynamic var licenseText: NSAttributedString?
 
-    public func applicationDidFinishLaunching( _ notification: Notification )
+    @IBOutlet private var textView: NSTextView!
+
+    public init( credit: Credit )
     {
-        self.mainWindowController.window?.center()
-        self.mainWindowController.window?.makeKeyAndOrderFront( nil )
+        self.credit = credit
+
+        super.init( nibName: nil, bundle: nil )
     }
 
-    public func applicationShouldTerminateAfterLastWindowClosed( _ sender: NSApplication ) -> Bool
+    required init?( coder: NSCoder )
     {
-        true
+        return nil
+    }
+
+    public override var nibName: NSNib.Name?
+    {
+        "CreditViewController"
+    }
+
+    public override func viewDidLoad()
+    {
+        super.viewDidLoad()
+
+        self.textView.textContainerInset = NSMakeSize( 10, 10 )
+
+        if let text = self.credit.licenseText
+        {
+            self.licenseText = NSAttributedString( string: text, attributes: [ .foregroundColor: NSColor.textColor ] )
+        }
     }
 
     @IBAction
-    public func showAboutWindow( _ sender: Any? )
+    private func openURL( _ sender: Any? )
     {
-        if self.aboutWindowController.window?.isVisible == false
+        guard let url = self.credit.url
+        else
         {
-            self.aboutWindowController.window?.center()
+            NSSound.beep()
+
+            return
         }
 
-        self.aboutWindowController.window?.makeKeyAndOrderFront( sender )
-    }
-
-    @IBAction
-    public func showCreditsWindow( _ sender: Any? )
-    {
-        if self.creditsWindowController.window?.isVisible == false
-        {
-            self.creditsWindowController.window?.center()
-        }
-
-        self.creditsWindowController.window?.makeKeyAndOrderFront( sender )
+        NSWorkspace.shared.open( url )
     }
 }

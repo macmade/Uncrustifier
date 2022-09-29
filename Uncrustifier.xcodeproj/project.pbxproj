@@ -11,29 +11,40 @@
 		0572AD0728E47BCF000AFC79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0572AD0628E47BCF000AFC79 /* Assets.xcassets */; };
 		0572AD0A28E47BCF000AFC79 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0572AD0828E47BCF000AFC79 /* MainMenu.xib */; };
 		0572AD1428E47C6A000AFC79 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD1328E47C6A000AFC79 /* MainWindowController.swift */; };
-		0572AD1628E47CE8000AFC79 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0572AD1528E47CE8000AFC79 /* MainWindowController.xib */; };
 		0572AD1828E4C0F5000AFC79 /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD1728E4C0F5000AFC79 /* NSError.swift */; };
 		0572AD1A28E4C6DE000AFC79 /* NSWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD1928E4C6DE000AFC79 /* NSWindowController.swift */; };
 		0572AD5D28E4DC43000AFC79 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD5C28E4DC43000AFC79 /* Config.swift */; };
 		0572AD5F28E4DC5D000AFC79 /* ConfigValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD5E28E4DC5D000AFC79 /* ConfigValue.swift */; };
 		0572AD6128E4E3AA000AFC79 /* ConfigValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD6028E4E3AA000AFC79 /* ConfigValueViewController.swift */; };
-		0572AD6328E4E40F000AFC79 /* ConfigValueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0572AD6228E4E40F000AFC79 /* ConfigValueViewController.xib */; };
 		057AAF1228E577CE004CB733 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF1128E577CE004CB733 /* ConfigViewController.swift */; };
-		057AAF1428E577E0004CB733 /* ConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057AAF1328E577E0004CB733 /* ConfigViewController.xib */; };
 		057AAF1628E578B4004CB733 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF1528E578B4004CB733 /* TextViewController.swift */; };
-		057AAF1828E578D9004CB733 /* TextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057AAF1728E578D9004CB733 /* TextViewController.xib */; };
 		057AAF1A28E57913004CB733 /* NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF1928E57913004CB733 /* NSView.swift */; };
 		057AAF4728E58428004CB733 /* uncrustify in Copy Executables */ = {isa = PBXBuildFile; fileRef = 057AAF4528E5840A004CB733 /* uncrustify */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		057AAF4928E5846B004CB733 /* Uncrustify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF4828E5846B004CB733 /* Uncrustify.swift */; };
 		057AAF4B28E5973D004CB733 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF4A28E5973D004CB733 /* Either.swift */; };
 		057AAF5428E59F0D004CB733 /* ConfigViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF5328E59F0D004CB733 /* ConfigViewItem.swift */; };
-		057AAF5628E5A043004CB733 /* ConfigViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057AAF5528E5A043004CB733 /* ConfigViewItem.xib */; };
 		057AAF5828E5F6AA004CB733 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF5728E5F6AA004CB733 /* BackgroundView.swift */; };
 		057AAF5A28E5FB47004CB733 /* CFBase.txt in Resources */ = {isa = PBXBuildFile; fileRef = 057AAF5928E5FB3C004CB733 /* CFBase.txt */; };
 		057AAF6728E5FE37004CB733 /* Highlightr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 057AAF6328E5FE22004CB733 /* Highlightr.framework */; };
 		057AAF6928E5FE48004CB733 /* Highlightr.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 057AAF6328E5FE22004CB733 /* Highlightr.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		057AAF6B28E610D4004CB733 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF6A28E610D4004CB733 /* ThemeViewController.swift */; };
-		057AAF6D28E61128004CB733 /* ThemeWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057AAF6C28E61128004CB733 /* ThemeWindowController.xib */; };
+		05EF23FF28E645E700334A41 /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF23FE28E645E700334A41 /* AboutWindowController.swift */; };
+		05EF240328E6465700334A41 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF240228E6465700334A41 /* Bundle.swift */; };
+		05EF240728E6465F00334A41 /* CreditsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF240428E6465F00334A41 /* CreditsWindowController.swift */; };
+		05EF240828E6465F00334A41 /* CreditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF240528E6465F00334A41 /* CreditViewController.swift */; };
+		05EF240928E6465F00334A41 /* Credit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF240628E6465F00334A41 /* Credit.swift */; };
+		05EF240F28E6469600334A41 /* TableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF240E28E6469600334A41 /* TableRowView.swift */; };
+		05EF241028E6472300334A41 /* AboutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EF241228E6472300334A41 /* AboutWindowController.xib */; };
+		05EF241328E6472600334A41 /* ConfigValueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EF241528E6472600334A41 /* ConfigValueViewController.xib */; };
+		05EF241628E6472C00334A41 /* ConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EF241828E6472C00334A41 /* ConfigViewController.xib */; };
+		05EF241928E6472F00334A41 /* ConfigViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EF241B28E6472F00334A41 /* ConfigViewItem.xib */; };
+		05EF241C28E6473400334A41 /* CreditsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EF241E28E6473400334A41 /* CreditsWindowController.xib */; };
+		05EF241F28E6473700334A41 /* CreditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EF242128E6473700334A41 /* CreditViewController.xib */; };
+		05EF242228E6473E00334A41 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EF242428E6473E00334A41 /* MainWindowController.xib */; };
+		05EF242528E6474200334A41 /* TextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EF242728E6474200334A41 /* TextViewController.xib */; };
+		05EF242828E6474500334A41 /* ThemeWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EF242A28E6474500334A41 /* ThemeWindowController.xib */; };
+		05EF242D28E6489A00334A41 /* License-Uncrustify.txt in Resources */ = {isa = PBXBuildFile; fileRef = 05EF242C28E6489A00334A41 /* License-Uncrustify.txt */; };
+		05EF242F28E6491700334A41 /* License-Highlightr.txt in Resources */ = {isa = PBXBuildFile; fileRef = 05EF242E28E6491700334A41 /* License-Highlightr.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +103,6 @@
 		0572AD0928E47BCF000AFC79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0572AD0B28E47BCF000AFC79 /* Uncrustifier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Uncrustifier.entitlements; sourceTree = "<group>"; };
 		0572AD1328E47C6A000AFC79 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
-		0572AD1528E47CE8000AFC79 /* MainWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 		0572AD1728E4C0F5000AFC79 /* NSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSError.swift; sourceTree = "<group>"; };
 		0572AD1928E4C6DE000AFC79 /* NSWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSWindowController.swift; sourceTree = "<group>"; };
 		0572AD1C28E4D6B5000AFC79 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
@@ -145,11 +155,8 @@
 		0572AD5C28E4DC43000AFC79 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		0572AD5E28E4DC5D000AFC79 /* ConfigValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigValue.swift; sourceTree = "<group>"; };
 		0572AD6028E4E3AA000AFC79 /* ConfigValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigValueViewController.swift; sourceTree = "<group>"; };
-		0572AD6228E4E40F000AFC79 /* ConfigValueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigValueViewController.xib; sourceTree = "<group>"; };
 		057AAF1128E577CE004CB733 /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
-		057AAF1328E577E0004CB733 /* ConfigViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigViewController.xib; sourceTree = "<group>"; };
 		057AAF1528E578B4004CB733 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
-		057AAF1728E578D9004CB733 /* TextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewController.xib; sourceTree = "<group>"; };
 		057AAF1928E57913004CB733 /* NSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSView.swift; sourceTree = "<group>"; };
 		057AAF1F28E581E8004CB733 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		057AAF2228E581E8004CB733 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -182,13 +189,28 @@
 		057AAF4828E5846B004CB733 /* Uncrustify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uncrustify.swift; sourceTree = "<group>"; };
 		057AAF4A28E5973D004CB733 /* Either.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
 		057AAF5328E59F0D004CB733 /* ConfigViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewItem.swift; sourceTree = "<group>"; };
-		057AAF5528E5A043004CB733 /* ConfigViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigViewItem.xib; sourceTree = "<group>"; };
 		057AAF5728E5F6AA004CB733 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		057AAF5928E5FB3C004CB733 /* CFBase.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CFBase.txt; sourceTree = "<group>"; };
 		057AAF5B28E5FE22004CB733 /* Highlightr.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Highlightr.xcodeproj; path = Submodules/Highlightr/Highlightr.xcodeproj; sourceTree = "<group>"; };
 		057AAF6A28E610D4004CB733 /* ThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
-		057AAF6C28E61128004CB733 /* ThemeWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThemeWindowController.xib; sourceTree = "<group>"; };
 		057AAF6E28E616AC004CB733 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		05EF23FE28E645E700334A41 /* AboutWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
+		05EF240228E6465700334A41 /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		05EF240428E6465F00334A41 /* CreditsWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsWindowController.swift; sourceTree = "<group>"; };
+		05EF240528E6465F00334A41 /* CreditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditViewController.swift; sourceTree = "<group>"; };
+		05EF240628E6465F00334A41 /* Credit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credit.swift; sourceTree = "<group>"; };
+		05EF240E28E6469600334A41 /* TableRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRowView.swift; sourceTree = "<group>"; };
+		05EF241128E6472300334A41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AboutWindowController.xib; sourceTree = "<group>"; };
+		05EF241428E6472600334A41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConfigValueViewController.xib; sourceTree = "<group>"; };
+		05EF241728E6472C00334A41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConfigViewController.xib; sourceTree = "<group>"; };
+		05EF241A28E6472F00334A41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConfigViewItem.xib; sourceTree = "<group>"; };
+		05EF241D28E6473400334A41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CreditsWindowController.xib; sourceTree = "<group>"; };
+		05EF242028E6473700334A41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CreditViewController.xib; sourceTree = "<group>"; };
+		05EF242328E6473E00334A41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainWindowController.xib; sourceTree = "<group>"; };
+		05EF242628E6474200334A41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TextViewController.xib; sourceTree = "<group>"; };
+		05EF242928E6474500334A41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ThemeWindowController.xib; sourceTree = "<group>"; };
+		05EF242C28E6489A00334A41 /* License-Uncrustify.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "License-Uncrustify.txt"; sourceTree = "<group>"; };
+		05EF242E28E6491700334A41 /* License-Highlightr.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "License-Highlightr.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,11 +249,11 @@
 		0572AD0328E47BCF000AFC79 /* Uncrustifier */ = {
 			isa = PBXGroup;
 			children = (
+				05EF242B28E6488900334A41 /* Resources */,
 				0572AD1128E47BD5000AFC79 /* Classes */,
+				0572AD5328E4D7D3000AFC79 /* Info.plist */,
 				0572AD1228E47BDD000AFC79 /* UI */,
 				0572AD0B28E47BCF000AFC79 /* Uncrustifier.entitlements */,
-				0572AD5328E4D7D3000AFC79 /* Info.plist */,
-				057AAF5928E5FB3C004CB733 /* CFBase.txt */,
 			);
 			path = Uncrustifier;
 			sourceTree = "<group>";
@@ -239,19 +261,24 @@
 		0572AD1128E47BD5000AFC79 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				05EF23FE28E645E700334A41 /* AboutWindowController.swift */,
 				0572AD0428E47BCF000AFC79 /* ApplicationDelegate.swift */,
+				057AAF5728E5F6AA004CB733 /* BackgroundView.swift */,
 				0572AD5C28E4DC43000AFC79 /* Config.swift */,
 				0572AD5E28E4DC5D000AFC79 /* ConfigValue.swift */,
 				0572AD6028E4E3AA000AFC79 /* ConfigValueViewController.swift */,
 				057AAF1128E577CE004CB733 /* ConfigViewController.swift */,
 				057AAF5328E59F0D004CB733 /* ConfigViewItem.swift */,
+				05EF240628E6465F00334A41 /* Credit.swift */,
+				05EF240428E6465F00334A41 /* CreditsWindowController.swift */,
+				05EF240528E6465F00334A41 /* CreditViewController.swift */,
 				057AAF4A28E5973D004CB733 /* Either.swift */,
 				057AAF1B28E57929004CB733 /* Extensions */,
 				0572AD1328E47C6A000AFC79 /* MainWindowController.swift */,
+				05EF240E28E6469600334A41 /* TableRowView.swift */,
 				057AAF1528E578B4004CB733 /* TextViewController.swift */,
-				057AAF4828E5846B004CB733 /* Uncrustify.swift */,
-				057AAF5728E5F6AA004CB733 /* BackgroundView.swift */,
 				057AAF6A28E610D4004CB733 /* ThemeViewController.swift */,
+				057AAF4828E5846B004CB733 /* Uncrustify.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -259,14 +286,17 @@
 		0572AD1228E47BDD000AFC79 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				05EF241228E6472300334A41 /* AboutWindowController.xib */,
 				0572AD0628E47BCF000AFC79 /* Assets.xcassets */,
-				0572AD6228E4E40F000AFC79 /* ConfigValueViewController.xib */,
-				057AAF1328E577E0004CB733 /* ConfigViewController.xib */,
+				05EF241528E6472600334A41 /* ConfigValueViewController.xib */,
+				05EF241828E6472C00334A41 /* ConfigViewController.xib */,
+				05EF241B28E6472F00334A41 /* ConfigViewItem.xib */,
+				05EF241E28E6473400334A41 /* CreditsWindowController.xib */,
+				05EF242128E6473700334A41 /* CreditViewController.xib */,
 				0572AD0828E47BCF000AFC79 /* MainMenu.xib */,
-				0572AD1528E47CE8000AFC79 /* MainWindowController.xib */,
-				057AAF1728E578D9004CB733 /* TextViewController.xib */,
-				057AAF5528E5A043004CB733 /* ConfigViewItem.xib */,
-				057AAF6C28E61128004CB733 /* ThemeWindowController.xib */,
+				05EF242428E6473E00334A41 /* MainWindowController.xib */,
+				05EF242728E6474200334A41 /* TextViewController.xib */,
+				05EF242A28E6474500334A41 /* ThemeWindowController.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -400,9 +430,10 @@
 		057AAF1B28E57929004CB733 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				05EF240228E6465700334A41 /* Bundle.swift */,
 				0572AD1728E4C0F5000AFC79 /* NSError.swift */,
-				0572AD1928E4C6DE000AFC79 /* NSWindowController.swift */,
 				057AAF1928E57913004CB733 /* NSView.swift */,
+				0572AD1928E4C6DE000AFC79 /* NSWindowController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -523,6 +554,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		05EF242B28E6488900334A41 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				057AAF5928E5FB3C004CB733 /* CFBase.txt */,
+				05EF242E28E6491700334A41 /* License-Highlightr.txt */,
+				05EF242C28E6489A00334A41 /* License-Uncrustify.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -608,15 +649,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				057AAF6D28E61128004CB733 /* ThemeWindowController.xib in Resources */,
-				0572AD6328E4E40F000AFC79 /* ConfigValueViewController.xib in Resources */,
+				05EF242F28E6491700334A41 /* License-Highlightr.txt in Resources */,
+				05EF242828E6474500334A41 /* ThemeWindowController.xib in Resources */,
+				05EF241328E6472600334A41 /* ConfigValueViewController.xib in Resources */,
 				0572AD0728E47BCF000AFC79 /* Assets.xcassets in Resources */,
-				057AAF5628E5A043004CB733 /* ConfigViewItem.xib in Resources */,
-				0572AD1628E47CE8000AFC79 /* MainWindowController.xib in Resources */,
+				05EF241028E6472300334A41 /* AboutWindowController.xib in Resources */,
+				05EF241928E6472F00334A41 /* ConfigViewItem.xib in Resources */,
+				05EF242228E6473E00334A41 /* MainWindowController.xib in Resources */,
 				0572AD0A28E47BCF000AFC79 /* MainMenu.xib in Resources */,
-				057AAF1428E577E0004CB733 /* ConfigViewController.xib in Resources */,
-				057AAF1828E578D9004CB733 /* TextViewController.xib in Resources */,
+				05EF241628E6472C00334A41 /* ConfigViewController.xib in Resources */,
+				05EF242D28E6489A00334A41 /* License-Uncrustify.txt in Resources */,
+				05EF242528E6474200334A41 /* TextViewController.xib in Resources */,
+				05EF241C28E6473400334A41 /* CreditsWindowController.xib in Resources */,
 				057AAF5A28E5FB47004CB733 /* CFBase.txt in Resources */,
+				05EF241F28E6473700334A41 /* CreditViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,6 +695,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05EF240828E6465F00334A41 /* CreditViewController.swift in Sources */,
 				057AAF6B28E610D4004CB733 /* ThemeViewController.swift in Sources */,
 				0572AD1A28E4C6DE000AFC79 /* NSWindowController.swift in Sources */,
 				0572AD1428E47C6A000AFC79 /* MainWindowController.swift in Sources */,
@@ -662,8 +709,13 @@
 				0572AD1828E4C0F5000AFC79 /* NSError.swift in Sources */,
 				057AAF5828E5F6AA004CB733 /* BackgroundView.swift in Sources */,
 				057AAF1628E578B4004CB733 /* TextViewController.swift in Sources */,
+				05EF240928E6465F00334A41 /* Credit.swift in Sources */,
+				05EF240328E6465700334A41 /* Bundle.swift in Sources */,
+				05EF240728E6465F00334A41 /* CreditsWindowController.swift in Sources */,
+				05EF23FF28E645E700334A41 /* AboutWindowController.swift in Sources */,
 				0572AD6128E4E3AA000AFC79 /* ConfigValueViewController.swift in Sources */,
 				0572AD5F28E4DC5D000AFC79 /* ConfigValue.swift in Sources */,
+				05EF240F28E6469600334A41 /* TableRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,6 +736,78 @@
 				0572AD0928E47BCF000AFC79 /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		05EF241228E6472300334A41 /* AboutWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05EF241128E6472300334A41 /* Base */,
+			);
+			name = AboutWindowController.xib;
+			sourceTree = "<group>";
+		};
+		05EF241528E6472600334A41 /* ConfigValueViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05EF241428E6472600334A41 /* Base */,
+			);
+			name = ConfigValueViewController.xib;
+			sourceTree = "<group>";
+		};
+		05EF241828E6472C00334A41 /* ConfigViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05EF241728E6472C00334A41 /* Base */,
+			);
+			name = ConfigViewController.xib;
+			sourceTree = "<group>";
+		};
+		05EF241B28E6472F00334A41 /* ConfigViewItem.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05EF241A28E6472F00334A41 /* Base */,
+			);
+			name = ConfigViewItem.xib;
+			sourceTree = "<group>";
+		};
+		05EF241E28E6473400334A41 /* CreditsWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05EF241D28E6473400334A41 /* Base */,
+			);
+			name = CreditsWindowController.xib;
+			sourceTree = "<group>";
+		};
+		05EF242128E6473700334A41 /* CreditViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05EF242028E6473700334A41 /* Base */,
+			);
+			name = CreditViewController.xib;
+			sourceTree = "<group>";
+		};
+		05EF242428E6473E00334A41 /* MainWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05EF242328E6473E00334A41 /* Base */,
+			);
+			name = MainWindowController.xib;
+			sourceTree = "<group>";
+		};
+		05EF242728E6474200334A41 /* TextViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05EF242628E6474200334A41 /* Base */,
+			);
+			name = TextViewController.xib;
+			sourceTree = "<group>";
+		};
+		05EF242A28E6474500334A41 /* ThemeWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05EF242928E6474500334A41 /* Base */,
+			);
+			name = ThemeWindowController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

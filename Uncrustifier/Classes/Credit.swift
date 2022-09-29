@@ -22,45 +22,35 @@
  * THE SOFTWARE.
  ******************************************************************************/
 
-import Cocoa
+import Foundation
 
-@main
-public class ApplicationDelegate: NSObject, NSApplicationDelegate
+public class Credit: NSObject
 {
-    private let mainWindowController    = MainWindowController()
-    private let aboutWindowController   = AboutWindowController()
-    private let creditsWindowController = CreditsWindowController()
+    @objc public dynamic var title:           String
+    @objc public dynamic var abstract:        String
+    @objc public dynamic var descriptionText: String
+    @objc public dynamic var url:             URL?
+    @objc public dynamic var license:         String?
+    @objc public dynamic var licenseText:     String?
 
-    public func applicationDidFinishLaunching( _ notification: Notification )
+    public init( title: String, abstract: String, descriptionText: String, url: String?, license: String?, licenseFile: String? )
     {
-        self.mainWindowController.window?.center()
-        self.mainWindowController.window?.makeKeyAndOrderFront( nil )
-    }
+        self.title           = title
+        self.abstract        = abstract
+        self.descriptionText = descriptionText
+        self.license         = license
 
-    public func applicationShouldTerminateAfterLastWindowClosed( _ sender: NSApplication ) -> Bool
-    {
-        true
-    }
-
-    @IBAction
-    public func showAboutWindow( _ sender: Any? )
-    {
-        if self.aboutWindowController.window?.isVisible == false
+        if let url = url
         {
-            self.aboutWindowController.window?.center()
+            self.url = URL( string: url )
         }
 
-        self.aboutWindowController.window?.makeKeyAndOrderFront( sender )
-    }
-
-    @IBAction
-    public func showCreditsWindow( _ sender: Any? )
-    {
-        if self.creditsWindowController.window?.isVisible == false
+        if let licenseFile = licenseFile,
+           let url         = Bundle.main.url( forResource: licenseFile, withExtension: "txt" ),
+           let data        = try? Data( contentsOf: url ),
+           let text        = String( data: data, encoding: .utf8 )
         {
-            self.creditsWindowController.window?.center()
+            self.licenseText = text
         }
-
-        self.creditsWindowController.window?.makeKeyAndOrderFront( sender )
     }
 }

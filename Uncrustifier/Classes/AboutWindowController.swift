@@ -24,43 +24,23 @@
 
 import Cocoa
 
-@main
-public class ApplicationDelegate: NSObject, NSApplicationDelegate
+public class AboutWindowController: NSWindowController
 {
-    private let mainWindowController    = MainWindowController()
-    private let aboutWindowController   = AboutWindowController()
-    private let creditsWindowController = CreditsWindowController()
+    @objc private dynamic var name:      String?
+    @objc private dynamic var version:   String?
+    @objc private dynamic var copyright: String?
 
-    public func applicationDidFinishLaunching( _ notification: Notification )
+    public override var windowNibName: NSNib.Name?
     {
-        self.mainWindowController.window?.center()
-        self.mainWindowController.window?.makeKeyAndOrderFront( nil )
+        return "AboutWindowController"
     }
 
-    public func applicationShouldTerminateAfterLastWindowClosed( _ sender: NSApplication ) -> Bool
+    public override func windowDidLoad()
     {
-        true
-    }
+        super.windowDidLoad()
 
-    @IBAction
-    public func showAboutWindow( _ sender: Any? )
-    {
-        if self.aboutWindowController.window?.isVisible == false
-        {
-            self.aboutWindowController.window?.center()
-        }
-
-        self.aboutWindowController.window?.makeKeyAndOrderFront( sender )
-    }
-
-    @IBAction
-    public func showCreditsWindow( _ sender: Any? )
-    {
-        if self.creditsWindowController.window?.isVisible == false
-        {
-            self.creditsWindowController.window?.center()
-        }
-
-        self.creditsWindowController.window?.makeKeyAndOrderFront( sender )
+        self.version   = Bundle.main.humanReadableVersion
+        self.name      = Bundle.main.bundleName
+        self.copyright = Bundle.main.humanReadableCopyright
     }
 }

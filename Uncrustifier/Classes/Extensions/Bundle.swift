@@ -24,43 +24,41 @@
 
 import Cocoa
 
-@main
-public class ApplicationDelegate: NSObject, NSApplicationDelegate
+extension Bundle
 {
-    private let mainWindowController    = MainWindowController()
-    private let aboutWindowController   = AboutWindowController()
-    private let creditsWindowController = CreditsWindowController()
-
-    public func applicationDidFinishLaunching( _ notification: Notification )
+    var bundleShortVersionString: String?
     {
-        self.mainWindowController.window?.center()
-        self.mainWindowController.window?.makeKeyAndOrderFront( nil )
+        self.object( forInfoDictionaryKey: "CFBundleShortVersionString" ) as? String
     }
 
-    public func applicationShouldTerminateAfterLastWindowClosed( _ sender: NSApplication ) -> Bool
+    var bundleVersion: String?
     {
-        true
+        self.object( forInfoDictionaryKey: "CFBundleVersion" ) as? String
     }
 
-    @IBAction
-    public func showAboutWindow( _ sender: Any? )
+    var bundleName: String?
     {
-        if self.aboutWindowController.window?.isVisible == false
+        self.object( forInfoDictionaryKey: "CFBundleName" ) as? String
+    }
+
+    var humanReadableCopyright: String?
+    {
+        self.object( forInfoDictionaryKey: "NSHumanReadableCopyright" ) as? String
+    }
+
+    var humanReadableVersion: String?
+    {
+        guard let version = self.bundleShortVersionString, version.isEmpty == false
+        else
         {
-            self.aboutWindowController.window?.center()
+            return "0.0.0"
         }
 
-        self.aboutWindowController.window?.makeKeyAndOrderFront( sender )
-    }
-
-    @IBAction
-    public func showCreditsWindow( _ sender: Any? )
-    {
-        if self.creditsWindowController.window?.isVisible == false
+        if let build = self.bundleVersion, build.isEmpty == false
         {
-            self.creditsWindowController.window?.center()
+            return "\( version ) (\( build ))"
         }
 
-        self.creditsWindowController.window?.makeKeyAndOrderFront( sender )
+        return version
     }
 }

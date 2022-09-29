@@ -43,12 +43,12 @@
                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                             <connections>
+                                <binding destination="-2" name="toolTip" keyPath="self.value.name" id="0yv-qv-dG3"/>
                                 <binding destination="-2" name="hidden" keyPath="self.value.valueHint" id="Hlf-N0-4nl">
                                     <dictionary key="options">
                                         <string key="NSValueTransformerName">NSIsNil</string>
                                     </dictionary>
                                 </binding>
-                                <binding destination="-2" name="toolTip" keyPath="self.value.name" id="0yv-qv-dG3"/>
                                 <binding destination="-2" name="value" keyPath="self.value.valueHint" id="ppH-b1-joM"/>
                             </connections>
                         </textField>
@@ -78,13 +78,13 @@
                                 </menu>
                             </popUpButtonCell>
                             <connections>
-                                <binding destination="-2" name="contentValues" keyPath="self.values" id="0jc-gv-EHg"/>
                                 <binding destination="-2" name="hidden" keyPath="self.hasValues" id="W4b-gZ-l1k">
                                     <dictionary key="options">
                                         <string key="NSValueTransformerName">NSNegateBoolean</string>
                                     </dictionary>
                                 </binding>
                                 <binding destination="-2" name="selectedValue" keyPath="self.value.value" previousBinding="0jc-gv-EHg" id="sjQ-YW-Kgg"/>
+                                <binding destination="-2" name="contentValues" keyPath="self.values" id="0jc-gv-EHg"/>
                             </connections>
                         </popUpButton>
                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ery-bw-xB1">
