@@ -116,7 +116,7 @@ public class ConfigViewController: NSViewController, NSCollectionViewDelegate, N
         }
         else
         {
-            let words = text.components( separatedBy: " " ).compactMap
+            let words: [ String ] = text.components( separatedBy: " " ).compactMap
             {
                 let text = $0.trimmingCharacters( in: .whitespaces ).lowercased()
 
