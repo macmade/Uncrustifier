@@ -65,7 +65,7 @@ public class ConfigValueViewController: NSViewController
         }
         else if let hint = self.value.valueHint, hint.contains( "/" )
         {
-            let values = hint.components( separatedBy: "/" ).compactMap
+            let values: [ String ] = hint.components( separatedBy: "/" ).compactMap
             {
                 let text = $0.trimmingCharacters( in: .whitespaces )
 
