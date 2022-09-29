@@ -47,7 +47,7 @@ public class ConfigValue: NSObject
         var lines = self.comments
 
         lines.append( "\( self.name ) = \( self.value )" )
-        lines.append( "\n" )
+        lines.append( "" )
 
         return lines.joined( separator: "\n" ).data( using: .utf8 )
     }

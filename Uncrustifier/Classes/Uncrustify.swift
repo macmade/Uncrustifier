@@ -26,14 +26,37 @@ import Foundation
 
 public class Uncrustify
 {
+    public enum Language: Int
+    {
+        case c
+        case cpp
+        case cs
+        case java
+        case objc
+        case objcpp
+    }
+
     public class func defaultConfig() throws -> String
     {
         try self.run( arguments: [ "--update-config-with-doc" ] )
     }
 
-    public class func format( config: URL, file: URL ) throws -> String
+    public class func format( config: URL, file: URL, language: Language ) throws -> String
     {
-        try self.run( arguments: [ "-c", config.path, "-f", file.path ] )
+        let lang =
+        {
+            switch language
+            {
+                case .c:      return "C"
+                case .cpp:    return "CPP"
+                case .cs:     return "CS"
+                case .java:   return "JAVA"
+                case .objc:   return "OC"
+                case .objcpp: return "OC+"
+            }
+        }()
+
+        return try self.run( arguments: [ "-c", config.path, "-f", file.path, "-l", lang ] )
     }
 
     public class func run( arguments: [ String ] ) throws -> String
@@ -90,6 +113,13 @@ public class Uncrustify
         self.task.waitUntilExit()
 
         self.terminationStatus = self.task.terminationStatus
+
+        #if DEBUG
+            if let err = String( data: self.standardError, encoding: .utf8 )?.trimmingCharacters( in: .whitespacesAndNewlines )
+            {
+                print( err )
+            }
+        #endif
     }
 
     @objc

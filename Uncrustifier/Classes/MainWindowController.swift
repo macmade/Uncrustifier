@@ -33,6 +33,14 @@ public class MainWindowController: NSWindowController
     @objc private dynamic var configController = ConfigViewController()
     @objc private dynamic var codeController   = TextViewController()
 
+    @objc private dynamic var language = UserDefaults.standard.integer( forKey: "language" )
+    {
+        didSet
+        {
+            UserDefaults.standard.set( self.language, forKey: "language" )
+        }
+    }
+
     private var cacheDirectory:  URL?
     private var configCacheFile: URL?
     private var codeCacheFile:   URL?
@@ -161,22 +169,30 @@ public class MainWindowController: NSWindowController
     {
         self.saveState()
 
-        guard let config = self.configCacheFile,
-              let code   = self.codeCacheFile
-        else
+        DispatchQueue.main.async
         {
-            self.displayError( title: "No Caches Directory", message: "The application's caches directory does not exists, or failed to be created." )
+            guard let config = self.configCacheFile,
+                  let code   = self.codeCacheFile
+            else
+            {
+                self.displayError( title: "No Caches Directory", message: "The application's caches directory does not exists, or failed to be created." )
 
-            return
-        }
+                return
+            }
 
-        do
-        {
-            self.codeController.text = try Uncrustify.format( config: config, file: code )
-        }
-        catch
-        {
-            self.presentError( error )
+            do
+            {
+                let text = try Uncrustify.format( config: config, file: code, language: Uncrustify.Language( rawValue: self.language ) ?? .c )
+
+                if text.isEmpty == false
+                {
+                    self.codeController.text = text
+                }
+            }
+            catch
+            {
+                self.presentError( error )
+            }
         }
     }
 
