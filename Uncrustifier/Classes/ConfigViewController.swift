@@ -50,19 +50,7 @@ public class ConfigViewController: NSViewController, NSCollectionViewDelegate, N
     {
         didSet
         {
-            if self.searchText.isEmpty
-            {
-                self.arrangedControllers = self.controllers
-            }
-            else
-            {
-                self.arrangedControllers = self.controllers.filter
-                {
-                    $0.value.name.lowercased().contains( self.searchText.lowercased() )
-                }
-            }
-
-            self.collectionView?.reloadData()
+            self.search( text: self.searchText )
         }
     }
 
@@ -118,5 +106,37 @@ public class ConfigViewController: NSViewController, NSCollectionViewDelegate, N
         controller.view.layoutSubtreeIfNeeded()
 
         return NSSize( width: controller.view.frame.size.width, height: controller.view.frame.size.height )
+    }
+
+    private func search( text: String )
+    {
+        if text.isEmpty
+        {
+            self.arrangedControllers = self.controllers
+        }
+        else
+        {
+            let words = text.components( separatedBy: " " ).compactMap
+            {
+                let text = $0.trimmingCharacters( in: .whitespaces ).lowercased()
+
+                return text.isEmpty ? nil : text
+            }
+
+            self.arrangedControllers = self.controllers.filter
+            {
+                for word in words
+                {
+                    if $0.value.name.lowercased().contains( word ) == false, $0.comment.lowercased().contains( word ) == false
+                    {
+                        return false
+                    }
+                }
+
+                return true
+            }
+        }
+
+        self.collectionView?.reloadData()
     }
 }
