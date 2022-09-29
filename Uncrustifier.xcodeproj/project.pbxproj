@@ -14,6 +14,10 @@
 		0572AD1628E47CE8000AFC79 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0572AD1528E47CE8000AFC79 /* MainWindowController.xib */; };
 		0572AD1828E4C0F5000AFC79 /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD1728E4C0F5000AFC79 /* NSError.swift */; };
 		0572AD1A28E4C6DE000AFC79 /* NSWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD1928E4C6DE000AFC79 /* NSWindowController.swift */; };
+		0572AD5D28E4DC43000AFC79 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD5C28E4DC43000AFC79 /* Config.swift */; };
+		0572AD5F28E4DC5D000AFC79 /* ConfigValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD5E28E4DC5D000AFC79 /* ConfigValue.swift */; };
+		0572AD6128E4E3AA000AFC79 /* ConfigValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD6028E4E3AA000AFC79 /* ConfigValueViewController.swift */; };
+		0572AD6328E4E40F000AFC79 /* ConfigValueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0572AD6228E4E40F000AFC79 /* ConfigValueViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +77,10 @@
 		0572AD5128E4D6B5000AFC79 /* FUNDING.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = FUNDING.yml; sourceTree = "<group>"; };
 		0572AD5228E4D6B5000AFC79 /* Debug - zld.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Debug - zld.xcconfig"; sourceTree = "<group>"; };
 		0572AD5328E4D7D3000AFC79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0572AD5C28E4DC43000AFC79 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		0572AD5E28E4DC5D000AFC79 /* ConfigValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigValue.swift; sourceTree = "<group>"; };
+		0572AD6028E4E3AA000AFC79 /* ConfigValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigValueViewController.swift; sourceTree = "<group>"; };
+		0572AD6228E4E40F000AFC79 /* ConfigValueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigValueViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +129,9 @@
 				0572AD1328E47C6A000AFC79 /* MainWindowController.swift */,
 				0572AD1928E4C6DE000AFC79 /* NSWindowController.swift */,
 				0572AD1728E4C0F5000AFC79 /* NSError.swift */,
+				0572AD5C28E4DC43000AFC79 /* Config.swift */,
+				0572AD5E28E4DC5D000AFC79 /* ConfigValue.swift */,
+				0572AD6028E4E3AA000AFC79 /* ConfigValueViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -131,6 +142,7 @@
 				0572AD0628E47BCF000AFC79 /* Assets.xcassets */,
 				0572AD0828E47BCF000AFC79 /* MainMenu.xib */,
 				0572AD1528E47CE8000AFC79 /* MainWindowController.xib */,
+				0572AD6228E4E40F000AFC79 /* ConfigValueViewController.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -320,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0572AD6328E4E40F000AFC79 /* ConfigValueViewController.xib in Resources */,
 				0572AD0728E47BCF000AFC79 /* Assets.xcassets in Resources */,
 				0572AD1628E47CE8000AFC79 /* MainWindowController.xib in Resources */,
 				0572AD0A28E47BCF000AFC79 /* MainMenu.xib in Resources */,
@@ -357,8 +370,11 @@
 			files = (
 				0572AD1A28E4C6DE000AFC79 /* NSWindowController.swift in Sources */,
 				0572AD1428E47C6A000AFC79 /* MainWindowController.swift in Sources */,
+				0572AD5D28E4DC43000AFC79 /* Config.swift in Sources */,
 				0572AD0528E47BCF000AFC79 /* ApplicationDelegate.swift in Sources */,
 				0572AD1828E4C0F5000AFC79 /* NSError.swift in Sources */,
+				0572AD6128E4E3AA000AFC79 /* ConfigValueViewController.swift in Sources */,
+				0572AD5F28E4DC5D000AFC79 /* ConfigValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

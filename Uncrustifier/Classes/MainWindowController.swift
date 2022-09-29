@@ -26,16 +26,22 @@ import Cocoa
 
 public class MainWindowController: NSWindowController
 {
+    @IBOutlet private var scrollView:     NSScrollView!
     @IBOutlet private var configTextView: NSTextView!
     @IBOutlet private var codeTextView:   NSTextView!
+    @IBOutlet private var sidebarWidth:   NSLayoutConstraint!
 
-    @objc private dynamic var config = ""
-    @objc private dynamic var code   = ""
+    @objc private dynamic var config       = ""
+    @objc private dynamic var code         = ""
+    @objc private dynamic var searchFilter = ""
 
-    private var cacheDirectory:  URL?
-    private var configCacheFile: URL?
-    private var codeCacheFile:   URL?
-    private var windowObserver:  Any?
+    private var cacheDirectory:       URL?
+    private var configCacheFile:      URL?
+    private var codeCacheFile:        URL?
+    private var windowObserver:       Any?
+    private var searchFilterObserver: NSKeyValueObservation?
+
+    private var controllers: [ ConfigValueViewController ] = []
 
     public init()
     {
@@ -75,6 +81,24 @@ public class MainWindowController: NSWindowController
         self.windowObserver = NotificationCenter.default.addObserver( forName: NSWindow.willCloseNotification, object: self.window, queue: nil )
         {
             [ weak self ] _ in self?.saveState()
+        }
+
+        self.displayConfig()
+
+        self.searchFilterObserver = self.observe( \.searchFilter )
+        {
+            [ weak self ] _, _ in
+
+            guard let self = self
+            else
+            {
+                return
+            }
+
+            self.controllers.forEach
+            {
+                $0.view.isHidden = self.searchFilter.isEmpty ? false : $0.value.name.contains( self.searchFilter ) == false
+            }
         }
     }
 
@@ -169,6 +193,47 @@ public class MainWindowController: NSWindowController
         task.waitUntilExit()
 
         self.code = ( try? self.readFile( url: temp ) ) ?? ""
+    }
+
+    private func displayConfig()
+    {
+        guard let configCacheFile = self.configCacheFile,
+              let config          = Config( url: configCacheFile )
+        else
+        {
+            return
+        }
+
+        self.controllers = config.values.map
+        {
+            ConfigValueViewController( value: $0 )
+        }
+
+        let stack                    = NSStackView( views: self.controllers.map { $0.view } )
+        stack.orientation            = .vertical
+        stack.alignment              = .leading
+        stack.spacing                = 0
+        stack.detachesHiddenViews    = true
+        self.scrollView.documentView = stack
+
+        stack.setHuggingPriority( .windowSizeStayPut, for: .horizontal )
+
+        if self.window?.isVisible == false
+        {
+            DispatchQueue.main.async
+            {
+                self.scrollView.verticalScroller?.floatValue = 0
+
+                self.scrollView.contentView.scroll( NSPoint( x: 0, y: NSMaxY( stack.frame ) - self.scrollView.bounds.size.height ) )
+            }
+        }
+
+        DispatchQueue.main.async
+        {
+            self.sidebarWidth.constant = stack.frame.size.width
+        }
+
+        self.window?.makeFirstResponder( self.codeTextView )
     }
 
     private func configureTextView( _ view: NSTextView )
