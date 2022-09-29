@@ -28,6 +28,7 @@
 		057AAF4B28E5973D004CB733 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF4A28E5973D004CB733 /* Either.swift */; };
 		057AAF5428E59F0D004CB733 /* ConfigViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF5328E59F0D004CB733 /* ConfigViewItem.swift */; };
 		057AAF5628E5A043004CB733 /* ConfigViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057AAF5528E5A043004CB733 /* ConfigViewItem.xib */; };
+		057AAF5828E5F6AA004CB733 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF5728E5F6AA004CB733 /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -142,6 +143,7 @@
 		057AAF4A28E5973D004CB733 /* Either.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
 		057AAF5328E59F0D004CB733 /* ConfigViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewItem.swift; sourceTree = "<group>"; };
 		057AAF5528E5A043004CB733 /* ConfigViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigViewItem.xib; sourceTree = "<group>"; };
+		057AAF5728E5F6AA004CB733 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 				0572AD1328E47C6A000AFC79 /* MainWindowController.swift */,
 				057AAF1528E578B4004CB733 /* TextViewController.swift */,
 				057AAF4828E5846B004CB733 /* Uncrustify.swift */,
+				057AAF5728E5F6AA004CB733 /* BackgroundView.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				0572AD0528E47BCF000AFC79 /* ApplicationDelegate.swift in Sources */,
 				057AAF4928E5846B004CB733 /* Uncrustify.swift in Sources */,
 				0572AD1828E4C0F5000AFC79 /* NSError.swift in Sources */,
+				057AAF5828E5F6AA004CB733 /* BackgroundView.swift in Sources */,
 				057AAF1628E578B4004CB733 /* TextViewController.swift in Sources */,
 				0572AD6128E4E3AA000AFC79 /* ConfigValueViewController.swift in Sources */,
 				0572AD5F28E4DC5D000AFC79 /* ConfigValue.swift in Sources */,

@@ -26,9 +26,18 @@ import Foundation
 
 public class ConfigValue: NSObject
 {
-    @objc public private( set ) dynamic var name:     String
-    @objc public private( set ) dynamic var value:    String
-    @objc public private( set ) dynamic var comments: [ String ]
+    @objc public private( set ) dynamic var name:      String
+    @objc public private( set ) dynamic var value:     String
+    @objc public private( set ) dynamic var valueHint: String?
+    @objc public private( set ) dynamic var comments:  [ String ]
+
+    public init( name: String, value: String, valueHint: String, comments: [ String ] )
+    {
+        self.name      = name
+        self.value     = value
+        self.valueHint = valueHint
+        self.comments  = comments
+    }
 
     public init( name: String, value: String, comments: [ String ] )
     {
@@ -46,7 +55,15 @@ public class ConfigValue: NSObject
     {
         var lines = self.comments
 
-        lines.append( "\( self.name ) = \( self.value )" )
+        if let hint = self.valueHint
+        {
+            lines.append( "\( self.name ) = \( self.value ) # \( hint )" )
+        }
+        else
+        {
+            lines.append( "\( self.name ) = \( self.value )" )
+        }
+
         lines.append( "" )
 
         return lines.joined( separator: "\n" ).data( using: .utf8 )

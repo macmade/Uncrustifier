@@ -99,7 +99,8 @@ public class ConfigViewController: NSViewController, NSCollectionViewDelegate, N
 
         if let item = item as? ConfigViewItem
         {
-            item.controller = self.arrangedControllers[ indexPath.item ]
+            item.controller            = self.arrangedControllers[ indexPath.item ]
+            item.controller?.alternate = indexPath.item % 2 == 0
         }
 
         item.view.layoutSubtreeIfNeeded()

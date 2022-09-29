@@ -24,56 +24,25 @@
 
 import Cocoa
 
-public class ConfigValueViewController: NSViewController
+public class BackgroundView: NSView
 {
-    @objc public private( set ) dynamic var value:      ConfigValue
-    @objc public private( set ) dynamic var comment:    String
-
-    @objc public dynamic var alternate = false
+    @IBInspectable public dynamic var backgroundColor: NSColor?
     {
         didSet
         {
-            guard let view = self.view as? BackgroundView
-            else
-            {
-                return
-            }
-
-            view.backgroundColor = self.alternate ? NSColor.alternatingContentBackgroundColors.last : NSColor.alternatingContentBackgroundColors.first
+            self.needsDisplay = true
         }
     }
 
-    public init( value: ConfigValue )
+    public override func draw( _ rect: NSRect )
     {
-        self.value   = value
-        let comments = value.comments.map { $0.dropFirst( 1 ).trimmingCharacters( in: .whitespaces ) }
-        self.comment = String( comments.joined( separator: "\n" ) )
+        guard let color = self.backgroundColor
+        else
+        {
+            return
+        }
 
-        super.init( nibName: nil, bundle: nil )
-    }
-
-    required init?( coder: NSCoder )
-    {
-        nil
-    }
-
-    public override var nibName: NSNib.Name?
-    {
-        "ConfigValueViewController"
-    }
-
-    public override func viewDidLoad()
-    {
-        super.viewDidLoad()
-    }
-
-    public func sizeToFit()
-    {
-        self.view.updateConstraints()
-        self.view.layoutSubtreeIfNeeded()
-
-        self.view.frame = NSRect( origin: NSPoint.zero, size: self.view.fittingSize )
-
-        self.view.layoutSubtreeIfNeeded()
+        color.setFill()
+        rect.fill()
     }
 }

@@ -8,8 +8,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController" customModule="Uncrustifier" customModuleProvider="target">
             <connections>
-                <outlet property="codeContainer" destination="Cx6-Q5-RAJ" id="bOz-CC-oDo"/>
-                <outlet property="configContainer" destination="hXn-c6-oRN" id="1in-H5-wZW"/>
+                <outlet property="codeContainer" destination="bU7-j4-g8h" id="aMA-eK-aEW"/>
+                <outlet property="configContainer" destination="ucd-oT-xNi" id="ZoQ-ux-q7z"/>
                 <outlet property="optionsMenu" destination="gR9-6q-ZIH" id="t8Y-Ey-vYC"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="92p-XF-yku"/>
             </connections>
@@ -26,29 +26,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Syf-0s-koy">
-                        <rect key="frame" x="0.0" y="47" width="800" height="553"/>
-                        <subviews>
-                            <customView id="hXn-c6-oRN">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="553"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="4cr-JK-lFA"/>
-                                </constraints>
-                            </customView>
-                            <customView id="Cx6-Q5-RAJ">
-                                <rect key="frame" x="301" y="0.0" width="499" height="553"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Cqp-j8-gDO"/>
-                                </constraints>
-                            </customView>
-                        </subviews>
-                        <holdingPriorities>
-                            <real value="300"/>
-                            <real value="250"/>
-                        </holdingPriorities>
-                    </splitView>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="ucd-oT-xNi">
+                        <rect key="frame" x="0.0" y="47" width="350" height="553"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="350" id="F8Y-WF-2Wl"/>
+                        </constraints>
+                    </customView>
+                    <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Rxn-Tj-rra">
+                        <rect key="frame" x="348" y="47" width="5" height="553"/>
+                    </box>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="bU7-j4-g8h">
+                        <rect key="frame" x="351" y="47" width="449" height="553"/>
+                    </customView>
                     <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="5rF-tW-WHj">
                         <rect key="frame" x="0.0" y="44" width="800" height="5"/>
                     </box>
@@ -122,18 +111,24 @@ DQ
                     <constraint firstItem="yeC-3g-opZ" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="8" id="3w2-DC-scx"/>
                     <constraint firstItem="VaB-wI-qlS" firstAttribute="leading" secondItem="NKU-kJ-9a5" secondAttribute="trailing" constant="8" symbolic="YES" id="6M3-WZ-ulx"/>
                     <constraint firstAttribute="trailing" secondItem="5rF-tW-WHj" secondAttribute="trailing" id="7mO-V4-Pkj"/>
+                    <constraint firstItem="5rF-tW-WHj" firstAttribute="top" secondItem="ucd-oT-xNi" secondAttribute="bottom" id="CdL-2a-VAH"/>
                     <constraint firstItem="pjp-IZ-uAn" firstAttribute="leading" secondItem="yeC-3g-opZ" secondAttribute="trailing" constant="8" symbolic="YES" id="Er4-IN-rt3"/>
                     <constraint firstItem="NKU-kJ-9a5" firstAttribute="centerY" secondItem="VaB-wI-qlS" secondAttribute="centerY" id="FoL-Cy-U7y"/>
                     <constraint firstItem="pjp-IZ-uAn" firstAttribute="centerY" secondItem="yeC-3g-opZ" secondAttribute="centerY" id="LPt-mB-YEe"/>
-                    <constraint firstItem="Syf-0s-koy" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="WR8-vo-zh3"/>
                     <constraint firstItem="NKU-kJ-9a5" firstAttribute="centerY" secondItem="pjp-IZ-uAn" secondAttribute="centerY" id="ZkP-Oi-bBs"/>
+                    <constraint firstItem="bU7-j4-g8h" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="aJa-Va-Cul"/>
                     <constraint firstAttribute="bottom" secondItem="yeC-3g-opZ" secondAttribute="bottom" constant="8" id="bka-7e-e9o"/>
+                    <constraint firstAttribute="trailing" secondItem="bU7-j4-g8h" secondAttribute="trailing" id="bng-cJ-NPq"/>
+                    <constraint firstItem="5rF-tW-WHj" firstAttribute="top" secondItem="bU7-j4-g8h" secondAttribute="bottom" id="eYQ-g0-7X8"/>
+                    <constraint firstItem="Rxn-Tj-rra" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="gkm-oL-3jZ"/>
                     <constraint firstAttribute="trailing" secondItem="VaB-wI-qlS" secondAttribute="trailing" constant="8" id="iJ7-Ns-jiE"/>
+                    <constraint firstItem="5rF-tW-WHj" firstAttribute="top" secondItem="Rxn-Tj-rra" secondAttribute="bottom" id="kLk-hW-2ut"/>
+                    <constraint firstItem="bU7-j4-g8h" firstAttribute="leading" secondItem="Rxn-Tj-rra" secondAttribute="trailing" id="lQz-ao-0h2"/>
+                    <constraint firstItem="ucd-oT-xNi" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="mkc-lC-Zmr"/>
+                    <constraint firstItem="ucd-oT-xNi" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="oY0-Ds-5Jx"/>
                     <constraint firstItem="5rF-tW-WHj" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="pRC-zx-aeh"/>
-                    <constraint firstItem="5rF-tW-WHj" firstAttribute="top" secondItem="Syf-0s-koy" secondAttribute="bottom" id="uDH-ue-Jbv"/>
-                    <constraint firstAttribute="trailing" secondItem="Syf-0s-koy" secondAttribute="trailing" id="wDZ-Gb-ES6"/>
+                    <constraint firstItem="Rxn-Tj-rra" firstAttribute="leading" secondItem="ucd-oT-xNi" secondAttribute="trailing" id="tTh-h4-YNX"/>
                     <constraint firstItem="yeC-3g-opZ" firstAttribute="top" secondItem="5rF-tW-WHj" secondAttribute="bottom" constant="8" id="yaj-i2-OZt"/>
-                    <constraint firstItem="Syf-0s-koy" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="yue-34-nhK"/>
                 </constraints>
             </view>
             <point key="canvasLocation" x="586" y="339"/>

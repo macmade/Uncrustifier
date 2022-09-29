@@ -120,9 +120,19 @@ public class Config: NSObject
             }
 
             let name  = String( parts[ 0 ] ).trimmingCharacters( in: .whitespaces )
-            let value = String( parts[ 1 ] ).trimmingCharacters( in: .whitespaces )
+            let right = String( parts[ 1 ] ).trimmingCharacters( in: .whitespaces )
 
-            self.values.append( .right( ConfigValue( name: name, value: value, comments: comments ) ) )
+            if let pos = right.lastIndex( of: "#" )
+            {
+                let value   = String( right[ right.startIndex ..< pos ] ).trimmingCharacters( in: .whitespaces )
+                let comment = String( right[ pos ..< right.endIndex ].dropFirst( 1 ) ).trimmingCharacters( in: .whitespaces )
+
+                self.values.append( .right( ConfigValue( name: name, value: value, valueHint: comment, comments: comments ) ) )
+            }
+            else
+            {
+                self.values.append( .right( ConfigValue( name: name, value: right, comments: comments ) ) )
+            }
 
             comments = []
         }
