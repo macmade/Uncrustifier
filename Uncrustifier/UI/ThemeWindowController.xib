@@ -45,8 +45,8 @@
                             </menu>
                         </popUpButtonCell>
                         <connections>
-                            <binding destination="-2" name="contentValues" keyPath="self.themes" id="mW0-JZ-3Ep"/>
                             <binding destination="-2" name="selectedValue" keyPath="self.theme" previousBinding="mW0-JZ-3Ep" id="6V7-tn-XX4"/>
+                            <binding destination="-2" name="contentValues" keyPath="self.themes" id="mW0-JZ-3Ep"/>
                         </connections>
                     </popUpButton>
                 </subviews>

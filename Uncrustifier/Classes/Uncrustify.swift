@@ -43,7 +43,7 @@ public class Uncrustify
 
     public class func format( config: URL, file: URL, language: Language ) throws -> String
     {
-        let lang =
+        let lang: String =
         {
             switch language
             {
