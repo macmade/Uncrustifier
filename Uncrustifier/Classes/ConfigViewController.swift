@@ -24,9 +24,26 @@
 
 import Cocoa
 
-public class ConfigViewController: NSViewController
+public class ConfigViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, NSCollectionViewDelegateFlowLayout
 {
     @objc public dynamic var config = Config()
+    {
+        didSet
+        {
+            self.controllers = self.config.values.compactMap
+            {
+                switch $0
+                {
+                    case .left:               return nil
+                    case .right( let value ): return ConfigValueViewController( value: value )
+                }
+            }
+        }
+    }
+
+    @objc private dynamic var controllers: [ ConfigValueViewController ] = []
+
+    @IBOutlet private var collectionView: NSCollectionView!
 
     public init()
     {
@@ -46,5 +63,36 @@ public class ConfigViewController: NSViewController
     public override func viewDidLoad()
     {
         super.viewDidLoad()
+    }
+
+    public func collectionView( _ collectionView: NSCollectionView, numberOfItemsInSection section: Int ) -> Int
+    {
+        self.controllers.count
+    }
+
+    public func collectionView( _ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath ) -> NSCollectionViewItem
+    {
+        let item = collectionView.makeItem( withIdentifier: NSUserInterfaceItemIdentifier( "ConfigViewItem" ), for: indexPath )
+
+        if let item = item as? ConfigViewItem
+        {
+            item.controller = self.controllers[ indexPath.item ]
+        }
+
+        item.view.layoutSubtreeIfNeeded()
+
+        return item
+    }
+
+    public func collectionView( _ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath ) -> NSSize
+    {
+        let controller        = self.controllers[ indexPath.item ]
+        var frame             = controller.view.frame
+        frame.size.width      = self.collectionView.frame.size.width
+        controller.view.frame = frame
+
+        controller.view.layoutSubtreeIfNeeded()
+
+        return NSSize( width: controller.view.frame.size.width, height: controller.view.frame.size.height )
     }
 }

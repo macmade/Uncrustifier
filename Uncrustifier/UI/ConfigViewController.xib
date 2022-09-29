@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ConfigViewController" customModule="Uncrustifier" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="Yag-B2-mHU" id="7gO-eZ-CQ6"/>
                 <outlet property="view" destination="c22-O7-iKe" id="f48-s8-bWB"/>
             </connections>
         </customObject>
@@ -16,6 +17,43 @@
         <customView id="c22-O7-iKe">
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vne-R9-cz4">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+                    <clipView key="contentView" id="qA3-hi-DdD">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView id="Yag-B2-mHU">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="158"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="Vbw-C7-d3y">
+                                    <size key="itemSize" width="50" height="50"/>
+                                </collectionViewFlowLayout>
+                                <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="-2" id="VoW-RT-bvo"/>
+                                    <outlet property="delegate" destination="-2" id="Wtc-jn-bZV"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="hbW-Y7-phO">
+                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="7By-fe-P2a">
+                        <rect key="frame" x="234" y="1" width="15" height="143"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vne-R9-cz4" secondAttribute="trailing" id="Xqb-dY-WIV"/>
+                <constraint firstAttribute="bottom" secondItem="vne-R9-cz4" secondAttribute="bottom" id="dU8-zy-3x1"/>
+                <constraint firstItem="vne-R9-cz4" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="gBP-PR-Pqn"/>
+                <constraint firstItem="vne-R9-cz4" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="xGx-oO-25t"/>
+            </constraints>
             <point key="canvasLocation" x="90" y="136"/>
         </customView>
     </objects>

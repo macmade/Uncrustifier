@@ -26,6 +26,8 @@
 		057AAF4728E58428004CB733 /* uncrustify in Copy Executables */ = {isa = PBXBuildFile; fileRef = 057AAF4528E5840A004CB733 /* uncrustify */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		057AAF4928E5846B004CB733 /* Uncrustify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF4828E5846B004CB733 /* Uncrustify.swift */; };
 		057AAF4B28E5973D004CB733 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF4A28E5973D004CB733 /* Either.swift */; };
+		057AAF5428E59F0D004CB733 /* ConfigViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF5328E59F0D004CB733 /* ConfigViewItem.swift */; };
+		057AAF5628E5A043004CB733 /* ConfigViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057AAF5528E5A043004CB733 /* ConfigViewItem.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -138,6 +140,8 @@
 		057AAF4528E5840A004CB733 /* uncrustify */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = uncrustify; sourceTree = "<group>"; };
 		057AAF4828E5846B004CB733 /* Uncrustify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uncrustify.swift; sourceTree = "<group>"; };
 		057AAF4A28E5973D004CB733 /* Either.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
+		057AAF5328E59F0D004CB733 /* ConfigViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewItem.swift; sourceTree = "<group>"; };
+		057AAF5528E5A043004CB733 /* ConfigViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigViewItem.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,7 @@
 				0572AD5E28E4DC5D000AFC79 /* ConfigValue.swift */,
 				0572AD6028E4E3AA000AFC79 /* ConfigValueViewController.swift */,
 				057AAF1128E577CE004CB733 /* ConfigViewController.swift */,
+				057AAF5328E59F0D004CB733 /* ConfigViewItem.swift */,
 				057AAF4A28E5973D004CB733 /* Either.swift */,
 				057AAF1B28E57929004CB733 /* Extensions */,
 				0572AD1328E47C6A000AFC79 /* MainWindowController.swift */,
@@ -206,6 +211,7 @@
 				0572AD0828E47BCF000AFC79 /* MainMenu.xib */,
 				0572AD1528E47CE8000AFC79 /* MainWindowController.xib */,
 				057AAF1728E578D9004CB733 /* TextViewController.xib */,
+				057AAF5528E5A043004CB733 /* ConfigViewItem.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -508,6 +514,7 @@
 			files = (
 				0572AD6328E4E40F000AFC79 /* ConfigValueViewController.xib in Resources */,
 				0572AD0728E47BCF000AFC79 /* Assets.xcassets in Resources */,
+				057AAF5628E5A043004CB733 /* ConfigViewItem.xib in Resources */,
 				0572AD1628E47CE8000AFC79 /* MainWindowController.xib in Resources */,
 				0572AD0A28E47BCF000AFC79 /* MainMenu.xib in Resources */,
 				057AAF1428E577E0004CB733 /* ConfigViewController.xib in Resources */,
@@ -546,6 +553,7 @@
 			files = (
 				0572AD1A28E4C6DE000AFC79 /* NSWindowController.swift in Sources */,
 				0572AD1428E47C6A000AFC79 /* MainWindowController.swift in Sources */,
+				057AAF5428E59F0D004CB733 /* ConfigViewItem.swift in Sources */,
 				057AAF1228E577CE004CB733 /* ConfigViewController.swift in Sources */,
 				057AAF1A28E57913004CB733 /* NSView.swift in Sources */,
 				057AAF4B28E5973D004CB733 /* Either.swift in Sources */,

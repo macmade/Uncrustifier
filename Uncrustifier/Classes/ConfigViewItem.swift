@@ -24,42 +24,20 @@
 
 import Cocoa
 
-public class ConfigValueViewController: NSViewController
+public class ConfigViewItem: NSCollectionViewItem
 {
-    @objc public private( set ) dynamic var value:   ConfigValue
-    @objc public private( set ) dynamic var comment: String
-
-    public init( value: ConfigValue )
+    @objc public dynamic var controller: ConfigValueViewController?
     {
-        self.value   = value
-        let comments = value.comments.map { $0.dropFirst( 1 ).trimmingCharacters( in: .whitespaces ) }
-        self.comment = String( comments.joined( separator: "\n" ) )
-
-        super.init( nibName: nil, bundle: nil )
-    }
-
-    required init?( coder: NSCoder )
-    {
-        nil
-    }
-
-    public override var nibName: NSNib.Name?
-    {
-        "ConfigValueViewController"
-    }
-
-    public override func viewDidLoad()
-    {
-        super.viewDidLoad()
-    }
-
-    public func sizeToFit()
-    {
-        self.view.updateConstraints()
-        self.view.layoutSubtreeIfNeeded()
-
-        self.view.frame = NSRect( origin: NSPoint.zero, size: self.view.fittingSize )
-
-        self.view.layoutSubtreeIfNeeded()
+        didSet
+        {
+            if let controller = self.controller
+            {
+                self.view.addFillingSubview( controller.view )
+            }
+            else
+            {
+                self.view.subviews.forEach { $0.removeFromSuperview() }
+            }
+        }
     }
 }
