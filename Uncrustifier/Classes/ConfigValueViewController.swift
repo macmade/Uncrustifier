@@ -51,6 +51,8 @@ public class ConfigValueViewController: NSViewController
         let comments = value.comments.map { $0.dropFirst( 1 ).trimmingCharacters( in: .whitespaces ) }
         self.comment = String( comments.joined( separator: "\n" ) )
 
+        super.init( nibName: nil, bundle: nil )
+
         if self.value.value == "true" || self.value.value == "false"
         {
             self.values    = [ "true", "false" ]
@@ -65,8 +67,6 @@ public class ConfigValueViewController: NSViewController
         {
             self.values.append( self.value.value )
         }
-
-        super.init( nibName: nil, bundle: nil )
     }
 
     required init?( coder: NSCoder )
