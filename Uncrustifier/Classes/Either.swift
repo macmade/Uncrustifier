@@ -24,31 +24,9 @@
 
 import Foundation
 
-public class ConfigValue: NSObject
+@frozen
+public enum Either< T1, T2 >
 {
-    @objc public private( set ) dynamic var name:     String
-    @objc public private( set ) dynamic var value:    String
-    @objc public private( set ) dynamic var comments: [ String ]
-
-    public init( name: String, value: String, comments: [ String ] )
-    {
-        self.name     = name
-        self.value    = value
-        self.comments = comments
-    }
-
-    public override var description: String
-    {
-        "\( super.description ): \( self.name )"
-    }
-
-    public var data: Data?
-    {
-        var lines = self.comments
-
-        lines.append( "\( self.name ) = \( self.value )" )
-        lines.append( "\n" )
-
-        return lines.joined( separator: "\n" ).data( using: .utf8 )
-    }
+    case left( T1 )
+    case right( T2 )
 }

@@ -32,7 +32,8 @@ public class ConfigValueViewController: NSViewController
     public init( value: ConfigValue )
     {
         self.value   = value
-        self.comment = String( value.comments.joined( separator: "\n" ) )
+        let comments = value.comments.map { $0.dropFirst( 1 ).trimmingCharacters( in: .whitespaces ) }
+        self.comment = String( comments.joined( separator: "\n" ) )
 
         super.init( nibName: nil, bundle: nil )
     }

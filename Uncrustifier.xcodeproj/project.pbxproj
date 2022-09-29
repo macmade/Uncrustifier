@@ -25,6 +25,7 @@
 		057AAF1A28E57913004CB733 /* NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF1928E57913004CB733 /* NSView.swift */; };
 		057AAF4728E58428004CB733 /* uncrustify in Copy Executables */ = {isa = PBXBuildFile; fileRef = 057AAF4528E5840A004CB733 /* uncrustify */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		057AAF4928E5846B004CB733 /* Uncrustify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF4828E5846B004CB733 /* Uncrustify.swift */; };
+		057AAF4B28E5973D004CB733 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF4A28E5973D004CB733 /* Either.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -136,6 +137,7 @@
 		057AAF4328E5840A004CB733 /* HELP */ = {isa = PBXFileReference; lastKnownFileType = text; path = HELP; sourceTree = "<group>"; };
 		057AAF4528E5840A004CB733 /* uncrustify */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = uncrustify; sourceTree = "<group>"; };
 		057AAF4828E5846B004CB733 /* Uncrustify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uncrustify.swift; sourceTree = "<group>"; };
+		057AAF4A28E5973D004CB733 /* Either.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 				0572AD5E28E4DC5D000AFC79 /* ConfigValue.swift */,
 				0572AD6028E4E3AA000AFC79 /* ConfigValueViewController.swift */,
 				057AAF1128E577CE004CB733 /* ConfigViewController.swift */,
+				057AAF4A28E5973D004CB733 /* Either.swift */,
 				057AAF1B28E57929004CB733 /* Extensions */,
 				0572AD1328E47C6A000AFC79 /* MainWindowController.swift */,
 				057AAF1528E578B4004CB733 /* TextViewController.swift */,
@@ -545,6 +548,7 @@
 				0572AD1428E47C6A000AFC79 /* MainWindowController.swift in Sources */,
 				057AAF1228E577CE004CB733 /* ConfigViewController.swift in Sources */,
 				057AAF1A28E57913004CB733 /* NSView.swift in Sources */,
+				057AAF4B28E5973D004CB733 /* Either.swift in Sources */,
 				0572AD5D28E4DC43000AFC79 /* Config.swift in Sources */,
 				0572AD0528E47BCF000AFC79 /* ApplicationDelegate.swift in Sources */,
 				057AAF4928E5846B004CB733 /* Uncrustify.swift in Sources */,

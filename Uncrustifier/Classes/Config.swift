@@ -27,7 +27,7 @@ import Foundation
 @objc
 public class Config: NSObject
 {
-    public private( set ) dynamic var values: [ ConfigValue ] = []
+    public private( set ) dynamic var values: [ Either< String, ConfigValue > ] = []
 
     public override init()
     {}
@@ -54,9 +54,21 @@ public class Config: NSObject
     {
         self.values.reduce( into: Data() )
         {
-            if let value = $1.data
+            switch $1
             {
-                $0.append( value )
+                case .left( let comment ):
+
+                    if let data = comment.appending( "\n" ).data( using: .utf8 )
+                    {
+                        $0.append( data )
+                    }
+
+                case .right( let value ):
+
+                    if let data = value.data
+                    {
+                        $0.append( data )
+                    }
             }
         }
     }
@@ -72,14 +84,21 @@ public class Config: NSObject
             guard let first = line.first
             else
             {
+                comments.forEach
+                {
+                    self.values.append( .left( $0 ) )
+                }
+
                 comments = []
+
+                self.values.append( .left( "" ) )
 
                 return
             }
 
             if first == "#"
             {
-                comments.append( String( line.dropFirst( 1 ) ).trimmingCharacters( in: .whitespaces ) )
+                comments.append( String( line.trimmingCharacters( in: .whitespaces ) ) )
 
                 return
             }
@@ -88,7 +107,14 @@ public class Config: NSObject
 
             if parts.count != 2
             {
+                comments.forEach
+                {
+                    self.values.append( .left( $0 ) )
+                }
+
                 comments = []
+
+                self.values.append( .left( line ) )
 
                 return
             }
@@ -96,7 +122,9 @@ public class Config: NSObject
             let name  = String( parts[ 0 ] ).trimmingCharacters( in: .whitespaces )
             let value = String( parts[ 1 ] ).trimmingCharacters( in: .whitespaces )
 
-            self.values.append( ConfigValue( name: name, value: value, comments: comments ) )
+            self.values.append( .right( ConfigValue( name: name, value: value, comments: comments ) ) )
+
+            comments = []
         }
     }
 }
