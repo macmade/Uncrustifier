@@ -23,15 +23,42 @@
  ******************************************************************************/
 
 import Cocoa
+import Highlightr
 
 public class TextViewController: NSViewController
 {
     @IBOutlet private var textView: NSTextView!
 
-    @objc public dynamic var text = ""
+    private var textStorage: CodeAttributedString
+
+    @objc public dynamic var text: String
+    {
+        get
+        {
+            self.textStorage.string
+        }
+
+        set( value )
+        {
+            self.textStorage.replaceCharacters( in: NSRange( location: 0, length: self.textStorage.string.count ), with: value )
+        }
+    }
 
     public init()
     {
+        if let highlightr = Highlightr()
+        {
+            highlightr.setTheme( to: "atom-one-dark" )
+
+            self.textStorage = CodeAttributedString( highlightr: highlightr )
+        }
+        else
+        {
+            self.textStorage = CodeAttributedString()
+        }
+
+        self.textStorage.language = "C"
+
         super.init( nibName: nil, bundle: nil )
     }
 
@@ -55,6 +82,16 @@ public class TextViewController: NSViewController
         self.textView.isHorizontallyResizable            = true
         self.textView.textContainer?.widthTracksTextView = false
         self.textView.textContainer?.containerSize       = NSSize( width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude )
+
+        if let layoutManager = self.textView.textContainer?.layoutManager
+        {
+            if let storage = layoutManager.textStorage
+            {
+                storage.removeLayoutManager( layoutManager )
+            }
+
+            self.textStorage.addLayoutManager( layoutManager )
+        }
     }
 
     public func setAsFirstResponder()

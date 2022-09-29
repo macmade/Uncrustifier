@@ -30,7 +30,33 @@
 		057AAF5628E5A043004CB733 /* ConfigViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057AAF5528E5A043004CB733 /* ConfigViewItem.xib */; };
 		057AAF5828E5F6AA004CB733 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF5728E5F6AA004CB733 /* BackgroundView.swift */; };
 		057AAF5A28E5FB47004CB733 /* CFBase.txt in Resources */ = {isa = PBXBuildFile; fileRef = 057AAF5928E5FB3C004CB733 /* CFBase.txt */; };
+		057AAF6728E5FE37004CB733 /* Highlightr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 057AAF6328E5FE22004CB733 /* Highlightr.framework */; };
+		057AAF6928E5FE48004CB733 /* Highlightr.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 057AAF6328E5FE22004CB733 /* Highlightr.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		057AAF6028E5FE22004CB733 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 057AAF5B28E5FE22004CB733 /* Highlightr.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8C2FB1C21F39118F00469D0D;
+			remoteInfo = "Highlightr-iOS";
+		};
+		057AAF6228E5FE22004CB733 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 057AAF5B28E5FE22004CB733 /* Highlightr.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8CD1AE161F391713000FDA02;
+			remoteInfo = "Highlightr-macOS";
+		};
+		057AAF6428E5FE2D004CB733 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 057AAF5B28E5FE22004CB733 /* Highlightr.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CD1AE151F391713000FDA02;
+			remoteInfo = "Highlightr-macOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		057AAF4628E58415004CB733 /* Copy Executables */ = {
@@ -42,6 +68,17 @@
 				057AAF4728E58428004CB733 /* uncrustify in Copy Executables */,
 			);
 			name = "Copy Executables";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		057AAF6828E5FE3B004CB733 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				057AAF6928E5FE48004CB733 /* Highlightr.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -146,6 +183,7 @@
 		057AAF5528E5A043004CB733 /* ConfigViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigViewItem.xib; sourceTree = "<group>"; };
 		057AAF5728E5F6AA004CB733 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		057AAF5928E5FB3C004CB733 /* CFBase.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CFBase.txt; sourceTree = "<group>"; };
+		057AAF5B28E5FE22004CB733 /* Highlightr.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Highlightr.xcodeproj; path = Submodules/Highlightr/Highlightr.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				057AAF6728E5FE37004CB733 /* Highlightr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,10 +201,12 @@
 		0572ACF828E47BCF000AFC79 = {
 			isa = PBXGroup;
 			children = (
+				057AAF5B28E5FE22004CB733 /* Highlightr.xcodeproj */,
 				0572AD1B28E4D6B5000AFC79 /* xcconfig */,
 				057AAF1C28E581E8004CB733 /* uncrustify-build */,
 				0572AD0328E47BCF000AFC79 /* Uncrustifier */,
 				0572AD0228E47BCF000AFC79 /* Products */,
+				057AAF6628E5FE37004CB733 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -458,6 +499,22 @@
 			path = bin;
 			sourceTree = "<group>";
 		};
+		057AAF5C28E5FE22004CB733 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				057AAF6128E5FE22004CB733 /* Highlightr.framework */,
+				057AAF6328E5FE22004CB733 /* Highlightr.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		057AAF6628E5FE37004CB733 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -469,11 +526,13 @@
 				0572ACFE28E47BCF000AFC79 /* Frameworks */,
 				0572ACFF28E47BCF000AFC79 /* Resources */,
 				057AAF4628E58415004CB733 /* Copy Executables */,
+				057AAF6828E5FE3B004CB733 /* Copy Frameworks */,
 				0572AD5B28E4D85B000AFC79 /* Swift Format */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				057AAF6528E5FE2D004CB733 /* PBXTargetDependency */,
 			);
 			name = Uncrustifier;
 			productName = Uncrustifier;
@@ -506,12 +565,35 @@
 			mainGroup = 0572ACF828E47BCF000AFC79;
 			productRefGroup = 0572AD0228E47BCF000AFC79 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 057AAF5C28E5FE22004CB733 /* Products */;
+					ProjectRef = 057AAF5B28E5FE22004CB733 /* Highlightr.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0572AD0028E47BCF000AFC79 /* Uncrustifier */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		057AAF6128E5FE22004CB733 /* Highlightr.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Highlightr.framework;
+			remoteRef = 057AAF6028E5FE22004CB733 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		057AAF6328E5FE22004CB733 /* Highlightr.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Highlightr.framework;
+			remoteRef = 057AAF6228E5FE22004CB733 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0572ACFF28E47BCF000AFC79 /* Resources */ = {
@@ -576,6 +658,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		057AAF6528E5FE2D004CB733 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Highlightr-macOS";
+			targetProxy = 057AAF6428E5FE2D004CB733 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0572AD0828E47BCF000AFC79 /* MainMenu.xib */ = {

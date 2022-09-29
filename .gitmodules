@@ -7,3 +7,6 @@
 [submodule "Submodules/uncrustify-build"]
 	path = Submodules/uncrustify-build
 	url = https://github.com/macmade/uncrustify-build.git
+[submodule "Submodules/Highlightr"]
+	path = Submodules/Highlightr
+	url = https://github.com/raspu/Highlightr

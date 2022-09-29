@@ -32,13 +32,6 @@
                                 <size key="minSize" width="480" height="272"/>
                                 <size key="maxSize" width="480" height="10000000"/>
                                 <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                <connections>
-                                    <binding destination="-2" name="value" keyPath="self.text" id="qOc-IN-jw4">
-                                        <dictionary key="options">
-                                            <bool key="NSContinuouslyUpdatesValue" value="YES"/>
-                                        </dictionary>
-                                    </binding>
-                                </connections>
                             </textView>
                         </subviews>
                     </clipView>
