@@ -49,8 +49,12 @@ public class TextViewController: NSViewController
     {
         super.viewDidLoad()
 
-        self.textView.font               = NSFont.monospacedSystemFont( ofSize: 12, weight: .regular )
-        self.textView.textContainerInset = NSSize( width: 10, height: 10 )
+        self.textView.font                               = NSFont.monospacedSystemFont( ofSize: 12, weight: .regular )
+        self.textView.textContainerInset                 = NSSize( width: 10, height: 10 )
+        self.textView.maxSize                            = NSSize( width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude )
+        self.textView.isHorizontallyResizable            = true
+        self.textView.textContainer?.widthTracksTextView = false
+        self.textView.textContainer?.containerSize       = NSSize( width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude )
     }
 
     public func setAsFirstResponder()

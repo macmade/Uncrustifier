@@ -161,9 +161,8 @@ public class MainWindowController: NSWindowController
     {
         self.saveState()
 
-        guard let cacheDirectory = self.cacheDirectory,
-              let config         = self.configCacheFile,
-              let code           = self.codeCacheFile
+        guard let config = self.configCacheFile,
+              let code   = self.codeCacheFile
         else
         {
             self.displayError( title: "No Caches Directory", message: "The application's caches directory does not exists, or failed to be created." )
@@ -171,30 +170,14 @@ public class MainWindowController: NSWindowController
             return
         }
 
-        let exec = "/opt/homebrew/bin/uncrustify"
-
-        guard FileManager.default.fileExists( atPath: exec )
-        else
+        do
         {
-            self.displayError( title: "Cannot find Uncrustify", message: "The Uncrustify executable was not found in: \( exec )" )
-
-            return
+            self.codeController.text = try Uncrustify.format( config: config, file: code )
         }
-
-        let temp        = cacheDirectory.appendingPathComponent( "format.txt" )
-        let task        = Process()
-        task.launchPath = exec
-        task.arguments  =
-            [
-                "-c", config.path,
-                "-f", code.path,
-                "-o", temp.path,
-            ]
-
-        task.launch()
-        task.waitUntilExit()
-
-        self.codeController.text = ( try? self.readFile( url: temp ) ) ?? ""
+        catch
+        {
+            self.presentError( error )
+        }
     }
 
     private func readFile( url: URL ) throws -> String
