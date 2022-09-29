@@ -32,7 +32,13 @@ public class Config: NSObject
     public override init()
     {}
 
-    public init?( url: URL )
+    public init( text: String )
+    {
+        super.init()
+        self.parse( text: text )
+    }
+
+    public convenience init?( url: URL )
     {
         guard let data = try? Data( contentsOf: url ),
               let text = String( data: data, encoding: .utf8 )
@@ -41,13 +47,18 @@ public class Config: NSObject
             return nil
         }
 
-        super.init()
-        self.parse( text: text )
+        self.init( text: text )
     }
 
     public var data: Data
     {
-        Data()
+        self.values.reduce( into: Data() )
+        {
+            if let value = $1.data
+            {
+                $0.append( value )
+            }
+        }
     }
 
     private func parse( text: String )

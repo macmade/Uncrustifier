@@ -23,7 +23,23 @@
 		057AAF1628E578B4004CB733 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF1528E578B4004CB733 /* TextViewController.swift */; };
 		057AAF1828E578D9004CB733 /* TextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057AAF1728E578D9004CB733 /* TextViewController.xib */; };
 		057AAF1A28E57913004CB733 /* NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF1928E57913004CB733 /* NSView.swift */; };
+		057AAF4728E58428004CB733 /* uncrustify in Copy Executables */ = {isa = PBXBuildFile; fileRef = 057AAF4528E5840A004CB733 /* uncrustify */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		057AAF4928E5846B004CB733 /* Uncrustify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF4828E5846B004CB733 /* Uncrustify.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		057AAF4628E58415004CB733 /* Copy Executables */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				057AAF4728E58428004CB733 /* uncrustify in Copy Executables */,
+			);
+			name = "Copy Executables";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0572AD0128E47BCF000AFC79 /* Uncrustifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uncrustifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +107,35 @@
 		057AAF1528E578B4004CB733 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		057AAF1728E578D9004CB733 /* TextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewController.xib; sourceTree = "<group>"; };
 		057AAF1928E57913004CB733 /* NSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSView.swift; sourceTree = "<group>"; };
+		057AAF1F28E581E8004CB733 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		057AAF2228E581E8004CB733 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		057AAF2328E581E8004CB733 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		057AAF2928E5840A004CB733 /* uncrustify.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = uncrustify.1; sourceTree = "<group>"; };
+		057AAF2C28E5840A004CB733 /* ChangeLog */ = {isa = PBXFileReference; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
+		057AAF2D28E5840A004CB733 /* AUTHORS */ = {isa = PBXFileReference; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
+		057AAF2E28E5840A004CB733 /* BUGS */ = {isa = PBXFileReference; lastKnownFileType = text; path = BUGS; sourceTree = "<group>"; };
+		057AAF2F28E5840A004CB733 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		057AAF3028E5840A004CB733 /* COPYING */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		057AAF3228E5840A004CB733 /* msvc.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = msvc.cfg; sourceTree = "<group>"; };
+		057AAF3328E5840A004CB733 /* ben2.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = ben2.cfg; sourceTree = "<group>"; };
+		057AAF3428E5840A004CB733 /* xsupplicant.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = xsupplicant.cfg; sourceTree = "<group>"; };
+		057AAF3528E5840A004CB733 /* linux-indent.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = "linux-indent.cfg"; sourceTree = "<group>"; };
+		057AAF3628E5840A004CB733 /* MS-calling_conventions.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = "MS-calling_conventions.cfg"; sourceTree = "<group>"; };
+		057AAF3728E5840A004CB733 /* objc.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = objc.cfg; sourceTree = "<group>"; };
+		057AAF3828E5840A004CB733 /* freebsd.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = freebsd.cfg; sourceTree = "<group>"; };
+		057AAF3928E5840A004CB733 /* kr-indent.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = "kr-indent.cfg"; sourceTree = "<group>"; };
+		057AAF3A28E5840A004CB733 /* linux.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = linux.cfg; sourceTree = "<group>"; };
+		057AAF3B28E5840A004CB733 /* klaus.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = klaus.cfg; sourceTree = "<group>"; };
+		057AAF3C28E5840A004CB733 /* ben.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = ben.cfg; sourceTree = "<group>"; };
+		057AAF3D28E5840A004CB733 /* mono.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = mono.cfg; sourceTree = "<group>"; };
+		057AAF3E28E5840A004CB733 /* gnu-indent.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = "gnu-indent.cfg"; sourceTree = "<group>"; };
+		057AAF3F28E5840A004CB733 /* defaults.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = defaults.cfg; sourceTree = "<group>"; };
+		057AAF4028E5840A004CB733 /* sun.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = sun.cfg; sourceTree = "<group>"; };
+		057AAF4128E5840A004CB733 /* d.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = d.cfg; sourceTree = "<group>"; };
+		057AAF4228E5840A004CB733 /* amxmodx.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = amxmodx.cfg; sourceTree = "<group>"; };
+		057AAF4328E5840A004CB733 /* HELP */ = {isa = PBXFileReference; lastKnownFileType = text; path = HELP; sourceTree = "<group>"; };
+		057AAF4528E5840A004CB733 /* uncrustify */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = uncrustify; sourceTree = "<group>"; };
+		057AAF4828E5846B004CB733 /* Uncrustify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uncrustify.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				0572AD1B28E4D6B5000AFC79 /* xcconfig */,
+				057AAF1C28E581E8004CB733 /* uncrustify-build */,
 				0572AD0328E47BCF000AFC79 /* Uncrustifier */,
 				0572AD0228E47BCF000AFC79 /* Products */,
 			);
@@ -143,6 +189,7 @@
 				057AAF1B28E57929004CB733 /* Extensions */,
 				0572AD1328E47C6A000AFC79 /* MainWindowController.swift */,
 				057AAF1528E578B4004CB733 /* TextViewController.swift */,
+				057AAF4828E5846B004CB733 /* Uncrustify.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -296,6 +343,106 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		057AAF1C28E581E8004CB733 /* uncrustify-build */ = {
+			isa = PBXGroup;
+			children = (
+				057AAF1D28E581E8004CB733 /* dist */,
+				057AAF1F28E581E8004CB733 /* Makefile */,
+				057AAF2228E581E8004CB733 /* README.md */,
+				057AAF2328E581E8004CB733 /* .gitignore */,
+			);
+			name = "uncrustify-build";
+			path = "Submodules/uncrustify-build";
+			sourceTree = "<group>";
+		};
+		057AAF1D28E581E8004CB733 /* dist */ = {
+			isa = PBXGroup;
+			children = (
+				057AAF4428E5840A004CB733 /* bin */,
+				057AAF2628E5840A004CB733 /* share */,
+			);
+			path = dist;
+			sourceTree = "<group>";
+		};
+		057AAF2628E5840A004CB733 /* share */ = {
+			isa = PBXGroup;
+			children = (
+				057AAF2728E5840A004CB733 /* man */,
+				057AAF2A28E5840A004CB733 /* doc */,
+			);
+			path = share;
+			sourceTree = "<group>";
+		};
+		057AAF2728E5840A004CB733 /* man */ = {
+			isa = PBXGroup;
+			children = (
+				057AAF2828E5840A004CB733 /* man1 */,
+			);
+			path = man;
+			sourceTree = "<group>";
+		};
+		057AAF2828E5840A004CB733 /* man1 */ = {
+			isa = PBXGroup;
+			children = (
+				057AAF2928E5840A004CB733 /* uncrustify.1 */,
+			);
+			path = man1;
+			sourceTree = "<group>";
+		};
+		057AAF2A28E5840A004CB733 /* doc */ = {
+			isa = PBXGroup;
+			children = (
+				057AAF2B28E5840A004CB733 /* uncrustify */,
+			);
+			path = doc;
+			sourceTree = "<group>";
+		};
+		057AAF2B28E5840A004CB733 /* uncrustify */ = {
+			isa = PBXGroup;
+			children = (
+				057AAF2C28E5840A004CB733 /* ChangeLog */,
+				057AAF2D28E5840A004CB733 /* AUTHORS */,
+				057AAF2E28E5840A004CB733 /* BUGS */,
+				057AAF2F28E5840A004CB733 /* README.md */,
+				057AAF3028E5840A004CB733 /* COPYING */,
+				057AAF3128E5840A004CB733 /* examples */,
+				057AAF4328E5840A004CB733 /* HELP */,
+			);
+			path = uncrustify;
+			sourceTree = "<group>";
+		};
+		057AAF3128E5840A004CB733 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				057AAF3228E5840A004CB733 /* msvc.cfg */,
+				057AAF3328E5840A004CB733 /* ben2.cfg */,
+				057AAF3428E5840A004CB733 /* xsupplicant.cfg */,
+				057AAF3528E5840A004CB733 /* linux-indent.cfg */,
+				057AAF3628E5840A004CB733 /* MS-calling_conventions.cfg */,
+				057AAF3728E5840A004CB733 /* objc.cfg */,
+				057AAF3828E5840A004CB733 /* freebsd.cfg */,
+				057AAF3928E5840A004CB733 /* kr-indent.cfg */,
+				057AAF3A28E5840A004CB733 /* linux.cfg */,
+				057AAF3B28E5840A004CB733 /* klaus.cfg */,
+				057AAF3C28E5840A004CB733 /* ben.cfg */,
+				057AAF3D28E5840A004CB733 /* mono.cfg */,
+				057AAF3E28E5840A004CB733 /* gnu-indent.cfg */,
+				057AAF3F28E5840A004CB733 /* defaults.cfg */,
+				057AAF4028E5840A004CB733 /* sun.cfg */,
+				057AAF4128E5840A004CB733 /* d.cfg */,
+				057AAF4228E5840A004CB733 /* amxmodx.cfg */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		057AAF4428E5840A004CB733 /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				057AAF4528E5840A004CB733 /* uncrustify */,
+			);
+			path = bin;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -306,6 +453,7 @@
 				0572ACFD28E47BCF000AFC79 /* Sources */,
 				0572ACFE28E47BCF000AFC79 /* Frameworks */,
 				0572ACFF28E47BCF000AFC79 /* Resources */,
+				057AAF4628E58415004CB733 /* Copy Executables */,
 				0572AD5B28E4D85B000AFC79 /* Swift Format */,
 			);
 			buildRules = (
@@ -399,6 +547,7 @@
 				057AAF1A28E57913004CB733 /* NSView.swift in Sources */,
 				0572AD5D28E4DC43000AFC79 /* Config.swift in Sources */,
 				0572AD0528E47BCF000AFC79 /* ApplicationDelegate.swift in Sources */,
+				057AAF4928E5846B004CB733 /* Uncrustify.swift in Sources */,
 				0572AD1828E4C0F5000AFC79 /* NSError.swift in Sources */,
 				057AAF1628E578B4004CB733 /* TextViewController.swift in Sources */,
 				0572AD6128E4E3AA000AFC79 /* ConfigValueViewController.swift in Sources */,

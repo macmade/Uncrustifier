@@ -4,3 +4,6 @@
 [submodule "Submodules/cgl"]
 	path = Submodules/cgl
 	url = https://github.com/macmade/cgl.git
+[submodule "Submodules/uncrustify-build"]
+	path = Submodules/uncrustify-build
+	url = https://github.com/macmade/uncrustify-build.git

@@ -41,4 +41,19 @@ public class ConfigValue: NSObject
     {
         "\( super.description ): \( self.name )"
     }
+
+    public var data: Data?
+    {
+        var lines: [ String ] = []
+
+        self.comments.forEach
+        {
+            lines.append( "# \( $0 )" )
+        }
+
+        lines.append( "\( self.name ) = \( self.value )" )
+        lines.append( "\n" )
+
+        return lines.joined( separator: "\n" ).data( using: .utf8 )
+    }
 }

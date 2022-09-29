@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="codeContainer" destination="Cx6-Q5-RAJ" id="bOz-CC-oDo"/>
                 <outlet property="configContainer" destination="hXn-c6-oRN" id="1in-H5-wZW"/>
+                <outlet property="optionsMenu" destination="gR9-6q-ZIH" id="t8Y-Ey-vYC"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="92p-XF-yku"/>
             </connections>
         </customObject>
@@ -52,41 +53,25 @@
                         <rect key="frame" x="0.0" y="44" width="800" height="5"/>
                     </box>
                     <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeC-3g-opZ">
-                        <rect key="frame" x="8" y="8" width="334" height="30"/>
+                        <rect key="frame" x="8" y="8" width="667" height="30"/>
                         <searchFieldCell key="cell" controlSize="large" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="x9J-KI-ejy">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </searchFieldCell>
                     </searchField>
-                    <button verticalHuggingPriority="750" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2fN-Ed-bOs">
-                        <rect key="frame" x="344" y="3" width="124" height="40"/>
-                        <buttonCell key="cell" type="push" title="Load Config" bezelStyle="rounded" image="text.badge.plus" catalog="system" imagePosition="leading" alignment="center" controlSize="large" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SqE-OY-I9b">
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="pjp-IZ-uAn">
+                        <rect key="frame" x="683" y="10" width="20.5" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="81t-KE-4Wl"/>
+                            <constraint firstAttribute="height" constant="20" id="GoU-Pp-d61"/>
+                        </constraints>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="gearshape.fill" catalog="system" imagePosition="only" alignment="center" controlSize="large" imageScaling="proportionallyUpOrDown" inset="2" id="EFf-uL-BMC">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="loadConfig:" target="-2" id="13D-6q-Pl9"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bI9-rc-tld">
-                        <rect key="frame" x="464" y="3" width="133" height="40"/>
-                        <buttonCell key="cell" type="push" title="Export Config" bezelStyle="rounded" image="NSShareTemplate" imagePosition="leading" alignment="center" controlSize="large" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CDB-WU-IJX">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="exportConfig:" target="-2" id="smt-W9-IBY"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JjZ-Mu-YRv">
-                        <rect key="frame" x="593" y="3" width="116" height="40"/>
-                        <buttonCell key="cell" type="push" title="Load Code" bezelStyle="rounded" image="text.badge.plus" catalog="system" imagePosition="leading" alignment="center" controlSize="large" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="R3N-2t-jOa">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="loadCode:" target="-2" id="BE5-y4-XTO"/>
+                            <action selector="showOptions:" target="-2" id="MWa-En-Soq"/>
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VaB-wI-qlS">
@@ -105,20 +90,16 @@ DQ
                 </subviews>
                 <constraints>
                     <constraint firstItem="yeC-3g-opZ" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="8" id="3w2-DC-scx"/>
-                    <constraint firstItem="yeC-3g-opZ" firstAttribute="centerY" secondItem="2fN-Ed-bOs" secondAttribute="centerY" id="4WU-ee-bvy"/>
+                    <constraint firstItem="pjp-IZ-uAn" firstAttribute="centerY" secondItem="VaB-wI-qlS" secondAttribute="centerY" id="4nJ-Xf-MGn"/>
                     <constraint firstAttribute="trailing" secondItem="5rF-tW-WHj" secondAttribute="trailing" id="7mO-V4-Pkj"/>
-                    <constraint firstItem="bI9-rc-tld" firstAttribute="centerY" secondItem="2fN-Ed-bOs" secondAttribute="centerY" id="DSZ-7X-lVb"/>
+                    <constraint firstItem="pjp-IZ-uAn" firstAttribute="leading" secondItem="yeC-3g-opZ" secondAttribute="trailing" constant="8" symbolic="YES" id="Er4-IN-rt3"/>
+                    <constraint firstItem="VaB-wI-qlS" firstAttribute="leading" secondItem="pjp-IZ-uAn" secondAttribute="trailing" constant="8" symbolic="YES" id="HXF-fC-Ci6"/>
+                    <constraint firstItem="pjp-IZ-uAn" firstAttribute="centerY" secondItem="yeC-3g-opZ" secondAttribute="centerY" id="LPt-mB-YEe"/>
                     <constraint firstItem="Syf-0s-koy" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="WR8-vo-zh3"/>
-                    <constraint firstItem="JjZ-Mu-YRv" firstAttribute="centerY" secondItem="bI9-rc-tld" secondAttribute="centerY" id="bLY-wz-M6S"/>
                     <constraint firstAttribute="bottom" secondItem="yeC-3g-opZ" secondAttribute="bottom" constant="8" id="bka-7e-e9o"/>
-                    <constraint firstItem="VaB-wI-qlS" firstAttribute="leading" secondItem="JjZ-Mu-YRv" secondAttribute="trailing" constant="8" id="cUS-ZP-C0f"/>
                     <constraint firstAttribute="trailing" secondItem="VaB-wI-qlS" secondAttribute="trailing" constant="8" id="iJ7-Ns-jiE"/>
-                    <constraint firstItem="JjZ-Mu-YRv" firstAttribute="leading" secondItem="bI9-rc-tld" secondAttribute="trailing" constant="8" id="iYb-R1-rvz"/>
-                    <constraint firstItem="JjZ-Mu-YRv" firstAttribute="centerY" secondItem="VaB-wI-qlS" secondAttribute="centerY" id="lmg-kF-wSf"/>
-                    <constraint firstItem="2fN-Ed-bOs" firstAttribute="leading" secondItem="yeC-3g-opZ" secondAttribute="trailing" constant="8" id="mfG-RL-Me6"/>
                     <constraint firstItem="5rF-tW-WHj" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="pRC-zx-aeh"/>
                     <constraint firstItem="5rF-tW-WHj" firstAttribute="top" secondItem="Syf-0s-koy" secondAttribute="bottom" id="uDH-ue-Jbv"/>
-                    <constraint firstItem="bI9-rc-tld" firstAttribute="leading" secondItem="2fN-Ed-bOs" secondAttribute="trailing" constant="8" id="vfl-hd-Ooh"/>
                     <constraint firstAttribute="trailing" secondItem="Syf-0s-koy" secondAttribute="trailing" id="wDZ-Gb-ES6"/>
                     <constraint firstItem="yeC-3g-opZ" firstAttribute="top" secondItem="5rF-tW-WHj" secondAttribute="bottom" constant="8" id="yaj-i2-OZt"/>
                     <constraint firstItem="Syf-0s-koy" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="yue-34-nhK"/>
@@ -126,9 +107,42 @@ DQ
             </view>
             <point key="canvasLocation" x="586" y="339"/>
         </window>
+        <menu id="gR9-6q-ZIH">
+            <items>
+                <menuItem title="Load Configuration File..." image="text.badge.plus" catalog="system" id="qxc-q1-Ulx">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="loadConfig:" target="-2" id="OS7-JT-d9Y"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Load Code..." image="text.badge.plus" catalog="system" id="tA5-tf-yPE">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="loadCode:" target="-2" id="9KE-QN-FB1"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="621-Vz-t5n"/>
+                <menuItem title="Export Configuration File..." image="NSShareTemplate" id="uRW-ee-YuE">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="exportConfig:" target="-2" id="oiQ-os-9l0"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="iDa-LD-pdC"/>
+                <menuItem title="Reload Default Configuration" image="NSRefreshTemplate" id="YyO-Xt-oqc">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="reloadDefaultConfig:" target="-2" id="Qe2-hX-ATS"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="-84" y="270"/>
+        </menu>
     </objects>
     <resources>
+        <image name="NSRefreshTemplate" width="14" height="16"/>
         <image name="NSShareTemplate" width="15" height="17"/>
+        <image name="gearshape.fill" catalog="system" width="16" height="16"/>
         <image name="text.badge.checkmark.rtl" catalog="system" width="16" height="14"/>
         <image name="text.badge.plus" catalog="system" width="16" height="14"/>
     </resources>

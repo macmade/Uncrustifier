@@ -28,6 +28,7 @@ public class MainWindowController: NSWindowController
 {
     @IBOutlet private var configContainer: NSView!
     @IBOutlet private var codeContainer:   NSView!
+    @IBOutlet private var optionsMenu:     NSMenu!
 
     @objc private dynamic var configController = ConfigViewController()
     @objc private dynamic var codeController   = TextViewController()
@@ -80,6 +81,21 @@ public class MainWindowController: NSWindowController
     }
 
     @IBAction
+    private func showOptions( _ sender: Any? )
+    {
+        guard let view  = sender as? NSView,
+              let event = NSApp.currentEvent
+        else
+        {
+            NSSound.beep()
+
+            return
+        }
+
+        NSMenu.popUpContextMenu( self.optionsMenu, with: event, for: view )
+    }
+
+    @IBAction
     private func loadConfig( _ sender: Any? )
     {
         self.chooseFile
@@ -124,6 +140,20 @@ public class MainWindowController: NSWindowController
                 self.displayError( error )
             }
         }
+    }
+
+    @IBAction
+    private func reloadDefaultConfig( _ sender: Any? )
+    {
+        guard let config = try? Uncrustify.defaultConfig()
+        else
+        {
+            self.displayError( message: "Cannot load the default Uncrustify configuration." )
+
+            return
+        }
+
+        self.configController.config = Config( text: config )
     }
 
     @IBAction
@@ -198,6 +228,10 @@ public class MainWindowController: NSWindowController
         if let url = self.configCacheFile, let config = Config( url: url )
         {
             self.configController.config = config
+        }
+        else if let config = try? Uncrustify.defaultConfig()
+        {
+            self.configController.config = Config( text: config )
         }
 
         if let url = self.codeCacheFile, let text = try? self.readFile( url: url )
