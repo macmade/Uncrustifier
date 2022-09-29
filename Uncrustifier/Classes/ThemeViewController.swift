@@ -28,7 +28,7 @@ import Highlightr
 public class ThemeWindowController: NSWindowController
 {
     @objc private dynamic var themes = [ String ]()
-    @objc public  dynamic var theme  = UserDefaults.standard.string( forKey: "theme" ) ?? "atom-one-dark"
+    @objc public  dynamic var theme  = UserDefaults.standard.string( forKey: "theme" ) ?? "vs2015"
 
     public init()
     {

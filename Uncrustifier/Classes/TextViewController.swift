@@ -80,7 +80,7 @@ public class TextViewController: NSViewController
         }
         else
         {
-            self.textStorage.highlightr.setTheme( to: "atom-one-dark" )
+            self.textStorage.highlightr.setTheme( to: "vs2015" )
         }
 
         self.textView.font                               = NSFont.monospacedSystemFont( ofSize: 12, weight: .regular )

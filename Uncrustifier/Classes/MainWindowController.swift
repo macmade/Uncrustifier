@@ -73,7 +73,7 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
 
         if UserDefaults.standard.string( forKey: "theme" ) == nil
         {
-            UserDefaults.standard.set( "atom-one-dark", forKey: "theme" )
+            UserDefaults.standard.set( "vs2015", forKey: "theme" )
         }
 
         if let cacheDirectory = NSSearchPathForDirectoriesInDomains( .cachesDirectory, .userDomainMask, true ).first,
