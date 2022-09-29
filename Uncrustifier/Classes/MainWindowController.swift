@@ -165,6 +165,22 @@ public class MainWindowController: NSWindowController
     }
 
     @IBAction
+    private func reloadExampleCode( _ sender: Any? )
+    {
+        guard let url  = Bundle.main.url( forResource: "CFBase", withExtension: "txt" ),
+              let code = try? self.readFile( url: url )
+        else
+        {
+            self.displayError( message: "Cannot load the example code file." )
+
+            return
+        }
+
+        self.codeController.text = code
+        self.language            = 0
+    }
+
+    @IBAction
     private func format( _ sender: Any? )
     {
         self.saveState()
@@ -234,6 +250,10 @@ public class MainWindowController: NSWindowController
         }
 
         if let url = self.codeCacheFile, let text = try? self.readFile( url: url )
+        {
+            self.codeController.text = text
+        }
+        else if let url = Bundle.main.url( forResource: "CFBase", withExtension: "txt" ), let text = try? self.readFile( url: url )
         {
             self.codeController.text = text
         }

@@ -27,7 +27,9 @@ import Cocoa
 public class ConfigValueViewController: NSViewController
 {
     @objc public private( set ) dynamic var value:      ConfigValue
+    @objc public private( set ) dynamic var values:     [ String ] = []
     @objc public private( set ) dynamic var comment:    String
+    @objc public private( set ) dynamic var hasValues = false
 
     @objc public dynamic var alternate = false
     {
@@ -48,6 +50,21 @@ public class ConfigValueViewController: NSViewController
         self.value   = value
         let comments = value.comments.map { $0.dropFirst( 1 ).trimmingCharacters( in: .whitespaces ) }
         self.comment = String( comments.joined( separator: "\n" ) )
+
+        if self.value.value == "true" || self.value.value == "false"
+        {
+            self.values    = [ "true", "false" ]
+            self.hasValues = true
+        }
+        else if self.value.value == "ignore" || self.value.value == "add" || self.value.value == "remove" || self.value.value == "force" || self.value.value == "not_defined"
+        {
+            self.values    = [ "ignore", "add", "remove", "force", "not_defined" ]
+            self.hasValues = true
+        }
+        else
+        {
+            self.values.append( self.value.value )
+        }
 
         super.init( nibName: nil, bundle: nil )
     }

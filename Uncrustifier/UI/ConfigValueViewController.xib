@@ -14,17 +14,17 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe" customClass="BackgroundView" customModule="Uncrustifier" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="517" height="108"/>
+            <rect key="frame" x="0.0" y="0.0" width="517" height="136"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="s7n-oX-CzK">
-                    <rect key="frame" x="0.0" y="105" width="517" height="5"/>
+                    <rect key="frame" x="0.0" y="133" width="517" height="5"/>
                 </box>
                 <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LEU-Bo-Tcm">
-                    <rect key="frame" x="10" y="10" width="497" height="87"/>
+                    <rect key="frame" x="10" y="10" width="497" height="115"/>
                     <subviews>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pay-xm-pfE">
-                            <rect key="frame" x="-2" y="71" width="40" height="16"/>
+                            <rect key="frame" x="-2" y="99" width="40" height="16"/>
                             <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" title="Label" id="fTk-aX-1F3">
                                 <font key="font" textStyle="headline" name=".SFNS-Bold"/>
                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -36,7 +36,7 @@
                             </connections>
                         </textField>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vCS-kH-s7y">
-                            <rect key="frame" x="-2" y="50" width="31" height="13"/>
+                            <rect key="frame" x="-2" y="78" width="31" height="13"/>
                             <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" title="Label" id="xhc-aL-QrW">
                                 <font key="font" textStyle="caption1" name=".SFNS-Regular"/>
                                 <color key="textColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
@@ -53,16 +53,40 @@
                             </connections>
                         </textField>
                         <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oYA-S7-DY1">
-                            <rect key="frame" x="0.0" y="21" width="497" height="21"/>
+                            <rect key="frame" x="0.0" y="49" width="497" height="21"/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="maa-8u-dnS">
                                 <font key="font" metaFont="system"/>
                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                             <connections>
+                                <binding destination="-2" name="hidden" keyPath="self.hasValues" id="UgN-yq-0Pv"/>
                                 <binding destination="-2" name="value" keyPath="self.value.value" id="k1B-XC-qPJ"/>
                             </connections>
                         </textField>
+                        <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="d9Q-aS-Pie">
+                            <rect key="frame" x="-3" y="17" width="504" height="25"/>
+                            <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="ibD-w2-cGf" id="nv3-PF-mcM">
+                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="menu"/>
+                                <menu key="menu" id="XZf-PW-iu6">
+                                    <items>
+                                        <menuItem title="Item 1" state="on" id="ibD-w2-cGf"/>
+                                        <menuItem title="Item 2" id="XMa-UB-o8a"/>
+                                        <menuItem title="Item 3" id="HpX-6g-Uiw"/>
+                                    </items>
+                                </menu>
+                            </popUpButtonCell>
+                            <connections>
+                                <binding destination="-2" name="contentValues" keyPath="self.values" id="0jc-gv-EHg"/>
+                                <binding destination="-2" name="hidden" keyPath="self.hasValues" id="W4b-gZ-l1k">
+                                    <dictionary key="options">
+                                        <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                    </dictionary>
+                                </binding>
+                                <binding destination="-2" name="selectedValue" keyPath="self.value.value" previousBinding="0jc-gv-EHg" id="sjQ-YW-Kgg"/>
+                            </connections>
+                        </popUpButton>
                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ery-bw-xB1">
                             <rect key="frame" x="-2" y="0.0" width="501" height="13"/>
                             <textFieldCell key="cell" controlSize="mini" selectable="YES" title="Multiline Label" id="y9c-SH-9s7">
@@ -80,7 +104,9 @@
                         <constraint firstAttribute="trailing" secondItem="ery-bw-xB1" secondAttribute="trailing" id="CUf-tx-Xa8"/>
                         <constraint firstItem="ery-bw-xB1" firstAttribute="leading" secondItem="LEU-Bo-Tcm" secondAttribute="leading" id="Ern-bX-S3x"/>
                         <constraint firstItem="Pay-xm-pfE" firstAttribute="leading" secondItem="LEU-Bo-Tcm" secondAttribute="leading" id="QUB-Yp-wvq"/>
+                        <constraint firstAttribute="trailing" secondItem="d9Q-aS-Pie" secondAttribute="trailing" id="adh-Sa-Uru"/>
                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Pay-xm-pfE" secondAttribute="trailing" id="fwC-bK-EvM"/>
+                        <constraint firstItem="d9Q-aS-Pie" firstAttribute="leading" secondItem="LEU-Bo-Tcm" secondAttribute="leading" id="wiq-Ku-lqB"/>
                         <constraint firstAttribute="trailing" secondItem="oYA-S7-DY1" secondAttribute="trailing" id="yKD-gv-1LV"/>
                     </constraints>
                     <visibilityPriorities>
@@ -88,8 +114,10 @@
                         <integer value="1000"/>
                         <integer value="1000"/>
                         <integer value="1000"/>
+                        <integer value="1000"/>
                     </visibilityPriorities>
                     <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
                         <real value="3.4028234663852886e+38"/>
                         <real value="3.4028234663852886e+38"/>
                         <real value="3.4028234663852886e+38"/>

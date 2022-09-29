@@ -161,6 +161,12 @@ DQ
                         <action selector="reloadDefaultConfig:" target="-2" id="Qe2-hX-ATS"/>
                     </connections>
                 </menuItem>
+                <menuItem title="Reload Example Code" image="NSRefreshTemplate" id="vfG-32-PSf">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="reloadExampleCode:" target="-2" id="GKF-uq-umk"/>
+                    </connections>
+                </menuItem>
             </items>
             <point key="canvasLocation" x="-84" y="270"/>
         </menu>
