@@ -280,4 +280,27 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
     {
         self.codeController.chooseTheme( sender )
     }
+
+    @IBAction
+    private func toggleSorting( _ sender: Any? )
+    {
+        self.configController.sortValues = self.configController.sortValues == false
+    }
+
+    public func menuWillOpen( _ menu: NSMenu )
+    {
+        guard menu == self.optionsMenu
+        else
+        {
+            return
+        }
+
+        menu.items.forEach
+        {
+            if $0.action == #selector( self.toggleSorting( _: ) )
+            {
+                $0.state = self.configController.sortValues ? .on : .off
+            }
+        }
+    }
 }

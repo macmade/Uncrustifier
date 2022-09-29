@@ -135,6 +135,13 @@ DQ
         </window>
         <menu id="gR9-6q-ZIH">
             <items>
+                <menuItem title="Sort Configuration Values Alphabetically" image="arrow.down.app" catalog="system" id="pfU-4Y-3SA">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="toggleSorting:" target="-2" id="rE4-eT-QUP"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="MT4-Os-r5V"/>
                 <menuItem title="Load Configuration File..." image="text.badge.plus" catalog="system" id="qxc-q1-Ulx">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -175,12 +182,16 @@ DQ
                     </connections>
                 </menuItem>
             </items>
+            <connections>
+                <outlet property="delegate" destination="-2" id="l7b-ZG-hH5"/>
+            </connections>
             <point key="canvasLocation" x="-84" y="270"/>
         </menu>
     </objects>
     <resources>
         <image name="NSRefreshTemplate" width="14" height="16"/>
         <image name="NSShareTemplate" width="15" height="17"/>
+        <image name="arrow.down.app" catalog="system" width="15" height="14"/>
         <image name="gearshape.fill" catalog="system" width="16" height="16"/>
         <image name="pencil.tip.crop.circle" catalog="system" width="15" height="15"/>
         <image name="text.badge.checkmark.rtl" catalog="system" width="16" height="14"/>

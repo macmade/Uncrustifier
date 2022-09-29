@@ -39,18 +39,27 @@ public class ConfigViewController: NSViewController, NSCollectionViewDelegate, N
                 }
             }
 
-            self.searchText = ""
+            self.rearrangeControllers()
         }
     }
 
     @objc private dynamic var controllers:         [ ConfigValueViewController ] = []
     @objc private dynamic var arrangedControllers: [ ConfigValueViewController ] = []
 
-    @objc private dynamic var searchText = ""
+    @objc public dynamic var searchText = ""
     {
         didSet
         {
-            self.search( text: self.searchText )
+            self.rearrangeControllers()
+        }
+    }
+
+    @objc public dynamic var sortValues = UserDefaults.standard.bool( forKey: "sortConfig" )
+    {
+        didSet
+        {
+            self.rearrangeControllers()
+            UserDefaults.standard.set( self.sortValues, forKey: "sortConfig" )
         }
     }
 
@@ -108,22 +117,20 @@ public class ConfigViewController: NSViewController, NSCollectionViewDelegate, N
         return NSSize( width: controller.view.frame.size.width, height: controller.view.frame.size.height )
     }
 
-    private func search( text: String )
+    private func rearrangeControllers()
     {
-        if text.isEmpty
+        var controllers = self.controllers
+
+        if self.searchText.isEmpty == false
         {
-            self.arrangedControllers = self.controllers
-        }
-        else
-        {
-            let words: [ String ] = text.components( separatedBy: " " ).compactMap
+            let words: [ String ] = self.searchText.components( separatedBy: " " ).compactMap
             {
                 let text = $0.trimmingCharacters( in: .whitespaces ).lowercased()
 
                 return text.isEmpty ? nil : text
             }
 
-            self.arrangedControllers = self.controllers.filter
+            controllers = controllers.filter
             {
                 for word in words
                 {
@@ -136,6 +143,16 @@ public class ConfigViewController: NSViewController, NSCollectionViewDelegate, N
                 return true
             }
         }
+
+        if self.sortValues
+        {
+            controllers.sort
+            {
+                $0.value.name < $1.value.name
+            }
+        }
+
+        self.arrangedControllers = controllers
 
         self.collectionView?.reloadData()
     }
