@@ -26,22 +26,16 @@ import Cocoa
 
 public class MainWindowController: NSWindowController
 {
-    @IBOutlet private var scrollView:     NSScrollView!
-    @IBOutlet private var configTextView: NSTextView!
-    @IBOutlet private var codeTextView:   NSTextView!
-    @IBOutlet private var sidebarWidth:   NSLayoutConstraint!
+    @IBOutlet private var configContainer: NSView!
+    @IBOutlet private var codeContainer:   NSView!
 
-    @objc private dynamic var config       = ""
-    @objc private dynamic var code         = ""
-    @objc private dynamic var searchFilter = ""
+    @objc private dynamic var configController = ConfigViewController()
+    @objc private dynamic var codeController   = TextViewController()
 
-    private var cacheDirectory:       URL?
-    private var configCacheFile:      URL?
-    private var codeCacheFile:        URL?
-    private var windowObserver:       Any?
-    private var searchFilterObserver: NSKeyValueObservation?
-
-    private var controllers: [ ConfigValueViewController ] = []
+    private var cacheDirectory:  URL?
+    private var configCacheFile: URL?
+    private var codeCacheFile:   URL?
+    private var windowObserver:  Any?
 
     public init()
     {
@@ -62,9 +56,6 @@ public class MainWindowController: NSWindowController
     {
         super.windowDidLoad()
 
-        self.configureTextView( self.configTextView )
-        self.configureTextView( self.codeTextView )
-
         if let cacheDirectory = NSSearchPathForDirectoriesInDomains( .cachesDirectory, .userDomainMask, true ).first,
            let bundleID       = Bundle.main.bundleIdentifier
         {
@@ -83,23 +74,9 @@ public class MainWindowController: NSWindowController
             [ weak self ] _ in self?.saveState()
         }
 
-        self.displayConfig()
-
-        self.searchFilterObserver = self.observe( \.searchFilter )
-        {
-            [ weak self ] _, _ in
-
-            guard let self = self
-            else
-            {
-                return
-            }
-
-            self.controllers.forEach
-            {
-                $0.view.isHidden = self.searchFilter.isEmpty ? false : $0.value.name.contains( self.searchFilter ) == false
-            }
-        }
+        self.configContainer.addFillingSubview( self.configController.view )
+        self.codeContainer.addFillingSubview( self.codeController.view )
+        self.codeController.setAsFirstResponder()
     }
 
     @IBAction
@@ -107,32 +84,27 @@ public class MainWindowController: NSWindowController
     {
         self.chooseFile
         {
-            do
+            guard let url = $0
+            else
             {
-                if let url = $0
-                {
-                    self.config = try self.readFile( url: url )
-                }
+                return
             }
-            catch
+
+            guard let config = Config( url: url )
+            else
             {
-                self.displayError( error )
+                self.displayError( title: "Invalid Config", message: "Cannot read configuration file at \( url.path )." )
+                return
             }
+
+            self.configController.config = config
         }
     }
 
     @IBAction
     private func exportConfig( _ sender: Any? )
     {
-        guard let data = self.config.data( using: .utf8 )
-        else
-        {
-            self.displayError( message: "Cannot export configuration as UTF-8 text." )
-
-            return
-        }
-
-        self.saveFile( data: data, name: "config", extension: "cfg" )
+        self.saveFile( data: self.configController.config.data, name: "config", extension: "cfg" )
     }
 
     @IBAction
@@ -144,7 +116,7 @@ public class MainWindowController: NSWindowController
             {
                 if let url = $0
                 {
-                    self.code = try self.readFile( url: url )
+                    self.codeController.text = try self.readFile( url: url )
                 }
             }
             catch
@@ -192,54 +164,7 @@ public class MainWindowController: NSWindowController
         task.launch()
         task.waitUntilExit()
 
-        self.code = ( try? self.readFile( url: temp ) ) ?? ""
-    }
-
-    private func displayConfig()
-    {
-        guard let configCacheFile = self.configCacheFile,
-              let config          = Config( url: configCacheFile )
-        else
-        {
-            return
-        }
-
-        self.controllers = config.values.map
-        {
-            ConfigValueViewController( value: $0 )
-        }
-
-        let stack                    = NSStackView( views: self.controllers.map { $0.view } )
-        stack.orientation            = .vertical
-        stack.alignment              = .leading
-        stack.spacing                = 0
-        stack.detachesHiddenViews    = true
-        self.scrollView.documentView = stack
-
-        stack.setHuggingPriority( .windowSizeStayPut, for: .horizontal )
-
-        if self.window?.isVisible == false
-        {
-            DispatchQueue.main.async
-            {
-                self.scrollView.verticalScroller?.floatValue = 0
-
-                self.scrollView.contentView.scroll( NSPoint( x: 0, y: NSMaxY( stack.frame ) - self.scrollView.bounds.size.height ) )
-            }
-        }
-
-        DispatchQueue.main.async
-        {
-            self.sidebarWidth.constant = stack.frame.size.width
-        }
-
-        self.window?.makeFirstResponder( self.codeTextView )
-    }
-
-    private func configureTextView( _ view: NSTextView )
-    {
-        view.font               = NSFont.monospacedSystemFont( ofSize: 12, weight: .regular )
-        view.textContainerInset = NSSize( width: 10, height: 10 )
+        self.codeController.text = ( try? self.readFile( url: temp ) ) ?? ""
     }
 
     private func readFile( url: URL ) throws -> String
@@ -257,12 +182,12 @@ public class MainWindowController: NSWindowController
 
     private func saveState()
     {
-        if let url = self.configCacheFile, let data = self.config.data( using: .utf8 )
+        if let url = self.configCacheFile
         {
-            try? data.write( to: url )
+            try? self.configController.config.data.write( to: url )
         }
 
-        if let url = self.codeCacheFile, let data = self.code.data( using: .utf8 )
+        if let url = self.codeCacheFile, let data = self.codeController.text.data( using: .utf8 )
         {
             try? data.write( to: url )
         }
@@ -270,14 +195,14 @@ public class MainWindowController: NSWindowController
 
     private func restoreState()
     {
-        if let url = self.configCacheFile, let text = try? self.readFile( url: url )
+        if let url = self.configCacheFile, let config = Config( url: url )
         {
-            self.config = text
+            self.configController.config = config
         }
 
         if let url = self.codeCacheFile, let text = try? self.readFile( url: url )
         {
-            self.code = text
+            self.codeController.text = text
         }
     }
 }

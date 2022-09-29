@@ -24,9 +24,13 @@
 
 import Foundation
 
-public class Config
+@objc
+public class Config: NSObject
 {
-    public private( set ) var values: [ ConfigValue ] = []
+    public private( set ) dynamic var values: [ ConfigValue ] = []
+
+    public override init()
+    {}
 
     public init?( url: URL )
     {
@@ -37,7 +41,13 @@ public class Config
             return nil
         }
 
+        super.init()
         self.parse( text: text )
+    }
+
+    public var data: Data
+    {
+        Data()
     }
 
     private func parse( text: String )
