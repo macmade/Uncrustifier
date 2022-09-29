@@ -38,10 +38,33 @@ public class ConfigViewController: NSViewController, NSCollectionViewDelegate, N
                     case .right( let value ): return ConfigValueViewController( value: value )
                 }
             }
+
+            self.searchText = ""
         }
     }
 
-    @objc private dynamic var controllers: [ ConfigValueViewController ] = []
+    @objc private dynamic var controllers:         [ ConfigValueViewController ] = []
+    @objc private dynamic var arrangedControllers: [ ConfigValueViewController ] = []
+
+    @objc private dynamic var searchText = ""
+    {
+        didSet
+        {
+            if self.searchText.isEmpty
+            {
+                self.arrangedControllers = self.controllers
+            }
+            else
+            {
+                self.arrangedControllers = self.controllers.filter
+                {
+                    $0.value.name.lowercased().contains( self.searchText.lowercased() )
+                }
+            }
+
+            self.collectionView?.reloadData()
+        }
+    }
 
     @IBOutlet private var collectionView: NSCollectionView!
 
@@ -67,7 +90,7 @@ public class ConfigViewController: NSViewController, NSCollectionViewDelegate, N
 
     public func collectionView( _ collectionView: NSCollectionView, numberOfItemsInSection section: Int ) -> Int
     {
-        self.controllers.count
+        self.arrangedControllers.count
     }
 
     public func collectionView( _ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath ) -> NSCollectionViewItem
@@ -76,7 +99,7 @@ public class ConfigViewController: NSViewController, NSCollectionViewDelegate, N
 
         if let item = item as? ConfigViewItem
         {
-            item.controller = self.controllers[ indexPath.item ]
+            item.controller = self.arrangedControllers[ indexPath.item ]
         }
 
         item.view.layoutSubtreeIfNeeded()
@@ -86,7 +109,7 @@ public class ConfigViewController: NSViewController, NSCollectionViewDelegate, N
 
     public func collectionView( _ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath ) -> NSSize
     {
-        let controller        = self.controllers[ indexPath.item ]
+        let controller        = self.arrangedControllers[ indexPath.item ]
         var frame             = controller.view.frame
         frame.size.width      = self.collectionView.frame.size.width
         controller.view.frame = frame

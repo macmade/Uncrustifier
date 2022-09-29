@@ -59,6 +59,13 @@
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </searchFieldCell>
+                        <connections>
+                            <binding destination="-2" name="value" keyPath="self.configController.searchText" id="Sz0-KA-0Fg">
+                                <dictionary key="options">
+                                    <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                </dictionary>
+                            </binding>
+                        </connections>
                     </searchField>
                     <button translatesAutoresizingMaskIntoConstraints="NO" id="pjp-IZ-uAn">
                         <rect key="frame" x="683" y="10" width="20.5" height="27"/>
