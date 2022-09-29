@@ -63,9 +63,29 @@ public class ConfigValueViewController: NSViewController
             self.values    = [ "ignore", "add", "remove", "force", "not_defined" ]
             self.hasValues = true
         }
+        else if let hint = self.value.valueHint, hint.contains( "/" )
+        {
+            let values = hint.components( separatedBy: "/" ).compactMap
+            {
+                let text = $0.trimmingCharacters( in: .whitespaces )
+
+                return text.isEmpty ? nil : text
+            }
+
+            if values.isEmpty == false, values.contains( self.value.value )
+            {
+                self.values    = values
+                self.hasValues = true
+            }
+        }
         else
         {
             self.values.append( self.value.value )
+        }
+
+        self.values.sort
+        {
+            $0 < $1
         }
     }
 
