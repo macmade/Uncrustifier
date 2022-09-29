@@ -29,7 +29,9 @@ public class TextViewController: NSViewController
 {
     @IBOutlet private var textView: NSTextView!
 
-    private var textStorage: CodeAttributedString
+    private var textStorage:            CodeAttributedString
+    private var themeObserver:          NSKeyValueObservation?
+    private var themeWindowController = ThemeWindowController()
 
     @objc public dynamic var text: String
     {
@@ -48,16 +50,12 @@ public class TextViewController: NSViewController
     {
         if let highlightr = Highlightr()
         {
-            highlightr.setTheme( to: "atom-one-dark" )
-
             self.textStorage = CodeAttributedString( highlightr: highlightr )
         }
         else
         {
             self.textStorage = CodeAttributedString()
         }
-
-        self.textStorage.language = "C"
 
         super.init( nibName: nil, bundle: nil )
     }
@@ -76,6 +74,15 @@ public class TextViewController: NSViewController
     {
         super.viewDidLoad()
 
+        if let theme = UserDefaults.standard.string( forKey: "theme" )
+        {
+            self.textStorage.highlightr.setTheme( to: theme )
+        }
+        else
+        {
+            self.textStorage.highlightr.setTheme( to: "atom-one-dark" )
+        }
+
         self.textView.font                               = NSFont.monospacedSystemFont( ofSize: 12, weight: .regular )
         self.textView.textContainerInset                 = NSSize( width: 10, height: 10 )
         self.textView.maxSize                            = NSSize( width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude )
@@ -92,10 +99,53 @@ public class TextViewController: NSViewController
 
             self.textStorage.addLayoutManager( layoutManager )
         }
+
+        self.themeObserver = self.themeWindowController.observe( \.theme )
+        {
+            [ weak self ] _, _ in
+
+            guard let self = self
+            else
+            {
+                return
+            }
+
+            self.textStorage.highlightr.setTheme( to: self.themeWindowController.theme )
+            UserDefaults.standard.set( self.themeWindowController.theme, forKey: "theme" )
+        }
+    }
+
+    public func setTheme( _ theme: String )
+    {
+        self.textStorage.highlightr.setTheme( to: theme )
+    }
+
+    public func setLanguage( _ language: Uncrustify.Language )
+    {
+        switch language
+        {
+            case .c:      self.textStorage.language = "c"
+            case .cpp:    self.textStorage.language = "cpp"
+            case .cs:     self.textStorage.language = "csharp"
+            case .java:   self.textStorage.language = "java"
+            case .objc:   self.textStorage.language = "objectivec"
+            case .objcpp: self.textStorage.language = "objectivec"
+        }
     }
 
     public func setAsFirstResponder()
     {
         self.view.window?.makeFirstResponder( self.textView )
+    }
+
+    @IBAction
+    public func chooseTheme( _ sender: Any? )
+    {
+        if self.themeWindowController.window?.isVisible == false
+        {
+            self.themeWindowController.window?.center()
+        }
+
+        self.themeWindowController.window?.makeKeyAndOrderFront( sender )
     }
 }

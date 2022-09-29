@@ -32,6 +32,8 @@
 		057AAF5A28E5FB47004CB733 /* CFBase.txt in Resources */ = {isa = PBXBuildFile; fileRef = 057AAF5928E5FB3C004CB733 /* CFBase.txt */; };
 		057AAF6728E5FE37004CB733 /* Highlightr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 057AAF6328E5FE22004CB733 /* Highlightr.framework */; };
 		057AAF6928E5FE48004CB733 /* Highlightr.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 057AAF6328E5FE22004CB733 /* Highlightr.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		057AAF6B28E610D4004CB733 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF6A28E610D4004CB733 /* ThemeViewController.swift */; };
+		057AAF6D28E61128004CB733 /* ThemeWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057AAF6C28E61128004CB733 /* ThemeWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +186,8 @@
 		057AAF5728E5F6AA004CB733 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		057AAF5928E5FB3C004CB733 /* CFBase.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CFBase.txt; sourceTree = "<group>"; };
 		057AAF5B28E5FE22004CB733 /* Highlightr.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Highlightr.xcodeproj; path = Submodules/Highlightr/Highlightr.xcodeproj; sourceTree = "<group>"; };
+		057AAF6A28E610D4004CB733 /* ThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
+		057AAF6C28E61128004CB733 /* ThemeWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThemeWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +249,7 @@
 				057AAF1528E578B4004CB733 /* TextViewController.swift */,
 				057AAF4828E5846B004CB733 /* Uncrustify.swift */,
 				057AAF5728E5F6AA004CB733 /* BackgroundView.swift */,
+				057AAF6A28E610D4004CB733 /* ThemeViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				0572AD1528E47CE8000AFC79 /* MainWindowController.xib */,
 				057AAF1728E578D9004CB733 /* TextViewController.xib */,
 				057AAF5528E5A043004CB733 /* ConfigViewItem.xib */,
+				057AAF6C28E61128004CB733 /* ThemeWindowController.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -600,6 +606,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				057AAF6D28E61128004CB733 /* ThemeWindowController.xib in Resources */,
 				0572AD6328E4E40F000AFC79 /* ConfigValueViewController.xib in Resources */,
 				0572AD0728E47BCF000AFC79 /* Assets.xcassets in Resources */,
 				057AAF5628E5A043004CB733 /* ConfigViewItem.xib in Resources */,
@@ -640,6 +647,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				057AAF6B28E610D4004CB733 /* ThemeViewController.swift in Sources */,
 				0572AD1A28E4C6DE000AFC79 /* NSWindowController.swift in Sources */,
 				0572AD1428E47C6A000AFC79 /* MainWindowController.swift in Sources */,
 				057AAF5428E59F0D004CB733 /* ConfigViewItem.swift in Sources */,

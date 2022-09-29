@@ -23,8 +23,9 @@
  ******************************************************************************/
 
 import Cocoa
+import Highlightr
 
-public class MainWindowController: NSWindowController
+public class MainWindowController: NSWindowController, NSMenuDelegate
 {
     @IBOutlet private var configContainer: NSView!
     @IBOutlet private var codeContainer:   NSView!
@@ -38,6 +39,11 @@ public class MainWindowController: NSWindowController
         didSet
         {
             UserDefaults.standard.set( self.language, forKey: "language" )
+
+            if let language = Uncrustify.Language( rawValue: self.language )
+            {
+                self.codeController.setLanguage( language )
+            }
         }
     }
 
@@ -65,6 +71,11 @@ public class MainWindowController: NSWindowController
     {
         super.windowDidLoad()
 
+        if UserDefaults.standard.string( forKey: "theme" ) == nil
+        {
+            UserDefaults.standard.set( "atom-one-dark", forKey: "theme" )
+        }
+
         if let cacheDirectory = NSSearchPathForDirectoriesInDomains( .cachesDirectory, .userDomainMask, true ).first,
            let bundleID       = Bundle.main.bundleIdentifier
         {
@@ -86,6 +97,11 @@ public class MainWindowController: NSWindowController
         self.configContainer.addFillingSubview( self.configController.view )
         self.codeContainer.addFillingSubview( self.codeController.view )
         self.codeController.setAsFirstResponder()
+
+        if let language = Uncrustify.Language( rawValue: self.language )
+        {
+            self.codeController.setLanguage( language )
+        }
     }
 
     @IBAction
@@ -257,5 +273,11 @@ public class MainWindowController: NSWindowController
         {
             self.codeController.text = text
         }
+    }
+
+    @IBAction
+    private func chooseTheme( _ sender: Any? )
+    {
+        self.codeController.chooseTheme( sender )
     }
 }
