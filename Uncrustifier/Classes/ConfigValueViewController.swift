@@ -30,6 +30,7 @@ public class ConfigValueViewController: NSViewController
     @objc public private( set ) dynamic var values:     [ String ] = []
     @objc public private( set ) dynamic var comment:    String
     @objc public private( set ) dynamic var hasValues = false
+    @objc public private( set ) dynamic var isBool    = false
 
     @objc public dynamic var alternate = false
     {
@@ -57,6 +58,7 @@ public class ConfigValueViewController: NSViewController
         {
             self.values    = [ "true", "false" ]
             self.hasValues = true
+            self.isBool    = true
         }
         else if self.value.value == "ignore" || self.value.value == "add" || self.value.value == "remove" || self.value.value == "force" || self.value.value == "not_defined"
         {

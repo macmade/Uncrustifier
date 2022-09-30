@@ -45,6 +45,7 @@
 		05EF242828E6474500334A41 /* ThemeWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EF242A28E6474500334A41 /* ThemeWindowController.xib */; };
 		05EF242D28E6489A00334A41 /* License-Uncrustify.txt in Resources */ = {isa = PBXBuildFile; fileRef = 05EF242C28E6489A00334A41 /* License-Uncrustify.txt */; };
 		05EF242F28E6491700334A41 /* License-Highlightr.txt in Resources */ = {isa = PBXBuildFile; fileRef = 05EF242E28E6491700334A41 /* License-Highlightr.txt */; };
+		05EF243228E743D500334A41 /* BoolConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF243128E743D500334A41 /* BoolConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +212,7 @@
 		05EF242928E6474500334A41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ThemeWindowController.xib; sourceTree = "<group>"; };
 		05EF242C28E6489A00334A41 /* License-Uncrustify.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "License-Uncrustify.txt"; sourceTree = "<group>"; };
 		05EF242E28E6491700334A41 /* License-Highlightr.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "License-Highlightr.txt"; sourceTree = "<group>"; };
+		05EF243128E743D500334A41 /* BoolConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +281,7 @@
 				057AAF1528E578B4004CB733 /* TextViewController.swift */,
 				057AAF6A28E610D4004CB733 /* ThemeViewController.swift */,
 				057AAF4828E5846B004CB733 /* Uncrustify.swift */,
+				05EF243128E743D500334A41 /* BoolConverter.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -709,6 +712,7 @@
 				0572AD1828E4C0F5000AFC79 /* NSError.swift in Sources */,
 				057AAF5828E5F6AA004CB733 /* BackgroundView.swift in Sources */,
 				057AAF1628E578B4004CB733 /* TextViewController.swift in Sources */,
+				05EF243228E743D500334A41 /* BoolConverter.swift in Sources */,
 				05EF240928E6465F00334A41 /* Credit.swift in Sources */,
 				05EF240328E6465700334A41 /* Bundle.swift in Sources */,
 				05EF240728E6465F00334A41 /* CreditsWindowController.swift in Sources */,
