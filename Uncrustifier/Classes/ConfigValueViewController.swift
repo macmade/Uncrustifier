@@ -31,6 +31,7 @@ public class ConfigValueViewController: NSViewController
     @objc public private( set ) dynamic var comment:    String
     @objc public private( set ) dynamic var hasValues = false
     @objc public private( set ) dynamic var isBool    = false
+    @objc public private( set ) dynamic var isNumeric = false
 
     @objc public dynamic var alternate = false
     {
@@ -82,6 +83,8 @@ public class ConfigValueViewController: NSViewController
         }
         else
         {
+            self.isNumeric = Int( self.value.value ) != nil
+
             self.values.append( self.value.value )
         }
 

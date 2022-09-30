@@ -14,14 +14,14 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe" customClass="BackgroundView" customModule="Uncrustifier" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="517" height="166"/>
+            <rect key="frame" x="0.0" y="0.0" width="538" height="166"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="s7n-oX-CzK">
-                    <rect key="frame" x="0.0" y="163" width="517" height="5"/>
+                    <rect key="frame" x="0.0" y="163" width="538" height="5"/>
                 </box>
                 <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LEU-Bo-Tcm">
-                    <rect key="frame" x="10" y="10" width="497" height="145"/>
+                    <rect key="frame" x="10" y="10" width="518" height="145"/>
                     <subviews>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pay-xm-pfE">
                             <rect key="frame" x="-2" y="129" width="40" height="16"/>
@@ -52,15 +52,51 @@
                                 <binding destination="-2" name="value" keyPath="self.value.valueHint" id="ppH-b1-joM"/>
                             </connections>
                         </textField>
-                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oYA-S7-DY1">
-                            <rect key="frame" x="0.0" y="79" width="497" height="21"/>
-                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="maa-8u-dnS">
-                                <font key="font" metaFont="system"/>
-                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                            </textFieldCell>
+                        <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wyk-py-Dj4">
+                            <rect key="frame" x="0.0" y="79" width="518" height="21"/>
+                            <subviews>
+                                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oYA-S7-DY1">
+                                    <rect key="frame" x="0.0" y="0.0" width="497" height="21"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="maa-8u-dnS">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <binding destination="-2" name="value" keyPath="self.value.value" id="k1B-XC-qPJ"/>
+                                    </connections>
+                                </textField>
+                                <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qBB-Xq-8Ht">
+                                    <rect key="frame" x="502" y="-3" width="19" height="28"/>
+                                    <stepperCell key="cell" continuous="YES" alignment="left" minValue="-2147483648" maxValue="2147483647" id="q8l-Cx-12F"/>
+                                    <connections>
+                                        <binding destination="-2" name="hidden" keyPath="self.isNumeric" id="DI7-Uj-FBj">
+                                            <dictionary key="options">
+                                                <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                            </dictionary>
+                                        </binding>
+                                        <binding destination="-2" name="value" keyPath="self.value.value" id="cYo-vq-WBz">
+                                            <dictionary key="options">
+                                                <string key="NSValueTransformerName">IntegerConverter</string>
+                                            </dictionary>
+                                        </binding>
+                                    </connections>
+                                </stepper>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="oYA-S7-DY1" secondAttribute="bottom" id="9xd-uz-Z00"/>
+                                <constraint firstItem="oYA-S7-DY1" firstAttribute="top" secondItem="Wyk-py-Dj4" secondAttribute="top" id="aYC-Wa-f7k"/>
+                            </constraints>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
                             <connections>
-                                <binding destination="-2" name="hidden2" keyPath="self.isBool" previousBinding="UgN-yq-0Pv" id="ogO-Oa-lbf">
+                                <binding destination="-2" name="hidden2" keyPath="self.isBool" previousBinding="z85-DU-VrA" id="aWr-qb-nqL">
                                     <dictionary key="options">
                                         <integer key="NSMultipleValuesPlaceholder" value="-1"/>
                                         <integer key="NSNoSelectionPlaceholder" value="-1"/>
@@ -68,12 +104,11 @@
                                         <integer key="NSNullPlaceholder" value="-1"/>
                                     </dictionary>
                                 </binding>
-                                <binding destination="-2" name="hidden" keyPath="self.hasValues" id="UgN-yq-0Pv"/>
-                                <binding destination="-2" name="value" keyPath="self.value.value" id="k1B-XC-qPJ"/>
+                                <binding destination="-2" name="hidden" keyPath="self.hasValues" id="z85-DU-VrA"/>
                             </connections>
-                        </textField>
+                        </stackView>
                         <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="d9Q-aS-Pie">
-                            <rect key="frame" x="-3" y="47" width="504" height="25"/>
+                            <rect key="frame" x="-3" y="47" width="525" height="25"/>
                             <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="ibD-w2-cGf" id="nv3-PF-mcM">
                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="menu"/>
@@ -119,7 +154,7 @@
                             </connections>
                         </switch>
                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ery-bw-xB1">
-                            <rect key="frame" x="-2" y="0.0" width="501" height="13"/>
+                            <rect key="frame" x="-2" y="0.0" width="522" height="13"/>
                             <textFieldCell key="cell" controlSize="mini" selectable="YES" title="Multiline Label" id="y9c-SH-9s7">
                                 <font key="font" textStyle="footnote" name=".SFNS-Regular"/>
                                 <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -131,14 +166,14 @@
                         </textField>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="oYA-S7-DY1" firstAttribute="leading" secondItem="LEU-Bo-Tcm" secondAttribute="leading" id="7yn-3V-c9a"/>
                         <constraint firstAttribute="trailing" secondItem="ery-bw-xB1" secondAttribute="trailing" id="CUf-tx-Xa8"/>
                         <constraint firstItem="ery-bw-xB1" firstAttribute="leading" secondItem="LEU-Bo-Tcm" secondAttribute="leading" id="Ern-bX-S3x"/>
+                        <constraint firstItem="Wyk-py-Dj4" firstAttribute="leading" secondItem="LEU-Bo-Tcm" secondAttribute="leading" id="HCf-AN-nXP"/>
+                        <constraint firstAttribute="trailing" secondItem="Wyk-py-Dj4" secondAttribute="trailing" id="OvL-Ez-MHv"/>
                         <constraint firstItem="Pay-xm-pfE" firstAttribute="leading" secondItem="LEU-Bo-Tcm" secondAttribute="leading" id="QUB-Yp-wvq"/>
                         <constraint firstAttribute="trailing" secondItem="d9Q-aS-Pie" secondAttribute="trailing" id="adh-Sa-Uru"/>
                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Pay-xm-pfE" secondAttribute="trailing" id="fwC-bK-EvM"/>
                         <constraint firstItem="d9Q-aS-Pie" firstAttribute="leading" secondItem="LEU-Bo-Tcm" secondAttribute="leading" id="wiq-Ku-lqB"/>
-                        <constraint firstAttribute="trailing" secondItem="oYA-S7-DY1" secondAttribute="trailing" id="yKD-gv-1LV"/>
                     </constraints>
                     <visibilityPriorities>
                         <integer value="1000"/>
