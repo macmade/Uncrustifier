@@ -50,8 +50,7 @@ public class ConfigValueViewController: NSViewController
     public init( value: ConfigValue )
     {
         self.value   = value
-        let comments = value.comments.map { $0.dropFirst( 1 ).trimmingCharacters( in: .whitespaces ) }
-        self.comment = String( comments.joined( separator: "\n" ) )
+        self.comment = ConfigValueViewController.processComments( value.comments )
 
         super.init( nibName: nil, bundle: nil )
 
@@ -117,5 +116,35 @@ public class ConfigValueViewController: NSViewController
         self.view.frame = NSRect( origin: NSPoint.zero, size: self.view.fittingSize )
 
         self.view.layoutSubtreeIfNeeded()
+    }
+
+    private class func processComments( _ comments: [ String ] ) -> String
+    {
+        comments.map
+        {
+            $0.dropFirst( 1 ).trimmingCharacters( in: .whitespaces )
+        }
+        .reduce( into: "" )
+        {
+            if let last = $0.last, let first = $1.first
+            {
+                if last.isLetter, first.isLetter
+                {
+                    $0 += " \( $1 )"
+                }
+                else
+                {
+                    $0 += "\n\( $1 )"
+                }
+            }
+            else if $0.isEmpty
+            {
+                $0 += $1
+            }
+            else
+            {
+                $0 += "\n\( $1 )"
+            }
+        }
     }
 }
