@@ -7,3 +7,6 @@
 [submodule "Submodules/Highlightr"]
 	path = Submodules/Highlightr
 	url = https://github.com/raspu/Highlightr
+[submodule "Submodules/GitHubUpdates"]
+	path = Submodules/GitHubUpdates
+	url = https://github.com/macmade/GitHubUpdates.git
