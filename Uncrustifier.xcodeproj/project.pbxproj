@@ -579,6 +579,7 @@
 			buildPhases = (
 				0572ACFD28E47BCF000AFC79 /* Sources */,
 				0572ACFE28E47BCF000AFC79 /* Frameworks */,
+				050E0EFB28EB3E490080C562 /* Set Bundle Version */,
 				0572ACFF28E47BCF000AFC79 /* Resources */,
 				057AAF4628E58415004CB733 /* Copy Executables */,
 				057AAF6828E5FE3B004CB733 /* Copy Frameworks */,
@@ -675,6 +676,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		050E0EFB28EB3E490080C562 /* Set Bundle Version */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Set Bundle Version";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n    plist=\"Uncrustifier/Info.plist\"\n    rev=$(git rev-list HEAD | wc -l)\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $rev\" \"$plist\"\nfi\n";
+		};
 		0572AD5B28E4D85B000AFC79 /* Swift Format */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;

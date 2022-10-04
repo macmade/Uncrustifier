@@ -96,6 +96,7 @@
                                 <real value="3.4028234663852886e+38"/>
                             </customSpacing>
                             <connections>
+                                <binding destination="-2" name="hidden" keyPath="self.hasValues" id="z85-DU-VrA"/>
                                 <binding destination="-2" name="hidden2" keyPath="self.isBool" previousBinding="z85-DU-VrA" id="aWr-qb-nqL">
                                     <dictionary key="options">
                                         <integer key="NSMultipleValuesPlaceholder" value="-1"/>
@@ -104,7 +105,6 @@
                                         <integer key="NSNullPlaceholder" value="-1"/>
                                     </dictionary>
                                 </binding>
-                                <binding destination="-2" name="hidden" keyPath="self.hasValues" id="z85-DU-VrA"/>
                             </connections>
                         </stackView>
                         <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="d9Q-aS-Pie">
@@ -121,17 +121,17 @@
                                 </menu>
                             </popUpButtonCell>
                             <connections>
+                                <binding destination="-2" name="hidden" keyPath="self.hasValues" id="W4b-gZ-l1k">
+                                    <dictionary key="options">
+                                        <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                    </dictionary>
+                                </binding>
                                 <binding destination="-2" name="hidden2" keyPath="self.isBool" previousBinding="W4b-gZ-l1k" id="qsQ-wz-Ytb">
                                     <dictionary key="options">
                                         <integer key="NSMultipleValuesPlaceholder" value="-1"/>
                                         <integer key="NSNoSelectionPlaceholder" value="-1"/>
                                         <integer key="NSNotApplicablePlaceholder" value="-1"/>
                                         <integer key="NSNullPlaceholder" value="-1"/>
-                                    </dictionary>
-                                </binding>
-                                <binding destination="-2" name="hidden" keyPath="self.hasValues" id="W4b-gZ-l1k">
-                                    <dictionary key="options">
-                                        <string key="NSValueTransformerName">NSNegateBoolean</string>
                                     </dictionary>
                                 </binding>
                                 <binding destination="-2" name="selectedValue" keyPath="self.value.value" previousBinding="0jc-gv-EHg" id="sjQ-YW-Kgg"/>
