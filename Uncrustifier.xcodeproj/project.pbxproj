@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052C390628EDED960034E743 /* ArrayCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052C390528EDED960034E743 /* ArrayCount.swift */; };
 		0572AD0528E47BCF000AFC79 /* ApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD0428E47BCF000AFC79 /* ApplicationDelegate.swift */; };
 		0572AD0728E47BCF000AFC79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0572AD0628E47BCF000AFC79 /* Assets.xcassets */; };
 		0572AD0A28E47BCF000AFC79 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0572AD0828E47BCF000AFC79 /* MainMenu.xib */; };
@@ -123,6 +124,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		052C390528EDED960034E743 /* ArrayCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayCount.swift; sourceTree = "<group>"; };
 		0572AD0128E47BCF000AFC79 /* Uncrustifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uncrustifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0572AD0428E47BCF000AFC79 /* ApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDelegate.swift; sourceTree = "<group>"; };
 		0572AD0628E47BCF000AFC79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 			children = (
 				05EF23FE28E645E700334A41 /* AboutWindowController.swift */,
 				0572AD0428E47BCF000AFC79 /* ApplicationDelegate.swift */,
+				052C390528EDED960034E743 /* ArrayCount.swift */,
 				057AAF5728E5F6AA004CB733 /* BackgroundView.swift */,
 				0572AD5C28E4DC43000AFC79 /* Config.swift */,
 				0572AD5E28E4DC5D000AFC79 /* ConfigValue.swift */,
@@ -767,6 +770,7 @@
 				0572AD5D28E4DC43000AFC79 /* Config.swift in Sources */,
 				0572AD0528E47BCF000AFC79 /* ApplicationDelegate.swift in Sources */,
 				057AAF4928E5846B004CB733 /* Uncrustify.swift in Sources */,
+				052C390628EDED960034E743 /* ArrayCount.swift in Sources */,
 				0572AD1828E4C0F5000AFC79 /* NSError.swift in Sources */,
 				057AAF5828E5F6AA004CB733 /* BackgroundView.swift in Sources */,
 				057AAF1628E578B4004CB733 /* TextViewController.swift in Sources */,

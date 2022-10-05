@@ -43,8 +43,8 @@ public class ConfigViewController: NSViewController, NSCollectionViewDelegate, N
         }
     }
 
-    @objc private dynamic var controllers:         [ ConfigValueViewController ] = []
-    @objc private dynamic var arrangedControllers: [ ConfigValueViewController ] = []
+    @objc public private( set ) dynamic var controllers:         [ ConfigValueViewController ] = []
+    @objc public private( set ) dynamic var arrangedControllers: [ ConfigValueViewController ] = []
 
     @objc public dynamic var searchText = ""
     {
