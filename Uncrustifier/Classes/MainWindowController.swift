@@ -169,31 +169,73 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
     @IBAction
     private func reloadDefaultConfig( _ sender: Any? )
     {
-        guard let config = try? Uncrustify.defaultConfig()
+        guard let window = self.window
         else
         {
-            self.displayError( message: "Cannot load the default Uncrustify configuration." )
-
             return
         }
 
-        self.configController.config = Config( text: config )
+        let alert             = NSAlert()
+        alert.messageText     = "Reload Default Configuration"
+        alert.informativeText = "Are you sure you want to reload the default configuration?"
+
+        alert.addButton( withTitle: "Reload" )
+        alert.addButton( withTitle: "Cancel" )
+
+        alert.beginSheetModal( for: window )
+        {
+            if $0 != .alertFirstButtonReturn
+            {
+                return
+            }
+
+            guard let config = try? Uncrustify.defaultConfig()
+            else
+            {
+                self.displayError( message: "Cannot load the default Uncrustify configuration." )
+
+                return
+            }
+
+            self.configController.config = Config( text: config )
+        }
     }
 
     @IBAction
     private func reloadExampleCode( _ sender: Any? )
     {
-        guard let url  = Bundle.main.url( forResource: "CFBase", withExtension: "txt" ),
-              let code = try? self.readFile( url: url )
+        guard let window = self.window
         else
         {
-            self.displayError( message: "Cannot load the example code file." )
-
             return
         }
 
-        self.codeController.text = code
-        self.language            = 0
+        let alert             = NSAlert()
+        alert.messageText     = "Reload Example Code"
+        alert.informativeText = "Are you sure you want to reload the example code?"
+
+        alert.addButton( withTitle: "Reload" )
+        alert.addButton( withTitle: "Cancel" )
+
+        alert.beginSheetModal( for: window )
+        {
+            if $0 != .alertFirstButtonReturn
+            {
+                return
+            }
+
+            guard let url  = Bundle.main.url( forResource: "CFBase", withExtension: "txt" ),
+                  let code = try? self.readFile( url: url )
+            else
+            {
+                self.displayError( message: "Cannot load the example code file." )
+
+                return
+            }
+
+            self.codeController.text = code
+            self.language            = 0
+        }
     }
 
     @IBAction
