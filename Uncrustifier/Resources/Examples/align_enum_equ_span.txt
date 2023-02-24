@@ -1,0 +1,7 @@
+// align_enum_equ_span
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

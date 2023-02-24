@@ -1,0 +1,7 @@
+// nl_create_list_one_liner
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

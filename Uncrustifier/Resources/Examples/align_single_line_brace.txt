@@ -1,0 +1,7 @@
+// align_single_line_brace
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

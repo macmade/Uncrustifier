@@ -52,6 +52,7 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
     private var codeCacheFile:        URL?
     private var windowObserver:       Any?
     private var valueChangedObserver: Any?
+    private var loadExampleObserver:  Any?
 
     public init()
     {
@@ -74,11 +75,34 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
 
         self.valueChangedObserver = NotificationCenter.default.addObserver( forName: ConfigValue.valueChangedNotification, object: nil, queue: nil )
         {
-            _ in
+            [ weak self ] _ in
+
+            guard let self = self
+            else
+            {
+                return
+            }
 
             if self.configController.autoFormat
             {
                 self.format( nil )
+            }
+        }
+
+        self.loadExampleObserver = NotificationCenter.default.addObserver( forName: ConfigValueViewController.loadExampleNotification, object: nil, queue: nil )
+        {
+            [ weak self ] in
+
+            guard let self = self
+            else
+            {
+                return
+            }
+
+            if let controller = $0.object as? ConfigValueViewController,
+               let example    = controller.value.example
+            {
+                self.codeController.text = example
             }
         }
 
@@ -253,6 +277,11 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
     private func format( _ sender: Any? )
     {
         self.saveState()
+
+        self.configController.controllers.forEach
+        {
+            print( $0.value.name )
+        }
 
         DispatchQueue.main.async
         {

@@ -1,0 +1,7 @@
+// align_same_func_call_params_thresh
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

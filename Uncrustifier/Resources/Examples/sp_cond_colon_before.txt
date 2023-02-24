@@ -1,0 +1,7 @@
+// sp_cond_colon_before
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

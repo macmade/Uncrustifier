@@ -1,0 +1,7 @@
+// cmt_insert_func_header
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

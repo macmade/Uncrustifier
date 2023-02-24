@@ -1,0 +1,7 @@
+// nl_before_whole_file_endif
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

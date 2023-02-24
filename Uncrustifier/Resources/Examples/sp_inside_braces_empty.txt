@@ -1,0 +1,7 @@
+// sp_inside_braces_empty
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

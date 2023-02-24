@@ -1,0 +1,7 @@
+// cmt_trailing_single_line_c_to_cpp
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

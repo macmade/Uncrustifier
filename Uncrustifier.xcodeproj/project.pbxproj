@@ -37,6 +37,8 @@
 		05B814D029A91A5E00133654 /* NSMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B814C129A8EB0000133654 /* NSMenu.swift */; };
 		05B814E029A91AA600133654 /* NSApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B814DF29A91AA600133654 /* NSApplication.swift */; };
 		05B814E129A91AA600133654 /* NSApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B814DF29A91AA600133654 /* NSApplication.swift */; };
+		05B814EA29A92C6100133654 /* Examples in Resources */ = {isa = PBXBuildFile; fileRef = 05B814E729A92C6100133654 /* Examples */; };
+		05B814EB29A92C6100133654 /* Examples in Resources */ = {isa = PBXBuildFile; fileRef = 05B814E729A92C6100133654 /* Examples */; };
 		05DB009A292CC69200FAB389 /* CreditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF240528E6465F00334A41 /* CreditViewController.swift */; };
 		05DB009B292CC69200FAB389 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF6A28E610D4004CB733 /* ThemeViewController.swift */; };
 		05DB009C292CC69200FAB389 /* NSWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD1928E4C6DE000AFC79 /* NSWindowController.swift */; };
@@ -302,6 +304,7 @@
 		05B814C129A8EB0000133654 /* NSMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMenu.swift; sourceTree = "<group>"; };
 		05B814CB29A91A5900133654 /* NSAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAppearance.swift; sourceTree = "<group>"; };
 		05B814DF29A91AA600133654 /* NSApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSApplication.swift; sourceTree = "<group>"; };
+		05B814E729A92C6100133654 /* Examples */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Examples; sourceTree = "<group>"; };
 		05DB00CD292CC69200FAB389 /* Uncrustifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uncrustifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05DB00D1292CC6BA00FAB389 /* Uncrustifier AppStore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Uncrustifier AppStore.entitlements"; sourceTree = "<group>"; };
 		05EF23FE28E645E700334A41 /* AboutWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
@@ -699,6 +702,7 @@
 				057AAF5928E5FB3C004CB733 /* CFBase.txt */,
 				05EF242E28E6491700334A41 /* License-Highlightr.txt */,
 				05EF242C28E6489A00334A41 /* License-Uncrustify.txt */,
+				05B814E729A92C6100133654 /* Examples */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -833,6 +837,7 @@
 				05EF242828E6474500334A41 /* ThemeWindowController.xib in Resources */,
 				05EF241328E6472600334A41 /* ConfigValueViewController.xib in Resources */,
 				0572AD0728E47BCF000AFC79 /* Assets.xcassets in Resources */,
+				05B814EA29A92C6100133654 /* Examples in Resources */,
 				05EF241028E6472300334A41 /* AboutWindowController.xib in Resources */,
 				05EF241928E6472F00334A41 /* ConfigViewItem.xib in Resources */,
 				05EF242228E6473E00334A41 /* MainWindowController.xib in Resources */,
@@ -854,6 +859,7 @@
 				05DB00B8292CC69200FAB389 /* ThemeWindowController.xib in Resources */,
 				05DB00B9292CC69200FAB389 /* ConfigValueViewController.xib in Resources */,
 				05DB00BA292CC69200FAB389 /* Assets.xcassets in Resources */,
+				05B814EB29A92C6100133654 /* Examples in Resources */,
 				05DB00BB292CC69200FAB389 /* AboutWindowController.xib in Resources */,
 				05DB00BC292CC69200FAB389 /* ConfigViewItem.xib in Resources */,
 				05DB00BD292CC69200FAB389 /* MainWindowController.xib in Resources */,

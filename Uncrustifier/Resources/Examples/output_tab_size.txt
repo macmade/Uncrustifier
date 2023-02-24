@@ -1,0 +1,7 @@
+// output_tab_size
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

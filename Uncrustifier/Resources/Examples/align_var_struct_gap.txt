@@ -1,0 +1,7 @@
+// align_var_struct_gap
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

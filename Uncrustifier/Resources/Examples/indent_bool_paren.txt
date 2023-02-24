@@ -1,0 +1,7 @@
+// indent_bool_paren
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

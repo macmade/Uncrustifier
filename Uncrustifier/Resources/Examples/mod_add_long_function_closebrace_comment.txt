@@ -1,0 +1,7 @@
+// mod_add_long_function_closebrace_comment
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

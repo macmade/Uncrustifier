@@ -1,0 +1,7 @@
+// cmt_multi_check_last
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

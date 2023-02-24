@@ -1,0 +1,7 @@
+// sp_after_oc_dict_colon
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

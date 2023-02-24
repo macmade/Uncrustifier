@@ -1,0 +1,7 @@
+// indent_first_bool_expr
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

@@ -1,0 +1,7 @@
+// align_func_params
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

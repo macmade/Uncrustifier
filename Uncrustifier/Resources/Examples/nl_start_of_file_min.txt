@@ -1,0 +1,7 @@
+// nl_start_of_file_min
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

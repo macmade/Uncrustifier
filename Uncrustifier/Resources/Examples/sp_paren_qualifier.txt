@@ -1,0 +1,7 @@
+// sp_paren_qualifier
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

@@ -1,0 +1,7 @@
+// include_category_0
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

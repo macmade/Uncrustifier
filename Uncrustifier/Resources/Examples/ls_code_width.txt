@@ -1,0 +1,7 @@
+// ls_code_width
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

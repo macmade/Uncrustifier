@@ -1,0 +1,7 @@
+// mod_remove_empty_return
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

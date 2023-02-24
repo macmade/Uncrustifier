@@ -1,0 +1,7 @@
+// nl_create_func_def_one_liner
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

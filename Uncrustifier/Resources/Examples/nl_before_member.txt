@@ -1,0 +1,7 @@
+// nl_before_member
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

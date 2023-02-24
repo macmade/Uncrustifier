@@ -1,0 +1,7 @@
+// indent_namespace_limit
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

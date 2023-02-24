@@ -1,0 +1,7 @@
+// indent_inside_ternary_operator
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

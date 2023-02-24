@@ -1,0 +1,7 @@
+// nl_typedef_blk_end
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

@@ -1,0 +1,7 @@
+// mod_move_case_break
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

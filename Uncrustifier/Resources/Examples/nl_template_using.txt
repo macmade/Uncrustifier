@@ -1,0 +1,7 @@
+// nl_template_using
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

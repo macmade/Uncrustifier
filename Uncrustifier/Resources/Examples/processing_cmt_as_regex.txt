@@ -1,0 +1,7 @@
+// processing_cmt_as_regex
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

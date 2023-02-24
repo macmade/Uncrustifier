@@ -1,0 +1,7 @@
+// nl_brace_finally
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

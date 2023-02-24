@@ -1,0 +1,7 @@
+// sp_inside_braces_enum
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

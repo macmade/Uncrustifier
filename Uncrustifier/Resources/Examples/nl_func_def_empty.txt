@@ -1,0 +1,7 @@
+// nl_func_def_empty
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

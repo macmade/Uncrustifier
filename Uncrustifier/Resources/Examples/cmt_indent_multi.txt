@@ -1,0 +1,7 @@
+// cmt_indent_multi
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

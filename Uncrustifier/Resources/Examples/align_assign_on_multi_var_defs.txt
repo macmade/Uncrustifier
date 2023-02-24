@@ -1,0 +1,7 @@
+// align_assign_on_multi_var_defs
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

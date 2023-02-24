@@ -1,0 +1,7 @@
+// nl_max_blank_in_func
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

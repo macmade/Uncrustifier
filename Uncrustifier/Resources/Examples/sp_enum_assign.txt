@@ -1,0 +1,7 @@
+// sp_enum_assign
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

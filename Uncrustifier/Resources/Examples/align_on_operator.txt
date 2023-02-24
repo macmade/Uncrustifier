@@ -1,0 +1,7 @@
+// align_on_operator
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

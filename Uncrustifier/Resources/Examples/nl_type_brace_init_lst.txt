@@ -1,0 +1,7 @@
+// nl_type_brace_init_lst
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

@@ -1,0 +1,7 @@
+// indent_switch_break_with_case
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

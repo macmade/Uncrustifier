@@ -1,0 +1,7 @@
+// nl_define_macro
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

@@ -1,0 +1,7 @@
+// mod_full_brace_for
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

@@ -1,0 +1,7 @@
+// sp_after_operator
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

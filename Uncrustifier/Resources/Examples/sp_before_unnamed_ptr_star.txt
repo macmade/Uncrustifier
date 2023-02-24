@@ -1,0 +1,7 @@
+// sp_before_unnamed_ptr_star
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

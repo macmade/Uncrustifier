@@ -1,0 +1,7 @@
+// align_same_func_call_params_span
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

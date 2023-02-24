@@ -1,0 +1,7 @@
+// mod_sort_oc_property_setter_weight
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

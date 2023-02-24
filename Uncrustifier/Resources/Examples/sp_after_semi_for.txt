@@ -1,0 +1,7 @@
+// sp_after_semi_for
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

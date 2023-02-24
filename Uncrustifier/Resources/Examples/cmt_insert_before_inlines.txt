@@ -1,0 +1,7 @@
+// cmt_insert_before_inlines
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

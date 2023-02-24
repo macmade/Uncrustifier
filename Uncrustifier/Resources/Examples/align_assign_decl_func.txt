@@ -1,0 +1,7 @@
+// align_assign_decl_func
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

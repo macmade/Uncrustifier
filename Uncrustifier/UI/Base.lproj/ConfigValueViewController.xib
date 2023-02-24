@@ -37,6 +37,25 @@
                                         <binding destination="-2" name="value" keyPath="self.value.name" id="egY-DG-nKn"/>
                                     </connections>
                                 </textField>
+                                <button translatesAutoresizingMaskIntoConstraints="NO" id="Od4-Fl-UnU">
+                                    <rect key="frame" x="477" y="-3.5" width="18.5" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="WFs-2y-PNL"/>
+                                        <constraint firstAttribute="width" constant="18" id="XLr-Vh-XZI"/>
+                                    </constraints>
+                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ellipsis.curlybraces" catalog="system" imagePosition="only" alignment="center" controlSize="small" imageScaling="proportionallyUpOrDown" inset="2" id="rbu-RO-cj1">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="smallSystem"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="loadExample:" target="-2" id="aBL-EK-Wnq"/>
+                                        <binding destination="-2" name="hidden" keyPath="self.value.example" id="fL7-Re-B7Q">
+                                            <dictionary key="options">
+                                                <string key="NSValueTransformerName">NSIsNil</string>
+                                            </dictionary>
+                                        </binding>
+                                    </connections>
+                                </button>
                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="Ij2-Np-Dpk">
                                     <rect key="frame" x="500" y="-1" width="18" height="18"/>
                                     <constraints>
@@ -73,10 +92,12 @@
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="Ij2-Np-Dpk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pay-xm-pfE" secondAttribute="trailing" constant="8" symbolic="YES" id="LEk-5B-iag"/>
+                                <constraint firstItem="Od4-Fl-UnU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pay-xm-pfE" secondAttribute="trailing" constant="8" symbolic="YES" id="KDA-Jv-RxA"/>
                                 <constraint firstItem="Pay-xm-pfE" firstAttribute="top" secondItem="xvX-D1-DpP" secondAttribute="top" id="Sv3-iL-MNm"/>
+                                <constraint firstItem="Ij2-Np-Dpk" firstAttribute="leading" secondItem="Od4-Fl-UnU" secondAttribute="trailing" constant="5" id="U7N-Bj-Pjj"/>
                                 <constraint firstItem="Pay-xm-pfE" firstAttribute="leading" secondItem="xvX-D1-DpP" secondAttribute="leading" id="VWy-at-JbX"/>
-                                <constraint firstItem="Ij2-Np-Dpk" firstAttribute="centerY" secondItem="Pay-xm-pfE" secondAttribute="centerY" id="ang-5d-ZFt"/>
+                                <constraint firstItem="Od4-Fl-UnU" firstAttribute="centerY" secondItem="Ij2-Np-Dpk" secondAttribute="centerY" id="XCf-23-gHT"/>
+                                <constraint firstItem="Od4-Fl-UnU" firstAttribute="centerY" secondItem="Pay-xm-pfE" secondAttribute="centerY" id="aGw-if-Ich"/>
                                 <constraint firstItem="Pay-xm-pfE" firstAttribute="leading" secondItem="xvX-D1-DpP" secondAttribute="leading" id="fTl-Ol-JcC"/>
                                 <constraint firstItem="PNY-XO-SUn" firstAttribute="centerX" secondItem="Ij2-Np-Dpk" secondAttribute="centerX" id="mj8-aL-VV8"/>
                                 <constraint firstItem="PNY-XO-SUn" firstAttribute="centerY" secondItem="Ij2-Np-Dpk" secondAttribute="centerY" id="rpr-NG-UQ4"/>
@@ -257,5 +278,6 @@
     <resources>
         <image name="NSStatusAvailable" width="16" height="16"/>
         <image name="circle" catalog="system" width="15" height="15"/>
+        <image name="ellipsis.curlybraces" catalog="system" width="19" height="16"/>
     </resources>
 </document>

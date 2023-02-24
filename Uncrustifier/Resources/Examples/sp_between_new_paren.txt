@@ -1,0 +1,7 @@
+// sp_between_new_paren
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

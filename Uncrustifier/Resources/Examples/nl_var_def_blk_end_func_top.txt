@@ -1,0 +1,7 @@
+// nl_var_def_blk_end_func_top
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

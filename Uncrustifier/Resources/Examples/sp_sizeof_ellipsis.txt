@@ -1,0 +1,7 @@
+// sp_sizeof_ellipsis
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

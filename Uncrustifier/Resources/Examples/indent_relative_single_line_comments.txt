@@ -1,0 +1,7 @@
+// indent_relative_single_line_comments
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

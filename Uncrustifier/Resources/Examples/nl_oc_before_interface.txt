@@ -1,0 +1,7 @@
+// nl_oc_before_interface
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

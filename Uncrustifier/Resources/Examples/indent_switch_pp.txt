@@ -1,0 +1,7 @@
+// indent_switch_pp
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

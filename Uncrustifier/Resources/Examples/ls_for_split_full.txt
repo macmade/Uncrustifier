@@ -1,0 +1,7 @@
+// ls_for_split_full
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

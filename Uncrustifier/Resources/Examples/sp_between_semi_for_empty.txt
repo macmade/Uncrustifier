@@ -1,0 +1,7 @@
+// sp_between_semi_for_empty
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

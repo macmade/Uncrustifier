@@ -1,0 +1,7 @@
+// indent_continue_class_head
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

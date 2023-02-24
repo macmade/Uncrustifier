@@ -60,6 +60,8 @@ public class ConfigValue: NSObject
         }
     }
 
+    @objc public private( set ) dynamic var example: String?
+
     public init( name: String, value: String, valueHint: String, comments: [ String ] )
     {
         self.name      = name
@@ -67,6 +69,9 @@ public class ConfigValue: NSObject
         self.valueHint = valueHint
         self.comments  = comments
         self.edited    = comments.contains { $0 == ConfigValue.editedComment }
+
+        super.init()
+        self.loadExample()
     }
 
     public init( name: String, value: String, comments: [ String ] )
@@ -75,6 +80,23 @@ public class ConfigValue: NSObject
         self.value    = value
         self.comments = comments
         self.edited    = comments.contains { $0 == ConfigValue.editedComment }
+
+        super.init()
+        self.loadExample()
+    }
+
+    private func loadExample()
+    {
+        if let file = Bundle.main.path( forResource: self.name, ofType: "txt", inDirectory: "Examples" ),
+           let data = try? Data( contentsOf: URL( fileURLWithPath: file ) )
+        {
+            let example = String( data: data, encoding: .utf8 )?.trimmingCharacters( in: .whitespacesAndNewlines )
+
+            if let example = example, example.isEmpty == false
+            {
+                self.example = example
+            }
+        }
     }
 
     public override var description: String

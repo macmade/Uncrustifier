@@ -1,0 +1,7 @@
+// align_braced_init_list_thresh
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

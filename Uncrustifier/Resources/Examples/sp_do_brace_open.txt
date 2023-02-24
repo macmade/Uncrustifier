@@ -1,0 +1,7 @@
+// sp_do_brace_open
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

@@ -1,0 +1,7 @@
+// nl_create_while_one_liner
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

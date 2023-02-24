@@ -1,0 +1,7 @@
+// align_nl_cont
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

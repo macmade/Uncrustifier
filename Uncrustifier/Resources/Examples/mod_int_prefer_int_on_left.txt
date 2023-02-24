@@ -1,0 +1,7 @@
+// mod_int_prefer_int_on_left
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

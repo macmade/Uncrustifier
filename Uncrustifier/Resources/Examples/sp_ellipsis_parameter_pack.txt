@@ -1,0 +1,7 @@
+// sp_ellipsis_parameter_pack
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

@@ -1,0 +1,7 @@
+// nl_after_brace_open
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

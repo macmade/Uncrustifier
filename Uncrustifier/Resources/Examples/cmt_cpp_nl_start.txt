@@ -1,0 +1,7 @@
+// cmt_cpp_nl_start
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

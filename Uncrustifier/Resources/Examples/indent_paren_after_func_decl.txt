@@ -1,0 +1,7 @@
+// indent_paren_after_func_decl
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

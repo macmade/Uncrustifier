@@ -1,0 +1,7 @@
+// string_escape_char
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

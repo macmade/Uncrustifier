@@ -1,0 +1,7 @@
+// sp_func_type_paren
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

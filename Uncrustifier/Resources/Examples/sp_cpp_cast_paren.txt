@@ -1,0 +1,7 @@
+// sp_cpp_cast_paren
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

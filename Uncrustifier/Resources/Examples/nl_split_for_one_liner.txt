@@ -1,0 +1,7 @@
+// nl_split_for_one_liner
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

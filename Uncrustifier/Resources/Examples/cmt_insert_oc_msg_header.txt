@@ -1,0 +1,7 @@
+// cmt_insert_oc_msg_header
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

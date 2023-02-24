@@ -1,0 +1,7 @@
+// sp_cmt_cpp_start
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

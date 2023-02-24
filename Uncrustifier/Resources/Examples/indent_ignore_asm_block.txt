@@ -1,0 +1,7 @@
+// indent_ignore_asm_block
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

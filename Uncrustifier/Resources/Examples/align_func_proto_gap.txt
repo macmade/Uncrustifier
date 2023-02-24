@@ -1,0 +1,7 @@
+// align_func_proto_gap
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

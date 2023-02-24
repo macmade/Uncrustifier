@@ -1,0 +1,7 @@
+// nl_after_try_catch_finally
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

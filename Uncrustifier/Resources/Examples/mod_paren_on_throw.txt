@@ -1,0 +1,7 @@
+// mod_paren_on_throw
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

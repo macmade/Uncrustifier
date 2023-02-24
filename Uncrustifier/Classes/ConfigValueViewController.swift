@@ -26,6 +26,8 @@ import Cocoa
 
 public class ConfigValueViewController: NSViewController
 {
+    public  static let loadExampleNotification = NSNotification.Name( "ConfigValueViewController.loadExampleNotification" )
+
     @objc public private( set ) dynamic var value:      ConfigValue
     @objc public private( set ) dynamic var values:     [ String ] = []
     @objc public private( set ) dynamic var comment:    String
@@ -152,5 +154,11 @@ public class ConfigValueViewController: NSViewController
     private func toggleEdited( _ sender: Any? )
     {
         self.value.edited = self.value.edited == false
+    }
+
+    @IBAction
+    private func loadExample( _ sender: Any? )
+    {
+        NotificationCenter.default.post( name: ConfigValueViewController.loadExampleNotification, object: self )
     }
 }

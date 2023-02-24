@@ -1,0 +1,7 @@
+// indent_compound_literal_return
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

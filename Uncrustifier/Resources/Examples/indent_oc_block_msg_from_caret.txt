@@ -1,0 +1,7 @@
+// indent_oc_block_msg_from_caret
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

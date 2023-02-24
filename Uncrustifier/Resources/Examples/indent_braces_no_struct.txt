@@ -1,0 +1,7 @@
+// indent_braces_no_struct
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

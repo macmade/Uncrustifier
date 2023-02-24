@@ -1,0 +1,7 @@
+// align_mix_var_proto
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

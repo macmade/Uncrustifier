@@ -1,0 +1,7 @@
+// sp_cpp_lambda_argument_list
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

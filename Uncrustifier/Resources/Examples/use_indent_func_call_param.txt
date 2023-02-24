@@ -1,0 +1,7 @@
+// use_indent_func_call_param
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

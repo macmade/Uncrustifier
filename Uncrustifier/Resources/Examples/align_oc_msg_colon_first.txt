@@ -1,0 +1,7 @@
+// align_oc_msg_colon_first
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

@@ -1,0 +1,7 @@
+// indent_member_single
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

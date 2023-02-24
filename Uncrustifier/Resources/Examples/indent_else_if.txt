@@ -1,0 +1,7 @@
+// indent_else_if
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

@@ -1,0 +1,7 @@
+// mod_full_paren_assign_bool
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

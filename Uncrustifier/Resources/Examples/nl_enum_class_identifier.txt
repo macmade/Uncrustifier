@@ -1,0 +1,7 @@
+// nl_enum_class_identifier
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

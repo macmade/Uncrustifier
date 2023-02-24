@@ -1,0 +1,7 @@
+// indent_func_def_param_paren_pos_threshold
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

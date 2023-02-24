@@ -1,0 +1,7 @@
+// nl_after_do
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

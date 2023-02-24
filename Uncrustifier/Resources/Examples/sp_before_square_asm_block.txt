@@ -1,0 +1,7 @@
+// sp_before_square_asm_block
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

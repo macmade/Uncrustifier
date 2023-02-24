@@ -1,0 +1,7 @@
+// donot_add_nl_before_cpp_comment
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

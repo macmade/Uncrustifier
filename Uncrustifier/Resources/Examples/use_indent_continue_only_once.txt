@@ -1,0 +1,7 @@
+// use_indent_continue_only_once
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

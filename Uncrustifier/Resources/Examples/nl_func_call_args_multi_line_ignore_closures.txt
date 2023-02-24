@@ -1,0 +1,7 @@
+// nl_func_call_args_multi_line_ignore_closures
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

@@ -1,0 +1,7 @@
+// sp_before_mdatype_commas
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

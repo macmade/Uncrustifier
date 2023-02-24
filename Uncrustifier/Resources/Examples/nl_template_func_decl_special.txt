@@ -1,0 +1,7 @@
+// nl_template_func_decl_special
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

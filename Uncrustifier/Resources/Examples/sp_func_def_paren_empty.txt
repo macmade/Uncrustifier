@@ -1,0 +1,7 @@
+// sp_func_def_paren_empty
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

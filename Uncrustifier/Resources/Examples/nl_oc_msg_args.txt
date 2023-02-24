@@ -1,0 +1,7 @@
+// nl_oc_msg_args
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

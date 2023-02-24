@@ -1,0 +1,7 @@
+// mod_sort_case_sensitive
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

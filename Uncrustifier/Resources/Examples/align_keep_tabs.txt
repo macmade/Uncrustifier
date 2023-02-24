@@ -1,0 +1,7 @@
+// align_keep_tabs
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

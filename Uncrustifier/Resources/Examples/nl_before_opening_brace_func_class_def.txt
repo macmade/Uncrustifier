@@ -1,0 +1,7 @@
+// nl_before_opening_brace_func_class_def
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

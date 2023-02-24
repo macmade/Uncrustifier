@@ -1,0 +1,7 @@
+// pp_indent_func_def
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+

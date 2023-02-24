@@ -1,0 +1,7 @@
+// indent_oc_block_msg_from_colon
+
+int main( int argc, char * argv[] )
+{
+    return 0;
+}
+
