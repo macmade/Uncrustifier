@@ -42,7 +42,7 @@ public class ConfigValue: NSObject
 
     @objc public private( set ) dynamic var valueHint: String?
     @objc public private( set ) dynamic var comments:  [ String ]
-    @objc public private( set ) dynamic var edited:    Bool
+    @objc public                dynamic var edited:    Bool
     {
         willSet
         {
