@@ -290,6 +290,12 @@ DQ
                         <action selector="toggleSorting:" target="-2" id="rE4-eT-QUP"/>
                     </connections>
                 </menuItem>
+                <menuItem title="Automatically Format" image="curlybraces" catalog="system" id="zqk-tz-4lJ">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="toggleAutoFormat:" target="-2" id="kFa-Rk-gOF"/>
+                    </connections>
+                </menuItem>
                 <menuItem isSeparatorItem="YES" id="MT4-Os-r5V"/>
                 <menuItem title="Load Configuration File..." image="text.badge.plus" catalog="system" id="qxc-q1-Ulx">
                     <modifierMask key="keyEquivalentModifierMask"/>
@@ -343,6 +349,7 @@ DQ
         <image name="arrow.down.app" catalog="system" width="15" height="14"/>
         <image name="circle.square" catalog="system" width="15" height="14"/>
         <image name="circle.square.fill" catalog="system" width="15" height="14"/>
+        <image name="curlybraces" catalog="system" width="15" height="16"/>
         <image name="curlybraces.square" catalog="system" width="15" height="14"/>
         <image name="curlybraces.square.fill" catalog="system" width="15" height="14"/>
         <image name="gearshape.fill" catalog="system" width="16" height="16"/>

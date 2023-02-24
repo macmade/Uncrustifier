@@ -87,6 +87,14 @@ public class ConfigViewController: NSViewController, NSCollectionViewDelegate, N
         }
     }
 
+    @objc public dynamic var autoFormat = UserDefaults.standard.bool( forKey: "autoFormat" )
+    {
+        didSet
+        {
+            UserDefaults.standard.set( self.autoFormat, forKey: "autoFormat" )
+        }
+    }
+
     @IBOutlet private var collectionView: NSCollectionView!
 
     public init()

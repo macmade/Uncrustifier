@@ -26,7 +26,8 @@ import Foundation
 
 public class ConfigValue: NSObject
 {
-    private static let editedComment = "# Edited: YES"
+    public  static let valueChangedNotification = NSNotification.Name( "ConfigValue.ValueChanged" )
+    private static let editedComment            = "# Edited: YES"
 
     @objc public private( set ) dynamic var name:  String
     @objc public private( set ) dynamic var value: String
@@ -34,6 +35,8 @@ public class ConfigValue: NSObject
         didSet
         {
             self.edited = true
+
+            NotificationCenter.default.post( name: ConfigValue.valueChangedNotification, object: self )
         }
     }
 

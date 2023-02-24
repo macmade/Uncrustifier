@@ -47,10 +47,11 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
         }
     }
 
-    private var cacheDirectory:  URL?
-    private var configCacheFile: URL?
-    private var codeCacheFile:   URL?
-    private var windowObserver:  Any?
+    private var cacheDirectory:       URL?
+    private var configCacheFile:      URL?
+    private var codeCacheFile:        URL?
+    private var windowObserver:       Any?
+    private var valueChangedObserver: Any?
 
     public init()
     {
@@ -70,6 +71,16 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
     public override func windowDidLoad()
     {
         super.windowDidLoad()
+
+        self.valueChangedObserver = NotificationCenter.default.addObserver( forName: ConfigValue.valueChangedNotification, object: nil, queue: nil )
+        {
+            _ in
+
+            if self.configController.autoFormat
+            {
+                self.format( nil )
+            }
+        }
 
         if UserDefaults.standard.string( forKey: "theme" ) == nil
         {
@@ -329,6 +340,12 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
         self.configController.sortValues = self.configController.sortValues == false
     }
 
+    @IBAction
+    private func toggleAutoFormat( _ sender: Any? )
+    {
+        self.configController.autoFormat = self.configController.autoFormat == false
+    }
+
     public func menuWillOpen( _ menu: NSMenu )
     {
         guard menu == self.optionsMenu
@@ -342,6 +359,10 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
             if $0.action == #selector( self.toggleSorting( _: ) )
             {
                 $0.state = self.configController.sortValues ? .on : .off
+            }
+            else if $0.action == #selector( self.toggleAutoFormat( _: ) )
+            {
+                $0.state = self.configController.autoFormat ? .on : .off
             }
         }
     }
