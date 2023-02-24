@@ -638,6 +638,12 @@
                                     <action selector="toggleFullScreen:" target="-1" id="dU3-MA-1Rq"/>
                                 </connections>
                             </menuItem>
+                            <menuItem isSeparatorItem="YES" id="lCM-dH-h4a"/>
+                            <menuItem title="Invert Appearance" keyEquivalent="I" id="geu-nd-3tY">
+                                <connections>
+                                    <action selector="invertAppearance:" target="-2" id="zgB-oF-Rt9"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                 </menuItem>

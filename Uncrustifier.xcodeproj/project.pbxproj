@@ -32,6 +32,11 @@
 		05A0848928ECA4B6008FD8EA /* GitHubUpdates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A0848528ECA4A5008FD8EA /* GitHubUpdates.framework */; };
 		05A0848C28ECA4C1008FD8EA /* GitHubUpdates.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 05A0848528ECA4A5008FD8EA /* GitHubUpdates.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		05B814C229A8EB0000133654 /* NSMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B814C129A8EB0000133654 /* NSMenu.swift */; };
+		05B814CC29A91A5900133654 /* NSAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B814CB29A91A5900133654 /* NSAppearance.swift */; };
+		05B814CD29A91A5900133654 /* NSAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B814CB29A91A5900133654 /* NSAppearance.swift */; };
+		05B814D029A91A5E00133654 /* NSMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B814C129A8EB0000133654 /* NSMenu.swift */; };
+		05B814E029A91AA600133654 /* NSApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B814DF29A91AA600133654 /* NSApplication.swift */; };
+		05B814E129A91AA600133654 /* NSApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B814DF29A91AA600133654 /* NSApplication.swift */; };
 		05DB009A292CC69200FAB389 /* CreditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF240528E6465F00334A41 /* CreditViewController.swift */; };
 		05DB009B292CC69200FAB389 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF6A28E610D4004CB733 /* ThemeViewController.swift */; };
 		05DB009C292CC69200FAB389 /* NSWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD1928E4C6DE000AFC79 /* NSWindowController.swift */; };
@@ -295,6 +300,8 @@
 		057AAF6E28E616AC004CB733 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		05A0847F28ECA4A5008FD8EA /* GitHubUpdates.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GitHubUpdates.xcodeproj; path = Submodules/GitHubUpdates/GitHubUpdates.xcodeproj; sourceTree = "<group>"; };
 		05B814C129A8EB0000133654 /* NSMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMenu.swift; sourceTree = "<group>"; };
+		05B814CB29A91A5900133654 /* NSAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAppearance.swift; sourceTree = "<group>"; };
+		05B814DF29A91AA600133654 /* NSApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSApplication.swift; sourceTree = "<group>"; };
 		05DB00CD292CC69200FAB389 /* Uncrustifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uncrustifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05DB00D1292CC6BA00FAB389 /* Uncrustifier AppStore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Uncrustifier AppStore.entitlements"; sourceTree = "<group>"; };
 		05EF23FE28E645E700334A41 /* AboutWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
@@ -555,6 +562,8 @@
 				057AAF1928E57913004CB733 /* NSView.swift */,
 				0572AD1928E4C6DE000AFC79 /* NSWindowController.swift */,
 				05B814C129A8EB0000133654 /* NSMenu.swift */,
+				05B814CB29A91A5900133654 /* NSAppearance.swift */,
+				05B814DF29A91AA600133654 /* NSApplication.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -910,6 +919,7 @@
 				057AAF6B28E610D4004CB733 /* ThemeViewController.swift in Sources */,
 				0572AD1A28E4C6DE000AFC79 /* NSWindowController.swift in Sources */,
 				0572AD1428E47C6A000AFC79 /* MainWindowController.swift in Sources */,
+				05B814CC29A91A5900133654 /* NSAppearance.swift in Sources */,
 				057AAF5428E59F0D004CB733 /* ConfigViewItem.swift in Sources */,
 				057AAF1228E577CE004CB733 /* ConfigViewController.swift in Sources */,
 				057AAF1A28E57913004CB733 /* NSView.swift in Sources */,
@@ -917,6 +927,7 @@
 				0572AD5D28E4DC43000AFC79 /* Config.swift in Sources */,
 				0572AD0528E47BCF000AFC79 /* ApplicationDelegate.swift in Sources */,
 				057AAF4928E5846B004CB733 /* Uncrustify.swift in Sources */,
+				05B814E029A91AA600133654 /* NSApplication.swift in Sources */,
 				05B814C229A8EB0000133654 /* NSMenu.swift in Sources */,
 				052C390628EDED960034E743 /* ArrayCount.swift in Sources */,
 				0572AD1828E4C0F5000AFC79 /* NSError.swift in Sources */,
@@ -941,6 +952,7 @@
 				05DB009A292CC69200FAB389 /* CreditViewController.swift in Sources */,
 				05DB009B292CC69200FAB389 /* ThemeViewController.swift in Sources */,
 				05DB009C292CC69200FAB389 /* NSWindowController.swift in Sources */,
+				05B814D029A91A5E00133654 /* NSMenu.swift in Sources */,
 				05DB009D292CC69200FAB389 /* MainWindowController.swift in Sources */,
 				05DB009E292CC69200FAB389 /* ConfigViewItem.swift in Sources */,
 				05DB009F292CC69200FAB389 /* ConfigViewController.swift in Sources */,
@@ -949,6 +961,7 @@
 				05DB00A2292CC69200FAB389 /* Config.swift in Sources */,
 				05DB00A3292CC69200FAB389 /* ApplicationDelegate.swift in Sources */,
 				05DB00A4292CC69200FAB389 /* Uncrustify.swift in Sources */,
+				05B814E129A91AA600133654 /* NSApplication.swift in Sources */,
 				05DB00A5292CC69200FAB389 /* ArrayCount.swift in Sources */,
 				05DB00A6292CC69200FAB389 /* NSError.swift in Sources */,
 				05DB00A7292CC69200FAB389 /* BackgroundView.swift in Sources */,
@@ -957,6 +970,7 @@
 				05DB00AA292CC69200FAB389 /* Credit.swift in Sources */,
 				05DB00AB292CC69200FAB389 /* Bundle.swift in Sources */,
 				05DB00AC292CC69200FAB389 /* CreditsWindowController.swift in Sources */,
+				05B814CD29A91A5900133654 /* NSAppearance.swift in Sources */,
 				05DB00AD292CC69200FAB389 /* AboutWindowController.swift in Sources */,
 				05DB00AE292CC69200FAB389 /* IntegerConverter.swift in Sources */,
 				05DB00AF292CC69200FAB389 /* ConfigValueViewController.swift in Sources */,
