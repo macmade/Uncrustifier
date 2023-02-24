@@ -1,7 +1,7 @@
 /*******************************************************************************
  * The MIT License (MIT)
  *
- * Copyright (c) 2022, Jean-David Gadina - www.xs-labs.com
+ * Copyright (c) 2023, Jean-David Gadina - www.xs-labs.com
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the Software), to deal
@@ -26,10 +26,36 @@ import Foundation
 
 public class ConfigValue: NSObject
 {
-    @objc public private( set ) dynamic var name:      String
-    @objc public private( set ) dynamic var value:     String
+    private static let editedComment = "# Edited: YES"
+
+    @objc public private( set ) dynamic var name:  String
+    @objc public private( set ) dynamic var value: String
+    {
+        didSet
+        {
+            self.edited = true
+        }
+    }
+
     @objc public private( set ) dynamic var valueHint: String?
     @objc public private( set ) dynamic var comments:  [ String ]
+    @objc public private( set ) dynamic var edited:    Bool
+    {
+        willSet
+        {
+            if self.edited == false
+            {
+                self.comments.append( ConfigValue.editedComment )
+            }
+        }
+        didSet
+        {
+            if self.edited == false
+            {
+                self.comments.removeAll { $0 == ConfigValue.editedComment }
+            }
+        }
+    }
 
     public init( name: String, value: String, valueHint: String, comments: [ String ] )
     {
@@ -37,6 +63,7 @@ public class ConfigValue: NSObject
         self.value     = value
         self.valueHint = valueHint
         self.comments  = comments
+        self.edited    = comments.contains { $0 == ConfigValue.editedComment }
     }
 
     public init( name: String, value: String, comments: [ String ] )
@@ -44,6 +71,7 @@ public class ConfigValue: NSObject
         self.name     = name
         self.value    = value
         self.comments = comments
+        self.edited    = comments.contains { $0 == ConfigValue.editedComment }
     }
 
     public override var description: String

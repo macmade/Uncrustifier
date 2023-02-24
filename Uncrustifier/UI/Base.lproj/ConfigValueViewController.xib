@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,18 +22,47 @@
                 <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LEU-Bo-Tcm">
                     <rect key="frame" x="10" y="10" width="518" height="145"/>
                     <subviews>
-                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pay-xm-pfE">
-                            <rect key="frame" x="-2" y="129" width="40" height="16"/>
-                            <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" title="Label" id="fTk-aX-1F3">
-                                <font key="font" textStyle="headline" name=".SFNS-Bold"/>
-                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                            </textFieldCell>
-                            <connections>
-                                <binding destination="-2" name="toolTip" keyPath="self.value.name" id="e2B-pY-4hE"/>
-                                <binding destination="-2" name="value" keyPath="self.value.name" id="egY-DG-nKn"/>
-                            </connections>
-                        </textField>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="xvX-D1-DpP">
+                            <rect key="frame" x="0.0" y="129" width="518" height="16"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pay-xm-pfE">
+                                    <rect key="frame" x="-2" y="0.0" width="40" height="16"/>
+                                    <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" title="Label" id="fTk-aX-1F3">
+                                        <font key="font" textStyle="headline" name=".SFNS-Bold"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <binding destination="-2" name="toolTip" keyPath="self.value.name" id="e2B-pY-4hE"/>
+                                        <binding destination="-2" name="value" keyPath="self.value.name" id="egY-DG-nKn"/>
+                                    </connections>
+                                </textField>
+                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KzT-Cg-jRz">
+                                    <rect key="frame" x="503" y="1" width="15" height="15"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="15" id="ABK-Be-FFu"/>
+                                        <constraint firstAttribute="width" constant="15" id="b9v-NW-gmz"/>
+                                    </constraints>
+                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusAvailable" id="lRy-e8-Qwx"/>
+                                    <connections>
+                                        <binding destination="-2" name="hidden" keyPath="self.value.edited" id="nf4-WL-4rP">
+                                            <dictionary key="options">
+                                                <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                            </dictionary>
+                                        </binding>
+                                    </connections>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="KzT-Cg-jRz" secondAttribute="trailing" id="BUA-0J-3zr"/>
+                                <constraint firstItem="KzT-Cg-jRz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pay-xm-pfE" secondAttribute="trailing" constant="8" symbolic="YES" id="ND0-8H-JVr"/>
+                                <constraint firstItem="KzT-Cg-jRz" firstAttribute="centerY" secondItem="Pay-xm-pfE" secondAttribute="centerY" id="Q3u-f8-0lo"/>
+                                <constraint firstItem="Pay-xm-pfE" firstAttribute="top" secondItem="xvX-D1-DpP" secondAttribute="top" id="Sv3-iL-MNm"/>
+                                <constraint firstItem="Pay-xm-pfE" firstAttribute="leading" secondItem="xvX-D1-DpP" secondAttribute="leading" id="VWy-at-JbX"/>
+                                <constraint firstItem="Pay-xm-pfE" firstAttribute="leading" secondItem="xvX-D1-DpP" secondAttribute="leading" id="fTl-Ol-JcC"/>
+                                <constraint firstAttribute="bottom" secondItem="Pay-xm-pfE" secondAttribute="bottom" id="uF9-iS-CAD"/>
+                            </constraints>
+                        </customView>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vCS-kH-s7y">
                             <rect key="frame" x="-2" y="108" width="31" height="13"/>
                             <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" title="Label" id="xhc-aL-QrW">
@@ -166,13 +194,13 @@
                         </textField>
                     </subviews>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="xvX-D1-DpP" secondAttribute="trailing" id="2VV-gE-gu9"/>
                         <constraint firstAttribute="trailing" secondItem="ery-bw-xB1" secondAttribute="trailing" id="CUf-tx-Xa8"/>
                         <constraint firstItem="ery-bw-xB1" firstAttribute="leading" secondItem="LEU-Bo-Tcm" secondAttribute="leading" id="Ern-bX-S3x"/>
                         <constraint firstItem="Wyk-py-Dj4" firstAttribute="leading" secondItem="LEU-Bo-Tcm" secondAttribute="leading" id="HCf-AN-nXP"/>
+                        <constraint firstItem="xvX-D1-DpP" firstAttribute="leading" secondItem="LEU-Bo-Tcm" secondAttribute="leading" id="LQc-Yj-z3J"/>
                         <constraint firstAttribute="trailing" secondItem="Wyk-py-Dj4" secondAttribute="trailing" id="OvL-Ez-MHv"/>
-                        <constraint firstItem="Pay-xm-pfE" firstAttribute="leading" secondItem="LEU-Bo-Tcm" secondAttribute="leading" id="QUB-Yp-wvq"/>
                         <constraint firstAttribute="trailing" secondItem="d9Q-aS-Pie" secondAttribute="trailing" id="adh-Sa-Uru"/>
-                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Pay-xm-pfE" secondAttribute="trailing" id="fwC-bK-EvM"/>
                         <constraint firstItem="d9Q-aS-Pie" firstAttribute="leading" secondItem="LEU-Bo-Tcm" secondAttribute="leading" id="wiq-Ku-lqB"/>
                     </constraints>
                     <visibilityPriorities>
@@ -202,7 +230,10 @@
                 <constraint firstItem="s7n-oX-CzK" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="qKW-cX-O4m"/>
                 <constraint firstItem="LEU-Bo-Tcm" firstAttribute="top" secondItem="s7n-oX-CzK" secondAttribute="bottom" constant="10" id="uBk-a4-N6K"/>
             </constraints>
-            <point key="canvasLocation" x="-49.5" y="77.5"/>
+            <point key="canvasLocation" x="-50" y="94"/>
         </customView>
     </objects>
+    <resources>
+        <image name="NSStatusAvailable" width="16" height="16"/>
+    </resources>
 </document>
