@@ -23,7 +23,10 @@
  ******************************************************************************/
 
 import Cocoa
+
+#if !APPSTORE
 import GitHubUpdates
+#endif
 
 @main
 public class ApplicationDelegate: NSObject, NSApplicationDelegate
@@ -32,17 +35,34 @@ public class ApplicationDelegate: NSObject, NSApplicationDelegate
     private let aboutWindowController   = AboutWindowController()
     private let creditsWindowController = CreditsWindowController()
 
-    @IBOutlet private var updater: GitHubUpdater!
+    #if !APPSTORE
+    private lazy var updater: GitHubUpdater =
+    {
+        let updater        = GitHubUpdater()
+        updater.user       = "macmade"
+        updater.repository = "Uncrustifier"
+
+        return updater
+    }()
+    #endif
+
+    #if APPSTORE
+    @objc private dynamic var appStore = true
+    #else
+    @objc private dynamic var appStore = false
+    #endif
 
     public func applicationDidFinishLaunching( _ notification: Notification )
     {
         self.mainWindowController.window?.center()
         self.mainWindowController.window?.makeKeyAndOrderFront( nil )
 
+        #if !APPSTORE
         DispatchQueue.main.asyncAfter( deadline: .now() + .seconds( 2 ) )
         {
             self.updater.checkForUpdatesInBackground()
         }
+        #endif
     }
 
     public func applicationShouldTerminateAfterLastWindowClosed( _ sender: NSApplication ) -> Bool
@@ -71,4 +91,14 @@ public class ApplicationDelegate: NSObject, NSApplicationDelegate
 
         self.creditsWindowController.window?.makeKeyAndOrderFront( sender )
     }
+
+    #if APPSTORE
+    @IBAction public func checkForUpdates( _ sender: Any? )
+    {}
+    #else
+    @IBAction public func checkForUpdates( _ sender: Any? )
+    {
+        self.updater.checkForUpdates( sender )
+    }
+    #endif
 }

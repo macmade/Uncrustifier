@@ -31,6 +31,47 @@
 		057AAF6B28E610D4004CB733 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF6A28E610D4004CB733 /* ThemeViewController.swift */; };
 		05A0848928ECA4B6008FD8EA /* GitHubUpdates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A0848528ECA4A5008FD8EA /* GitHubUpdates.framework */; };
 		05A0848C28ECA4C1008FD8EA /* GitHubUpdates.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 05A0848528ECA4A5008FD8EA /* GitHubUpdates.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05DB009A292CC69200FAB389 /* CreditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF240528E6465F00334A41 /* CreditViewController.swift */; };
+		05DB009B292CC69200FAB389 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF6A28E610D4004CB733 /* ThemeViewController.swift */; };
+		05DB009C292CC69200FAB389 /* NSWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD1928E4C6DE000AFC79 /* NSWindowController.swift */; };
+		05DB009D292CC69200FAB389 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD1328E47C6A000AFC79 /* MainWindowController.swift */; };
+		05DB009E292CC69200FAB389 /* ConfigViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF5328E59F0D004CB733 /* ConfigViewItem.swift */; };
+		05DB009F292CC69200FAB389 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF1128E577CE004CB733 /* ConfigViewController.swift */; };
+		05DB00A0292CC69200FAB389 /* NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF1928E57913004CB733 /* NSView.swift */; };
+		05DB00A1292CC69200FAB389 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF4A28E5973D004CB733 /* Either.swift */; };
+		05DB00A2292CC69200FAB389 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD5C28E4DC43000AFC79 /* Config.swift */; };
+		05DB00A3292CC69200FAB389 /* ApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD0428E47BCF000AFC79 /* ApplicationDelegate.swift */; };
+		05DB00A4292CC69200FAB389 /* Uncrustify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF4828E5846B004CB733 /* Uncrustify.swift */; };
+		05DB00A5292CC69200FAB389 /* ArrayCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052C390528EDED960034E743 /* ArrayCount.swift */; };
+		05DB00A6292CC69200FAB389 /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD1728E4C0F5000AFC79 /* NSError.swift */; };
+		05DB00A7292CC69200FAB389 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF5728E5F6AA004CB733 /* BackgroundView.swift */; };
+		05DB00A8292CC69200FAB389 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF1528E578B4004CB733 /* TextViewController.swift */; };
+		05DB00A9292CC69200FAB389 /* BoolConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF243128E743D500334A41 /* BoolConverter.swift */; };
+		05DB00AA292CC69200FAB389 /* Credit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF240628E6465F00334A41 /* Credit.swift */; };
+		05DB00AB292CC69200FAB389 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF240228E6465700334A41 /* Bundle.swift */; };
+		05DB00AC292CC69200FAB389 /* CreditsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF240428E6465F00334A41 /* CreditsWindowController.swift */; };
+		05DB00AD292CC69200FAB389 /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF23FE28E645E700334A41 /* AboutWindowController.swift */; };
+		05DB00AE292CC69200FAB389 /* IntegerConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF243428E7493900334A41 /* IntegerConverter.swift */; };
+		05DB00AF292CC69200FAB389 /* ConfigValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD6028E4E3AA000AFC79 /* ConfigValueViewController.swift */; };
+		05DB00B0292CC69200FAB389 /* ConfigValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD5E28E4DC5D000AFC79 /* ConfigValue.swift */; };
+		05DB00B1292CC69200FAB389 /* TableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF240E28E6469600334A41 /* TableRowView.swift */; };
+		05DB00B4292CC69200FAB389 /* Highlightr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 057AAF6328E5FE22004CB733 /* Highlightr.framework */; };
+		05DB00B7292CC69200FAB389 /* License-Highlightr.txt in Resources */ = {isa = PBXBuildFile; fileRef = 05EF242E28E6491700334A41 /* License-Highlightr.txt */; };
+		05DB00B8292CC69200FAB389 /* ThemeWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EF242A28E6474500334A41 /* ThemeWindowController.xib */; };
+		05DB00B9292CC69200FAB389 /* ConfigValueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EF241528E6472600334A41 /* ConfigValueViewController.xib */; };
+		05DB00BA292CC69200FAB389 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0572AD0628E47BCF000AFC79 /* Assets.xcassets */; };
+		05DB00BB292CC69200FAB389 /* AboutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EF241228E6472300334A41 /* AboutWindowController.xib */; };
+		05DB00BC292CC69200FAB389 /* ConfigViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EF241B28E6472F00334A41 /* ConfigViewItem.xib */; };
+		05DB00BD292CC69200FAB389 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EF242428E6473E00334A41 /* MainWindowController.xib */; };
+		05DB00BE292CC69200FAB389 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0572AD0828E47BCF000AFC79 /* MainMenu.xib */; };
+		05DB00BF292CC69200FAB389 /* ConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EF241828E6472C00334A41 /* ConfigViewController.xib */; };
+		05DB00C0292CC69200FAB389 /* License-Uncrustify.txt in Resources */ = {isa = PBXBuildFile; fileRef = 05EF242C28E6489A00334A41 /* License-Uncrustify.txt */; };
+		05DB00C1292CC69200FAB389 /* TextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EF242728E6474200334A41 /* TextViewController.xib */; };
+		05DB00C2292CC69200FAB389 /* CreditsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EF241E28E6473400334A41 /* CreditsWindowController.xib */; };
+		05DB00C3292CC69200FAB389 /* CFBase.txt in Resources */ = {isa = PBXBuildFile; fileRef = 057AAF5928E5FB3C004CB733 /* CFBase.txt */; };
+		05DB00C4292CC69200FAB389 /* CreditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EF242128E6473700334A41 /* CreditViewController.xib */; };
+		05DB00C6292CC69200FAB389 /* uncrustify in Copy Executables */ = {isa = PBXBuildFile; fileRef = 057AAF4528E5840A004CB733 /* uncrustify */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		05DB00C9292CC69200FAB389 /* Highlightr.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 057AAF6328E5FE22004CB733 /* Highlightr.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		05EF23FF28E645E700334A41 /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF23FE28E645E700334A41 /* AboutWindowController.swift */; };
 		05EF240328E6465700334A41 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF240228E6465700334A41 /* Bundle.swift */; };
 		05EF240728E6465F00334A41 /* CreditsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF240428E6465F00334A41 /* CreditsWindowController.swift */; };
@@ -95,6 +136,13 @@
 			remoteGlobalIDString = 05F82B241EF32EA700EC8A93;
 			remoteInfo = GitHubUpdates;
 		};
+		05DB0098292CC69200FAB389 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 057AAF5B28E5FE22004CB733 /* Highlightr.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CD1AE151F391713000FDA02;
+			remoteInfo = "Highlightr-macOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -117,6 +165,28 @@
 			files = (
 				05A0848C28ECA4C1008FD8EA /* GitHubUpdates.framework in Copy Frameworks */,
 				057AAF6928E5FE48004CB733 /* Highlightr.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05DB00C5292CC69200FAB389 /* Copy Executables */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				05DB00C6292CC69200FAB389 /* uncrustify in Copy Executables */,
+			);
+			name = "Copy Executables";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05DB00C7292CC69200FAB389 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				05DB00C9292CC69200FAB389 /* Highlightr.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +293,8 @@
 		057AAF6A28E610D4004CB733 /* ThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
 		057AAF6E28E616AC004CB733 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		05A0847F28ECA4A5008FD8EA /* GitHubUpdates.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GitHubUpdates.xcodeproj; path = Submodules/GitHubUpdates/GitHubUpdates.xcodeproj; sourceTree = "<group>"; };
+		05DB00CD292CC69200FAB389 /* Uncrustifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uncrustifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05DB00D1292CC6BA00FAB389 /* Uncrustifier AppStore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Uncrustifier AppStore.entitlements"; sourceTree = "<group>"; };
 		05EF23FE28E645E700334A41 /* AboutWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
 		05EF240228E6465700334A41 /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		05EF240428E6465F00334A41 /* CreditsWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsWindowController.swift; sourceTree = "<group>"; };
@@ -254,6 +326,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05DB00B2292CC69200FAB389 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05DB00B4292CC69200FAB389 /* Highlightr.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -275,6 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				0572AD0128E47BCF000AFC79 /* Uncrustifier.app */,
+				05DB00CD292CC69200FAB389 /* Uncrustifier.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -287,6 +368,7 @@
 				0572AD5328E4D7D3000AFC79 /* Info.plist */,
 				0572AD1228E47BDD000AFC79 /* UI */,
 				0572AD0B28E47BCF000AFC79 /* Uncrustifier.entitlements */,
+				05DB00D1292CC6BA00FAB389 /* Uncrustifier AppStore.entitlements */,
 			);
 			path = Uncrustifier;
 			sourceTree = "<group>";
@@ -634,6 +716,27 @@
 			productReference = 0572AD0128E47BCF000AFC79 /* Uncrustifier.app */;
 			productType = "com.apple.product-type.application";
 		};
+		05DB0094292CC69200FAB389 /* Uncrustifier AppStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05DB00CA292CC69200FAB389 /* Build configuration list for PBXNativeTarget "Uncrustifier AppStore" */;
+			buildPhases = (
+				05DB0099292CC69200FAB389 /* Sources */,
+				05DB00B2292CC69200FAB389 /* Frameworks */,
+				05DB00B5292CC69200FAB389 /* Set Bundle Version */,
+				05DB00B6292CC69200FAB389 /* Resources */,
+				05DB00C5292CC69200FAB389 /* Copy Executables */,
+				05DB00C7292CC69200FAB389 /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05DB0097292CC69200FAB389 /* PBXTargetDependency */,
+			);
+			name = "Uncrustifier AppStore";
+			productName = Uncrustifier;
+			productReference = 05DB00CD292CC69200FAB389 /* Uncrustifier.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -673,6 +776,7 @@
 			projectRoot = "";
 			targets = (
 				0572AD0028E47BCF000AFC79 /* Uncrustifier */,
+				05DB0094292CC69200FAB389 /* Uncrustifier AppStore */,
 			);
 		};
 /* End PBXProject section */
@@ -730,10 +834,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05DB00B6292CC69200FAB389 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05DB00B7292CC69200FAB389 /* License-Highlightr.txt in Resources */,
+				05DB00B8292CC69200FAB389 /* ThemeWindowController.xib in Resources */,
+				05DB00B9292CC69200FAB389 /* ConfigValueViewController.xib in Resources */,
+				05DB00BA292CC69200FAB389 /* Assets.xcassets in Resources */,
+				05DB00BB292CC69200FAB389 /* AboutWindowController.xib in Resources */,
+				05DB00BC292CC69200FAB389 /* ConfigViewItem.xib in Resources */,
+				05DB00BD292CC69200FAB389 /* MainWindowController.xib in Resources */,
+				05DB00BE292CC69200FAB389 /* MainMenu.xib in Resources */,
+				05DB00BF292CC69200FAB389 /* ConfigViewController.xib in Resources */,
+				05DB00C0292CC69200FAB389 /* License-Uncrustify.txt in Resources */,
+				05DB00C1292CC69200FAB389 /* TextViewController.xib in Resources */,
+				05DB00C2292CC69200FAB389 /* CreditsWindowController.xib in Resources */,
+				05DB00C3292CC69200FAB389 /* CFBase.txt in Resources */,
+				05DB00C4292CC69200FAB389 /* CreditViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		050E0EFB28EB3E490080C562 /* Set Bundle Version */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Set Bundle Version";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n    plist=\"Uncrustifier/Info.plist\"\n    rev=$(git rev-list HEAD | wc -l)\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $rev\" \"$plist\"\nfi\n";
+		};
+		05DB00B5292CC69200FAB389 /* Set Bundle Version */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -786,6 +930,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05DB0099292CC69200FAB389 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05DB009A292CC69200FAB389 /* CreditViewController.swift in Sources */,
+				05DB009B292CC69200FAB389 /* ThemeViewController.swift in Sources */,
+				05DB009C292CC69200FAB389 /* NSWindowController.swift in Sources */,
+				05DB009D292CC69200FAB389 /* MainWindowController.swift in Sources */,
+				05DB009E292CC69200FAB389 /* ConfigViewItem.swift in Sources */,
+				05DB009F292CC69200FAB389 /* ConfigViewController.swift in Sources */,
+				05DB00A0292CC69200FAB389 /* NSView.swift in Sources */,
+				05DB00A1292CC69200FAB389 /* Either.swift in Sources */,
+				05DB00A2292CC69200FAB389 /* Config.swift in Sources */,
+				05DB00A3292CC69200FAB389 /* ApplicationDelegate.swift in Sources */,
+				05DB00A4292CC69200FAB389 /* Uncrustify.swift in Sources */,
+				05DB00A5292CC69200FAB389 /* ArrayCount.swift in Sources */,
+				05DB00A6292CC69200FAB389 /* NSError.swift in Sources */,
+				05DB00A7292CC69200FAB389 /* BackgroundView.swift in Sources */,
+				05DB00A8292CC69200FAB389 /* TextViewController.swift in Sources */,
+				05DB00A9292CC69200FAB389 /* BoolConverter.swift in Sources */,
+				05DB00AA292CC69200FAB389 /* Credit.swift in Sources */,
+				05DB00AB292CC69200FAB389 /* Bundle.swift in Sources */,
+				05DB00AC292CC69200FAB389 /* CreditsWindowController.swift in Sources */,
+				05DB00AD292CC69200FAB389 /* AboutWindowController.swift in Sources */,
+				05DB00AE292CC69200FAB389 /* IntegerConverter.swift in Sources */,
+				05DB00AF292CC69200FAB389 /* ConfigValueViewController.swift in Sources */,
+				05DB00B0292CC69200FAB389 /* ConfigValue.swift in Sources */,
+				05DB00B1292CC69200FAB389 /* TableRowView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -798,6 +973,11 @@
 			isa = PBXTargetDependency;
 			name = GitHubUpdates;
 			targetProxy = 05A0848A28ECA4BA008FD8EA /* PBXContainerItemProxy */;
+		};
+		05DB0097292CC69200FAB389 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Highlightr-macOS";
+			targetProxy = 05DB0098292CC69200FAB389 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -915,7 +1095,7 @@
 					"@executable_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.Uncrustifier";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Uncrustifier;
 			};
 			name = Debug;
 		};
@@ -935,7 +1115,57 @@
 					"@executable_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.Uncrustifier";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Uncrustifier;
+			};
+			name = Release;
+		};
+		05DB00CB292CC69200FAB389 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Uncrustifier/Uncrustifier AppStore.entitlements";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"APPSTORE=1",
+				);
+				INFOPLIST_FILE = Uncrustifier/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 XS-Labs. All rights reserved.";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.Uncrustifier";
+				PRODUCT_NAME = Uncrustifier;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) APPSTORE";
+			};
+			name = Debug;
+		};
+		05DB00CC292CC69200FAB389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Uncrustifier/Uncrustifier AppStore.entitlements";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"APPSTORE=1",
+				);
+				INFOPLIST_FILE = Uncrustifier/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 XS-Labs. All rights reserved.";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.Uncrustifier";
+				PRODUCT_NAME = Uncrustifier;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) APPSTORE";
 			};
 			name = Release;
 		};
@@ -956,6 +1186,15 @@
 			buildConfigurations = (
 				0572AD0F28E47BCF000AFC79 /* Debug */,
 				0572AD1028E47BCF000AFC79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05DB00CA292CC69200FAB389 /* Build configuration list for PBXNativeTarget "Uncrustifier AppStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05DB00CB292CC69200FAB389 /* Debug */,
+				05DB00CC292CC69200FAB389 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
