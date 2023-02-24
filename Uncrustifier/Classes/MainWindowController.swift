@@ -347,6 +347,23 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
     }
 
     @IBAction
+    private func showEdited( _ sender: Any? )
+    {
+        guard let view = sender as? NSView, let event = NSApp.currentEvent
+        else
+        {
+            return
+        }
+
+        let menu = NSMenu()
+
+        menu.addItem( withTitle: "Show Only Edited",     action: #selector( self.toggleShowEdited( _: ) ), representedObject: NSNumber( booleanLiteral: true ),  isOn: self.configController.showEdited == true )
+        menu.addItem( withTitle: "Show Only Non Edited", action: #selector( self.toggleShowEdited( _: ) ), representedObject: NSNumber( booleanLiteral: false ), isOn: self.configController.showEdited == false )
+
+        NSMenu.popUpContextMenu( menu, with: event, for: view )
+    }
+
+    @IBAction
     private func showTags( _ sender: Any? )
     {
         guard let view = sender as? NSView, let event = NSApp.currentEvent
@@ -407,6 +424,25 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
         menu.addItem( withTitle: "Objective-C", action: #selector( self.selectLanguage( _: ) ), representedObject: "_oc_",  isOn: self.configController.selectedLanguage == "_oc_" )
 
         NSMenu.popUpContextMenu( menu, with: event, for: view )
+    }
+
+    @IBAction
+    private func toggleShowEdited( _ sender: Any? )
+    {
+        guard let item = sender as? NSMenuItem, let show = item.representedObject as? NSNumber
+        else
+        {
+            return
+        }
+
+        if let current = self.configController.showEdited, current.boolValue == show.boolValue
+        {
+            self.configController.showEdited = nil
+        }
+        else
+        {
+            self.configController.showEdited = show
+        }
     }
 
     @IBAction

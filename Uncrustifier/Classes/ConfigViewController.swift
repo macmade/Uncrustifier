@@ -54,6 +54,14 @@ public class ConfigViewController: NSViewController, NSCollectionViewDelegate, N
         }
     }
 
+    @objc public dynamic var showEdited: NSNumber?
+    {
+        didSet
+        {
+            self.rearrangeControllers()
+        }
+    }
+
     @objc public dynamic var selectedTag: String?
     {
         didSet
@@ -173,6 +181,14 @@ public class ConfigViewController: NSViewController, NSCollectionViewDelegate, N
             controllers = controllers.filter
             {
                 $0.value.name.contains( lang )
+            }
+        }
+
+        if let showEdited = self.showEdited
+        {
+            controllers = controllers.filter
+            {
+                $0.value.edited == showEdited.boolValue
             }
         }
 
