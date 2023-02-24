@@ -1,7 +1,7 @@
 /*******************************************************************************
  * The MIT License (MIT)
  *
- * Copyright (c) 2022, Jean-David Gadina - www.xs-labs.com
+ * Copyright (c) 2023, Jean-David Gadina - www.xs-labs.com
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the Software), to deal
@@ -302,5 +302,92 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
                 $0.state = self.configController.sortValues ? .on : .off
             }
         }
+    }
+
+    @IBAction
+    private func showTags( _ sender: Any? )
+    {
+        guard let view = sender as? NSView, let event = NSApp.currentEvent
+        else
+        {
+            return
+        }
+
+        let names: [ String ] = self.configController.config.values.compactMap
+        {
+            switch $0
+            {
+                case .left:               return nil
+                case .right( let value ): return value.name
+            }
+        }
+
+        let tags: Set< String > = Set(
+            names.compactMap
+            {
+                let s = $0 as NSString
+                let r = s.range( of: "_" )
+
+                if r.location != NSNotFound
+                {
+                    return s.substring( to: r.location + 1 )
+                }
+
+                return $0
+            }
+        )
+
+        let menu = NSMenu()
+
+        tags.sorted().forEach
+        {
+            let title = $0.hasSuffix( "_" ) ? String( $0.dropLast( 1 ) ) : $0
+
+            menu.addItem( withTitle: title.capitalized, action: #selector( self.selectTag( _: ) ), representedObject: $0, isOn: self.configController.selectedTag == $0 )
+        }
+
+        NSMenu.popUpContextMenu( menu, with: event, for: view )
+    }
+
+    @IBAction
+    private func showLanguages( _ sender: Any? )
+    {
+        guard let view = sender as? NSView, let event = NSApp.currentEvent
+        else
+        {
+            return
+        }
+
+        let menu = NSMenu()
+
+        menu.addItem( withTitle: "C",           action: #selector( self.selectLanguage( _: ) ), representedObject: "_c_",   isOn: self.configController.selectedLanguage == "_c_" )
+        menu.addItem( withTitle: "C++",         action: #selector( self.selectLanguage( _: ) ), representedObject: "_cpp_", isOn: self.configController.selectedLanguage == "_cpp_" )
+        menu.addItem( withTitle: "Objective-C", action: #selector( self.selectLanguage( _: ) ), representedObject: "_oc_",  isOn: self.configController.selectedLanguage == "_oc_" )
+
+        NSMenu.popUpContextMenu( menu, with: event, for: view )
+    }
+
+    @IBAction
+    private func selectTag( _ sender: Any? )
+    {
+        guard let item = sender as? NSMenuItem, let tag = item.representedObject as? String
+        else
+        {
+            return
+        }
+
+        self.configController.selectedTag = self.configController.selectedTag == tag ? nil : tag
+    }
+
+    @IBAction
+    private func selectLanguage( _ sender: Any? )
+    {
+        guard let item = sender as? NSMenuItem, let lang = item.representedObject as? String
+        else
+        {
+            return
+        }
+
+        self.configController.selectedLanguage = self.configController.selectedLanguage == lang ? nil : lang
     }
 }

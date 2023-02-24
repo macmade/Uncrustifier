@@ -1,7 +1,7 @@
 /*******************************************************************************
  * The MIT License (MIT)
  *
- * Copyright (c) 2022, Jean-David Gadina - www.xs-labs.com
+ * Copyright (c) 2023, Jean-David Gadina - www.xs-labs.com
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the Software), to deal
@@ -47,6 +47,22 @@ public class ConfigViewController: NSViewController, NSCollectionViewDelegate, N
     @objc public private( set ) dynamic var arrangedControllers: [ ConfigValueViewController ] = []
 
     @objc public dynamic var searchText = ""
+    {
+        didSet
+        {
+            self.rearrangeControllers()
+        }
+    }
+
+    @objc public dynamic var selectedTag: String?
+    {
+        didSet
+        {
+            self.rearrangeControllers()
+        }
+    }
+
+    @objc public dynamic var selectedLanguage: String?
     {
         didSet
         {
@@ -141,6 +157,22 @@ public class ConfigViewController: NSViewController, NSCollectionViewDelegate, N
                 }
 
                 return true
+            }
+        }
+
+        if let tag = self.selectedTag
+        {
+            controllers = controllers.filter
+            {
+                $0.value.name.hasPrefix( tag )
+            }
+        }
+
+        if let lang = self.selectedLanguage
+        {
+            controllers = controllers.filter
+            {
+                $0.value.name.contains( lang )
             }
         }
 

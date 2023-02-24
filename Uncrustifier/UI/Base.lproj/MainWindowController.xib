@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -36,7 +35,7 @@
                         <rect key="frame" x="0.0" y="75" width="350" height="5"/>
                     </box>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="r0u-Mp-z9X">
-                        <rect key="frame" x="159" y="55" width="33" height="14"/>
+                        <rect key="frame" x="8" y="55" width="33" height="14"/>
                         <textFieldCell key="cell" controlSize="small" lineBreakMode="clipping" title="Label" id="KlO-3H-ie6">
                             <font key="font" metaFont="smallSystem"/>
                             <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -50,6 +49,95 @@
                             </binding>
                         </connections>
                     </textField>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="HIX-Vm-R1V">
+                        <rect key="frame" x="300" y="49.5" width="20" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="Gmb-Cc-WfY"/>
+                            <constraint firstAttribute="height" constant="20" id="yZj-Cc-lul"/>
+                        </constraints>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="tag.square" catalog="system" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="AyE-Vs-HpJ">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showTags:" target="-2" id="ewe-Bl-LCg"/>
+                            <binding destination="-2" name="hidden" keyPath="self.configController.selectedTag" id="wRt-MO-06n">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">NSIsNotNil</string>
+                                </dictionary>
+                            </binding>
+                        </connections>
+                    </button>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="UFy-36-7c1">
+                        <rect key="frame" x="300" y="49.5" width="20" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="0iR-kM-4Ko"/>
+                            <constraint firstAttribute="height" constant="20" id="YE3-FN-WbS"/>
+                        </constraints>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="tag.square.fill" catalog="system" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="P8k-5c-ol8">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showTags:" target="-2" id="07t-Yr-Ehe"/>
+                            <binding destination="-2" name="hidden" keyPath="self.configController.selectedTag" id="SR0-Dp-1ea">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">NSIsNil</string>
+                                </dictionary>
+                            </binding>
+                        </connections>
+                    </button>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="Nie-TY-UyV">
+                        <rect key="frame" x="325" y="49.5" width="20" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="lh6-xa-W8J"/>
+                            <constraint firstAttribute="width" constant="20" id="rJW-q9-GKk"/>
+                        </constraints>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="curlybraces.square" catalog="system" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="eOq-pR-AdN">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showLanguages:" target="-2" id="R7N-Mf-vLN"/>
+                            <binding destination="-2" name="hidden" keyPath="self.configController.selectedLanguage" id="VN7-l5-QRw">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">NSIsNotNil</string>
+                                </dictionary>
+                            </binding>
+                        </connections>
+                    </button>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="PA1-4P-ZpN">
+                        <rect key="frame" x="325" y="49.5" width="20" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="5AV-BF-BpV"/>
+                            <constraint firstAttribute="width" constant="20" id="PE2-XK-hAh"/>
+                        </constraints>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="curlybraces.square.fill" catalog="system" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="K1c-bP-pEA">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showLanguages:" target="-2" id="FxP-tf-Umj"/>
+                            <binding destination="-2" name="hidden" keyPath="self.configController.selectedLanguage" id="9Hx-7V-tTs">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">NSIsNil</string>
+                                </dictionary>
+                            </binding>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VaB-wI-qlS">
+                        <rect key="frame" x="705" y="3" width="93" height="40"/>
+                        <buttonCell key="cell" type="push" title="Format" bezelStyle="rounded" image="text.badge.checkmark.rtl" catalog="system" imagePosition="trailing" alignment="center" controlSize="large" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="N6m-hO-unG">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="format:" target="-2" id="U5U-tL-KJb"/>
+                        </connections>
+                    </button>
                     <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Rxn-Tj-rra">
                         <rect key="frame" x="348" y="47" width="5" height="553"/>
                     </box>
@@ -110,33 +198,25 @@
                             <binding destination="-2" name="selectedTag" keyPath="self.language" id="nqj-cS-Ada"/>
                         </connections>
                     </popUpButton>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VaB-wI-qlS">
-                        <rect key="frame" x="705" y="3" width="93" height="40"/>
-                        <buttonCell key="cell" type="push" title="Format" bezelStyle="rounded" image="text.badge.checkmark.rtl" catalog="system" imagePosition="trailing" alignment="center" controlSize="large" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="N6m-hO-unG">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                            <string key="keyEquivalent" base64-UTF8="YES">
-DQ
-</string>
-                        </buttonCell>
-                        <connections>
-                            <action selector="format:" target="-2" id="U5U-tL-KJb"/>
-                        </connections>
-                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Rxn-Tj-rra" firstAttribute="leading" secondItem="0IO-sY-4Gs" secondAttribute="trailing" id="2GA-uH-RIa"/>
                     <constraint firstItem="NKU-kJ-9a5" firstAttribute="leading" secondItem="pjp-IZ-uAn" secondAttribute="trailing" constant="8" symbolic="YES" id="3PU-qX-jQ1"/>
                     <constraint firstItem="yeC-3g-opZ" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="8" id="3w2-DC-scx"/>
+                    <constraint firstItem="PA1-4P-ZpN" firstAttribute="centerY" secondItem="Nie-TY-UyV" secondAttribute="centerY" id="50J-xY-Usb"/>
                     <constraint firstItem="r0u-Mp-z9X" firstAttribute="top" secondItem="0IO-sY-4Gs" secondAttribute="bottom" constant="8" symbolic="YES" id="5am-fG-43p"/>
                     <constraint firstItem="VaB-wI-qlS" firstAttribute="leading" secondItem="NKU-kJ-9a5" secondAttribute="trailing" constant="8" symbolic="YES" id="6M3-WZ-ulx"/>
+                    <constraint firstItem="HIX-Vm-R1V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r0u-Mp-z9X" secondAttribute="trailing" constant="8" symbolic="YES" id="7j2-qJ-gnc"/>
                     <constraint firstAttribute="trailing" secondItem="5rF-tW-WHj" secondAttribute="trailing" id="7mO-V4-Pkj"/>
-                    <constraint firstItem="r0u-Mp-z9X" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" symbolic="YES" id="Eeg-cu-9ue"/>
+                    <constraint firstItem="r0u-Mp-z9X" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="10" id="Eeg-cu-9ue"/>
                     <constraint firstItem="pjp-IZ-uAn" firstAttribute="leading" secondItem="yeC-3g-opZ" secondAttribute="trailing" constant="8" symbolic="YES" id="Er4-IN-rt3"/>
                     <constraint firstItem="NKU-kJ-9a5" firstAttribute="centerY" secondItem="VaB-wI-qlS" secondAttribute="centerY" id="FoL-Cy-U7y"/>
                     <constraint firstItem="0IO-sY-4Gs" firstAttribute="top" secondItem="ucd-oT-xNi" secondAttribute="bottom" id="GPF-B1-GDQ"/>
                     <constraint firstItem="pjp-IZ-uAn" firstAttribute="centerY" secondItem="yeC-3g-opZ" secondAttribute="centerY" id="LPt-mB-YEe"/>
-                    <constraint firstItem="r0u-Mp-z9X" firstAttribute="centerX" secondItem="ucd-oT-xNi" secondAttribute="centerX" id="YZC-UH-Lvu"/>
+                    <constraint firstItem="Rxn-Tj-rra" firstAttribute="leading" secondItem="Nie-TY-UyV" secondAttribute="trailing" constant="5" id="Mcs-CS-Qw3"/>
+                    <constraint firstItem="UFy-36-7c1" firstAttribute="centerY" secondItem="HIX-Vm-R1V" secondAttribute="centerY" id="RNW-sn-L8m"/>
+                    <constraint firstItem="UFy-36-7c1" firstAttribute="centerX" secondItem="HIX-Vm-R1V" secondAttribute="centerX" id="RNb-Bn-8L2"/>
+                    <constraint firstItem="Nie-TY-UyV" firstAttribute="leading" secondItem="HIX-Vm-R1V" secondAttribute="trailing" constant="5" id="Uki-AW-F8I"/>
                     <constraint firstItem="NKU-kJ-9a5" firstAttribute="centerY" secondItem="pjp-IZ-uAn" secondAttribute="centerY" id="ZkP-Oi-bBs"/>
                     <constraint firstItem="bU7-j4-g8h" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="aJa-Va-Cul"/>
                     <constraint firstItem="5rF-tW-WHj" firstAttribute="top" secondItem="r0u-Mp-z9X" secondAttribute="bottom" constant="8" symbolic="YES" id="bLV-5h-VBU"/>
@@ -147,12 +227,14 @@ DQ
                     <constraint firstItem="Rxn-Tj-rra" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="gkm-oL-3jZ"/>
                     <constraint firstAttribute="trailing" secondItem="VaB-wI-qlS" secondAttribute="trailing" constant="8" id="iJ7-Ns-jiE"/>
                     <constraint firstItem="5rF-tW-WHj" firstAttribute="top" secondItem="Rxn-Tj-rra" secondAttribute="bottom" id="kLk-hW-2ut"/>
+                    <constraint firstItem="HIX-Vm-R1V" firstAttribute="centerY" secondItem="Nie-TY-UyV" secondAttribute="centerY" id="ks9-gJ-12M"/>
                     <constraint firstItem="bU7-j4-g8h" firstAttribute="leading" secondItem="Rxn-Tj-rra" secondAttribute="trailing" id="lQz-ao-0h2"/>
                     <constraint firstItem="ucd-oT-xNi" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="mkc-lC-Zmr"/>
                     <constraint firstItem="ucd-oT-xNi" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="oY0-Ds-5Jx"/>
                     <constraint firstItem="5rF-tW-WHj" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="pRC-zx-aeh"/>
+                    <constraint firstItem="PA1-4P-ZpN" firstAttribute="centerX" secondItem="Nie-TY-UyV" secondAttribute="centerX" id="tNy-EP-TQb"/>
                     <constraint firstItem="Rxn-Tj-rra" firstAttribute="leading" secondItem="ucd-oT-xNi" secondAttribute="trailing" id="tTh-h4-YNX"/>
-                    <constraint firstItem="Rxn-Tj-rra" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r0u-Mp-z9X" secondAttribute="trailing" constant="8" symbolic="YES" id="xoJ-bk-Myt"/>
+                    <constraint firstItem="HIX-Vm-R1V" firstAttribute="centerY" secondItem="r0u-Mp-z9X" secondAttribute="centerY" id="vpH-QA-7JL"/>
                     <constraint firstItem="yeC-3g-opZ" firstAttribute="top" secondItem="5rF-tW-WHj" secondAttribute="bottom" constant="8" id="yaj-i2-OZt"/>
                 </constraints>
             </view>
@@ -214,11 +296,15 @@ DQ
         </menu>
     </objects>
     <resources>
-        <image name="NSRefreshTemplate" width="14" height="16"/>
-        <image name="NSShareTemplate" width="15" height="17"/>
+        <image name="NSRefreshTemplate" width="18" height="21"/>
+        <image name="NSShareTemplate" width="19" height="22"/>
         <image name="arrow.down.app" catalog="system" width="15" height="14"/>
+        <image name="curlybraces.square" catalog="system" width="15" height="14"/>
+        <image name="curlybraces.square.fill" catalog="system" width="15" height="14"/>
         <image name="gearshape.fill" catalog="system" width="16" height="16"/>
         <image name="pencil.tip.crop.circle" catalog="system" width="15" height="15"/>
+        <image name="tag.square" catalog="system" width="15" height="14"/>
+        <image name="tag.square.fill" catalog="system" width="15" height="14"/>
         <image name="text.badge.checkmark.rtl" catalog="system" width="16" height="14"/>
         <image name="text.badge.plus" catalog="system" width="16" height="14"/>
     </resources>

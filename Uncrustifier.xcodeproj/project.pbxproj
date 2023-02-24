@@ -31,6 +31,7 @@
 		057AAF6B28E610D4004CB733 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF6A28E610D4004CB733 /* ThemeViewController.swift */; };
 		05A0848928ECA4B6008FD8EA /* GitHubUpdates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A0848528ECA4A5008FD8EA /* GitHubUpdates.framework */; };
 		05A0848C28ECA4C1008FD8EA /* GitHubUpdates.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 05A0848528ECA4A5008FD8EA /* GitHubUpdates.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05B814C229A8EB0000133654 /* NSMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B814C129A8EB0000133654 /* NSMenu.swift */; };
 		05DB009A292CC69200FAB389 /* CreditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF240528E6465F00334A41 /* CreditViewController.swift */; };
 		05DB009B292CC69200FAB389 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AAF6A28E610D4004CB733 /* ThemeViewController.swift */; };
 		05DB009C292CC69200FAB389 /* NSWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572AD1928E4C6DE000AFC79 /* NSWindowController.swift */; };
@@ -293,6 +294,7 @@
 		057AAF6A28E610D4004CB733 /* ThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
 		057AAF6E28E616AC004CB733 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		05A0847F28ECA4A5008FD8EA /* GitHubUpdates.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GitHubUpdates.xcodeproj; path = Submodules/GitHubUpdates/GitHubUpdates.xcodeproj; sourceTree = "<group>"; };
+		05B814C129A8EB0000133654 /* NSMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMenu.swift; sourceTree = "<group>"; };
 		05DB00CD292CC69200FAB389 /* Uncrustifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uncrustifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05DB00D1292CC6BA00FAB389 /* Uncrustifier AppStore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Uncrustifier AppStore.entitlements"; sourceTree = "<group>"; };
 		05EF23FE28E645E700334A41 /* AboutWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
@@ -552,6 +554,7 @@
 				0572AD1728E4C0F5000AFC79 /* NSError.swift */,
 				057AAF1928E57913004CB733 /* NSView.swift */,
 				0572AD1928E4C6DE000AFC79 /* NSWindowController.swift */,
+				05B814C129A8EB0000133654 /* NSMenu.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -914,6 +917,7 @@
 				0572AD5D28E4DC43000AFC79 /* Config.swift in Sources */,
 				0572AD0528E47BCF000AFC79 /* ApplicationDelegate.swift in Sources */,
 				057AAF4928E5846B004CB733 /* Uncrustify.swift in Sources */,
+				05B814C229A8EB0000133654 /* NSMenu.swift in Sources */,
 				052C390628EDED960034E743 /* ArrayCount.swift in Sources */,
 				0572AD1828E4C0F5000AFC79 /* NSError.swift in Sources */,
 				057AAF5828E5F6AA004CB733 /* BackgroundView.swift in Sources */,
