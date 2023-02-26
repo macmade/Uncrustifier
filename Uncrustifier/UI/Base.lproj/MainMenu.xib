@@ -93,6 +93,12 @@
                                 </menu>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="m54-Is-iLE"/>
+                            <menuItem title="Reload Examples" keyEquivalent="r" id="cu3-Ck-w1L">
+                                <connections>
+                                    <action selector="reloadExamples:" target="-1" id="3tu-Zh-lES"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="Lap-lD-kYO"/>
                             <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">
                                 <connections>
                                     <action selector="performClose:" target="-1" id="HmO-Ls-i7Q"/>

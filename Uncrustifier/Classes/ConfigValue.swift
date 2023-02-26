@@ -85,10 +85,24 @@ public class ConfigValue: NSObject
         self.loadExample()
     }
 
-    private func loadExample()
+    public func loadExample()
     {
-        if let file = Bundle.main.path( forResource: self.name, ofType: "txt", inDirectory: "Examples" ),
-           let data = try? Data( contentsOf: URL( fileURLWithPath: file ) )
+        self.example = nil
+
+        guard let support  = NSSearchPathForDirectoriesInDomains( .applicationSupportDirectory, .userDomainMask, true ).first,
+              let bundleID = Bundle.main.bundleIdentifier
+        else
+        {
+            return
+        }
+
+        let file = URL( fileURLWithPath: support )
+            .appending( component: bundleID )
+            .appending( component: "Examples" )
+            .appending( component: self.name )
+            .appendingPathExtension( "txt" )
+
+        if let data = try? Data( contentsOf: file )
         {
             let example = String( data: data, encoding: .utf8 )?.trimmingCharacters( in: .whitespacesAndNewlines )
 

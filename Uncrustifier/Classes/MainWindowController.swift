@@ -565,4 +565,17 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
         self.savedLanguage  = nil
         self.currentExample = nil
     }
+
+    @IBAction
+    public func reloadExamples( _ sender: Any? )
+    {
+        self.configController.config.values.forEach
+        {
+            switch $0
+            {
+                case .left:               return
+                case .right( let value ): value.loadExample()
+            }
+        }
+    }
 }
