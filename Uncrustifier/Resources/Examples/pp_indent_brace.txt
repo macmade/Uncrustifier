@@ -1,7 +1,0 @@
-// pp_indent_brace
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

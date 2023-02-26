@@ -1,7 +1,0 @@
-// pos_class_comma
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

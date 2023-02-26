@@ -1,7 +1,0 @@
-// sp_func_call_user_inside_fparen
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

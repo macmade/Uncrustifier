@@ -1,7 +1,0 @@
-// indent_var_def_cont
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

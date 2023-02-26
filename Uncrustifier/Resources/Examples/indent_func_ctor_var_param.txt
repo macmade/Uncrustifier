@@ -1,7 +1,0 @@
-// indent_func_ctor_var_param
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

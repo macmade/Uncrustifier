@@ -1,7 +1,0 @@
-// indent_func_def_force_col1
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

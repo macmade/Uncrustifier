@@ -1,7 +1,0 @@
-// sp_after_tparen_close
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

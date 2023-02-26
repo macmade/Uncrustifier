@@ -1,7 +1,0 @@
-// use_sp_after_angle_always
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

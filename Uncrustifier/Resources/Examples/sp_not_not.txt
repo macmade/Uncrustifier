@@ -1,7 +1,0 @@
-// sp_not_not
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

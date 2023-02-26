@@ -1,7 +1,0 @@
-// align_var_class_gap
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

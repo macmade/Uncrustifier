@@ -1,7 +1,1 @@
-// sp_inside_paren
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-
+int x = ( 0 );

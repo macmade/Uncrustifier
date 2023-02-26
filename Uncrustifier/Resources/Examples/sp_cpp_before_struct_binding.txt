@@ -1,7 +1,0 @@
-// sp_cpp_before_struct_binding
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

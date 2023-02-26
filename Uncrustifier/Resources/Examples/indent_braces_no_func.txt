@@ -1,7 +1,0 @@
-// indent_braces_no_func
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

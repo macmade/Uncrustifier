@@ -1,7 +1,0 @@
-// indent_ignore_first_continue
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

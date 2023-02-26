@@ -1,7 +1,0 @@
-// warn_level_tabs_found_in_verbatim_string_literals
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

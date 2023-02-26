@@ -1,7 +1,0 @@
-// nl_before_func_body_def
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

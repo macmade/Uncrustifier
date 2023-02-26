@@ -1,7 +1,0 @@
-// sp_cond_ternary_short
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

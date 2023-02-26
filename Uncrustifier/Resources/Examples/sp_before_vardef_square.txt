@@ -1,7 +1,0 @@
-// sp_before_vardef_square
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

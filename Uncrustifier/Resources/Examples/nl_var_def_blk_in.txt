@@ -1,7 +1,0 @@
-// nl_var_def_blk_in
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

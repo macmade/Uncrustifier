@@ -1,7 +1,2 @@
-// sp_cpp_lambda_assign
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-
+auto x = [ = ] {
+	 };

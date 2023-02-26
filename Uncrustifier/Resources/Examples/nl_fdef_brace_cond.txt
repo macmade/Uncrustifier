@@ -1,7 +1,0 @@
-// nl_fdef_brace_cond
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

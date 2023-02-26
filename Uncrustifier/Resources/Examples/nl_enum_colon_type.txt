@@ -1,7 +1,0 @@
-// nl_enum_colon_type
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

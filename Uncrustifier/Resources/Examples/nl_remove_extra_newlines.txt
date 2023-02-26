@@ -1,7 +1,0 @@
-// nl_remove_extra_newlines
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

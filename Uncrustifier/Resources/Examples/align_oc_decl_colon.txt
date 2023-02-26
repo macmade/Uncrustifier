@@ -1,7 +1,0 @@
-// align_oc_decl_colon
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

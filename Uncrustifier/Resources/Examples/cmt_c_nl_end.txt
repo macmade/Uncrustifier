@@ -1,7 +1,0 @@
-// cmt_c_nl_end
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

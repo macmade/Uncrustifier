@@ -1,7 +1,0 @@
-// nl_brace_square
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

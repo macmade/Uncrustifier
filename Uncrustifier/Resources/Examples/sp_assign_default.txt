@@ -1,7 +1,1 @@
-// sp_assign_default
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-
+void foo( int x = 0 );

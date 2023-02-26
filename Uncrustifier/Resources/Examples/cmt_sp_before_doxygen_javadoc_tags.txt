@@ -1,7 +1,0 @@
-// cmt_sp_before_doxygen_javadoc_tags
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

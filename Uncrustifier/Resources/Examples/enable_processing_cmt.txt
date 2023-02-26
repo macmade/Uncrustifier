@@ -1,7 +1,0 @@
-// enable_processing_cmt
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

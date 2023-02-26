@@ -1,7 +1,0 @@
-// indent_access_spec_body
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

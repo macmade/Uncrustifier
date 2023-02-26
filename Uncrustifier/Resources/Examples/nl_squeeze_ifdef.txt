@@ -1,7 +1,0 @@
-// nl_squeeze_ifdef
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

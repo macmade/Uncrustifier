@@ -1,7 +1,0 @@
-// pp_indent_in_guard
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

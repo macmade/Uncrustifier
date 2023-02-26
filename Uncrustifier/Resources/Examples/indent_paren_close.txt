@@ -1,7 +1,0 @@
-// indent_paren_close
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

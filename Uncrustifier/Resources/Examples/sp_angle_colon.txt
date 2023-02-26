@@ -1,7 +1,0 @@
-// sp_angle_colon
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

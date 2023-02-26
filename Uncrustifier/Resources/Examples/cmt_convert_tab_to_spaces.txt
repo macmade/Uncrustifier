@@ -1,7 +1,0 @@
-// cmt_convert_tab_to_spaces
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

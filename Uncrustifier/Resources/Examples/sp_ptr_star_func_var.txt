@@ -1,7 +1,0 @@
-// sp_ptr_star_func_var
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

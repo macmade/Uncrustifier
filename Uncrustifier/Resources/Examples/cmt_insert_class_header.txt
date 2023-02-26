@@ -1,7 +1,0 @@
-// cmt_insert_class_header
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

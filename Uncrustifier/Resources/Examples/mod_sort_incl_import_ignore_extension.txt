@@ -1,7 +1,0 @@
-// mod_sort_incl_import_ignore_extension
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

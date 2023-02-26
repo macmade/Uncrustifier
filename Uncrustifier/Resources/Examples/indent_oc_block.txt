@@ -1,7 +1,0 @@
-// indent_oc_block
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

@@ -1,7 +1,0 @@
-// sp_before_unnamed_byref
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

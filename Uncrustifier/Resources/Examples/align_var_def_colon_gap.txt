@@ -1,7 +1,0 @@
-// align_var_def_colon_gap
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

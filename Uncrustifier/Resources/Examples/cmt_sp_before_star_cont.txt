@@ -1,7 +1,0 @@
-// cmt_sp_before_star_cont
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

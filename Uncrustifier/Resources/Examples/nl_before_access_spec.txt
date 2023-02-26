@@ -1,7 +1,0 @@
-// nl_before_access_spec
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

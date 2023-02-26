@@ -1,7 +1,0 @@
-// nl_collapse_empty_body
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

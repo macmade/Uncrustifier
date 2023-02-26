@@ -1,7 +1,0 @@
-// tok_split_gte
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

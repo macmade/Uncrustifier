@@ -1,7 +1,0 @@
-// string_escape_char2
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

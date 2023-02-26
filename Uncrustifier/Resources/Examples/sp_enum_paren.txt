@@ -1,7 +1,1 @@
-// sp_enum_paren
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-
+typedef NS_ENUM( int, Foo ) { Bar };

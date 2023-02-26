@@ -1,7 +1,1 @@
-// sp_enum_colon
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-
+enum class Foo : int { Bar };

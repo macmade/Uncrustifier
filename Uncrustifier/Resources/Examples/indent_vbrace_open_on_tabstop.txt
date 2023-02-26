@@ -1,7 +1,0 @@
-// indent_vbrace_open_on_tabstop
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

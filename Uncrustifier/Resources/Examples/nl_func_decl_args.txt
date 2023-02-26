@@ -1,7 +1,0 @@
-// nl_func_decl_args
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

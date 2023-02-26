@@ -1,7 +1,0 @@
-// sp_after_byref
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

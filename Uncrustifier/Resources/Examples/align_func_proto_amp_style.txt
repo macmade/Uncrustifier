@@ -1,7 +1,0 @@
-// align_func_proto_amp_style
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

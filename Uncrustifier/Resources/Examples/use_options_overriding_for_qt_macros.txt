@@ -1,7 +1,0 @@
-// use_options_overriding_for_qt_macros
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

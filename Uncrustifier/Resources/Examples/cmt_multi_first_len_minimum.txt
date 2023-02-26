@@ -1,7 +1,0 @@
-// cmt_multi_first_len_minimum
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

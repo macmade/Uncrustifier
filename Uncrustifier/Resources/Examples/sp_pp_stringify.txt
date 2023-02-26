@@ -1,7 +1,1 @@
-// sp_pp_stringify
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-
+#define FOO( x, y ) x # y

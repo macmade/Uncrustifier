@@ -1,7 +1,0 @@
-// mod_full_brace_nl_block_rem_mlcond
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

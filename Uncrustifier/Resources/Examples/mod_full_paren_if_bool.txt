@@ -1,7 +1,0 @@
-// mod_full_paren_if_bool
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

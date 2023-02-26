@@ -1,7 +1,0 @@
-// indent_ignore_assign
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

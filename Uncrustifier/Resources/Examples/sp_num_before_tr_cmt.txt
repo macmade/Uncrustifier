@@ -1,7 +1,0 @@
-// sp_num_before_tr_cmt
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

@@ -31,8 +31,20 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
     @IBOutlet private var codeContainer:   NSView!
     @IBOutlet private var optionsMenu:     NSMenu!
 
-    @objc private dynamic var configController = ConfigViewController()
-    @objc private dynamic var codeController   = TextViewController()
+    @objc private dynamic var configController    = ConfigViewController()
+    @objc private dynamic var codeController      = TextViewController()
+    @objc private dynamic var formatUsingAllRules = false
+    @objc private dynamic var currentExample:       ConfigValue?
+    {
+        willSet
+        {
+            if self.currentExample == nil
+            {
+                self.savedCode     = self.codeController.text
+                self.savedLanguage = self.language
+            }
+        }
+    }
 
     @objc private dynamic var language = UserDefaults.standard.integer( forKey: "language" )
     {
@@ -53,6 +65,8 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
     private var windowObserver:       Any?
     private var valueChangedObserver: Any?
     private var loadExampleObserver:  Any?
+    private var savedCode:            String?
+    private var savedLanguage:        Int?
 
     public init()
     {
@@ -85,7 +99,10 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
 
             if self.configController.autoFormat
             {
-                self.format( nil )
+                DispatchQueue.main.async
+                {
+                    self.format( nil )
+                }
             }
         }
 
@@ -102,7 +119,14 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
             if let controller = $0.object as? ConfigValueViewController,
                let example    = controller.value.example
             {
+                self.currentExample      = controller.value
                 self.codeController.text = example
+                self.language            = Uncrustify.Language.objcpp.rawValue
+
+                DispatchQueue.main.async
+                {
+                    self.format( nil )
+                }
             }
         }
 
@@ -126,7 +150,10 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
 
         self.windowObserver = NotificationCenter.default.addObserver( forName: NSWindow.willCloseNotification, object: self.window, queue: nil )
         {
-            [ weak self ] _ in self?.saveState()
+            [ weak self ] _ in
+
+            self?.resetCurrentExample( nil )
+            self?.saveState()
         }
 
         self.configContainer.addFillingSubview( self.configController.view )
@@ -278,14 +305,9 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
     {
         self.saveState()
 
-        self.configController.controllers.forEach
-        {
-            print( $0.value.name )
-        }
-
         DispatchQueue.main.async
         {
-            guard let config = self.configCacheFile,
+            guard var config = self.configCacheFile,
                   let code   = self.codeCacheFile
             else
             {
@@ -296,6 +318,13 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
 
             do
             {
+                if let example = self.currentExample, self.formatUsingAllRules == false
+                {
+                    config = URL( fileURLWithPath: NSTemporaryDirectory() ).appending( path: UUID().uuidString )
+
+                    try example.data?.write( to: config )
+                }
+
                 let text = try Uncrustify.format( config: config, file: code, language: Uncrustify.Language( rawValue: self.language ) ?? .c )
 
                 if text.isEmpty == false
@@ -517,5 +546,23 @@ public class MainWindowController: NSWindowController, NSMenuDelegate
         }
 
         self.configController.selectedLanguage = self.configController.selectedLanguage == lang ? nil : lang
+    }
+
+    @IBAction
+    private func resetCurrentExample( _ sender: Any? )
+    {
+        if let code = self.savedCode
+        {
+            self.codeController.text = code
+        }
+
+        if let savedLanguage = self.savedLanguage
+        {
+            self.language = savedLanguage
+        }
+
+        self.savedCode      = nil
+        self.savedLanguage  = nil
+        self.currentExample = nil
     }
 }

@@ -1,7 +1,0 @@
-// utf8_force
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

@@ -1,7 +1,0 @@
-// debug_max_number_of_loops
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

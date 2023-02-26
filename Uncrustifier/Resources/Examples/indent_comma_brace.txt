@@ -1,7 +1,0 @@
-// indent_comma_brace
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

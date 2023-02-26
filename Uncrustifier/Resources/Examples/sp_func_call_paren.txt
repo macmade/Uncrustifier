@@ -1,7 +1,0 @@
-// sp_func_call_paren
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

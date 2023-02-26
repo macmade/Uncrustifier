@@ -1,7 +1,0 @@
-// align_eigen_comma_init
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

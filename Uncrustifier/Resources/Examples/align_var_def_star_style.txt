@@ -1,7 +1,0 @@
-// align_var_def_star_style
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

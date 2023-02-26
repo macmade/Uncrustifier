@@ -1,7 +1,0 @@
-// indent_namespace_inner_only
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

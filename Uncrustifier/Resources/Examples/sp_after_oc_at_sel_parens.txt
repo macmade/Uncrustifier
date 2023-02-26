@@ -1,7 +1,0 @@
-// sp_after_oc_at_sel_parens
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

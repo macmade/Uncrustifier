@@ -1,7 +1,0 @@
-// align_right_cmt_same_level
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

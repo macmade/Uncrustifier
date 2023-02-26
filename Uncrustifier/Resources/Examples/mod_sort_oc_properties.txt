@@ -1,7 +1,0 @@
-// mod_sort_oc_properties
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

@@ -1,7 +1,0 @@
-// align_func_proto_thresh
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

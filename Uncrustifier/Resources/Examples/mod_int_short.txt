@@ -1,7 +1,0 @@
-// mod_int_short
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

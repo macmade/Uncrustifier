@@ -1,7 +1,0 @@
-// indent_off_after_return_new
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

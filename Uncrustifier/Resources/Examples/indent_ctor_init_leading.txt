@@ -1,7 +1,0 @@
-// indent_ctor_init_leading
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

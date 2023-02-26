@@ -1,7 +1,0 @@
-// indent_cpp_lambda_only_once
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

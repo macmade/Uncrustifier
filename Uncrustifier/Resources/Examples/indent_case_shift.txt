@@ -1,7 +1,0 @@
-// indent_case_shift
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

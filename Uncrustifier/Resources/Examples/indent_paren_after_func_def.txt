@@ -1,7 +1,0 @@
-// indent_paren_after_func_def
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

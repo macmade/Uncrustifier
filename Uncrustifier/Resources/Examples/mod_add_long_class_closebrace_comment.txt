@@ -1,7 +1,0 @@
-// mod_add_long_class_closebrace_comment
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

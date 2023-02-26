@@ -1,7 +1,0 @@
-// sp_inside_braces
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

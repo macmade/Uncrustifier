@@ -1,7 +1,0 @@
-// nl_enum_class
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

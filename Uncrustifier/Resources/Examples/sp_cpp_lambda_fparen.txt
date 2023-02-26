@@ -1,7 +1,3 @@
-// sp_cpp_lambda_fparen
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-
+auto x = []( int x ) -> int {
+	return 0;
+	}();

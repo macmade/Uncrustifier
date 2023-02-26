@@ -1,7 +1,0 @@
-// sp_before_oc_proto_list
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

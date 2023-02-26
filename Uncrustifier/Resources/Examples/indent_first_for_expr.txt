@@ -1,7 +1,0 @@
-// indent_first_for_expr
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

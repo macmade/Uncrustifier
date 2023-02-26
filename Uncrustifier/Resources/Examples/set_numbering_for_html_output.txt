@@ -1,7 +1,0 @@
-// set_numbering_for_html_output
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

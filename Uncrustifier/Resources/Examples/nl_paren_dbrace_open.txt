@@ -1,7 +1,0 @@
-// nl_paren_dbrace_open
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

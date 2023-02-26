@@ -1,7 +1,0 @@
-// sp_after_oc_msg_receiver
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

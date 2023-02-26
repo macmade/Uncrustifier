@@ -1,7 +1,1 @@
-// sp_between_ptr_star
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-
+void ** x = NULL;

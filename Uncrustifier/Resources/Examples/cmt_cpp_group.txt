@@ -1,7 +1,0 @@
-// cmt_cpp_group
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

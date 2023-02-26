@@ -1,7 +1,0 @@
-// nl_oc_msg_args_max_code_width
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

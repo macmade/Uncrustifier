@@ -1,7 +1,0 @@
-// mod_full_brace_if_chain_only
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

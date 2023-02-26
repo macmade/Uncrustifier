@@ -1,7 +1,0 @@
-// align_pp_define_together
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

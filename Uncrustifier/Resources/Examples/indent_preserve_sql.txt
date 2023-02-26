@@ -1,7 +1,0 @@
-// indent_preserve_sql
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

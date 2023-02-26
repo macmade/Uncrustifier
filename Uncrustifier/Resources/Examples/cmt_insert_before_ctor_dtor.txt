@@ -1,7 +1,0 @@
-// cmt_insert_before_ctor_dtor
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

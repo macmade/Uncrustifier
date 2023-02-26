@@ -1,7 +1,0 @@
-// sp_func_proto_paren_empty
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

@@ -1,7 +1,0 @@
-// align_constr_value_thresh
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

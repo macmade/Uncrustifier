@@ -1,7 +1,0 @@
-// sp_ptr_star_func_type
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

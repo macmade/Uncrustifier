@@ -54,27 +54,30 @@ public class ConfigViewController: NSViewController, NSCollectionViewDelegate, N
         }
     }
 
-    @objc public dynamic var showEdited: NSNumber?
+    @objc public dynamic var showEdited: NSNumber? = UserDefaults.standard.object( forKey: "showEdited" ) as? NSNumber
     {
         didSet
         {
             self.rearrangeControllers()
+            UserDefaults.standard.set( self.sortValues, forKey: "showEdited" )
         }
     }
 
-    @objc public dynamic var selectedTag: String?
+    @objc public dynamic var selectedTag: String? = UserDefaults.standard.object( forKey: "selectedTag" ) as? String
     {
         didSet
         {
             self.rearrangeControllers()
+            UserDefaults.standard.set( self.selectedTag, forKey: "selectedTag" )
         }
     }
 
-    @objc public dynamic var selectedLanguage: String?
+    @objc public dynamic var selectedLanguage: String? = UserDefaults.standard.object( forKey: "selectedLanguage" ) as? String
     {
         didSet
         {
             self.rearrangeControllers()
+            UserDefaults.standard.set( self.selectedLanguage, forKey: "selectedLanguage" )
         }
     }
 

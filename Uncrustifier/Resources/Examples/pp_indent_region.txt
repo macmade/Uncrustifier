@@ -1,7 +1,0 @@
-// pp_indent_region
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

@@ -1,7 +1,0 @@
-// sp_vala_after_translation
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

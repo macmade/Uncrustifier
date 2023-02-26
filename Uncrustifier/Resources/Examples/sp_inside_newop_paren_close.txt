@@ -1,7 +1,0 @@
-// sp_inside_newop_paren_close
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

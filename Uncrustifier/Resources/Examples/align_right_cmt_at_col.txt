@@ -1,7 +1,0 @@
-// align_right_cmt_at_col
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

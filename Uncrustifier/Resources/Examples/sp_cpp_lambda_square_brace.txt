@@ -1,7 +1,2 @@
-// sp_cpp_lambda_square_brace
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-
+auto x = [] {
+	 };

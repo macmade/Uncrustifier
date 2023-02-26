@@ -1,7 +1,0 @@
-// pp_if_indent_code
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

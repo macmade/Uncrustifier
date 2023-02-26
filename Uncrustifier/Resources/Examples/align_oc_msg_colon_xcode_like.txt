@@ -1,7 +1,0 @@
-// align_oc_msg_colon_xcode_like
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

@@ -1,7 +1,0 @@
-// pp_multiline_define_body_indent
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

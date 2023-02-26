@@ -1,7 +1,0 @@
-// indent_func_proto_param
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

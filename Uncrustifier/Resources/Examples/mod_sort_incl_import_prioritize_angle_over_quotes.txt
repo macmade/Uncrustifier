@@ -1,7 +1,0 @@
-// mod_sort_incl_import_prioritize_angle_over_quotes
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

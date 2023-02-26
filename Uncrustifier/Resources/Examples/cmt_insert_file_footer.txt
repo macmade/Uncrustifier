@@ -1,7 +1,0 @@
-// cmt_insert_file_footer
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

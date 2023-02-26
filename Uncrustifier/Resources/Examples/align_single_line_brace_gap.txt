@@ -1,7 +1,0 @@
-// align_single_line_brace_gap
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-

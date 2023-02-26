@@ -1,7 +1,0 @@
-// cmt_insert_before_preproc
-
-int main( int argc, char * argv[] )
-{
-    return 0;
-}
-
