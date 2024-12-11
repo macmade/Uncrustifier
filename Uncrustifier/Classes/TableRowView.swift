@@ -1,7 +1,7 @@
 /*******************************************************************************
  * The MIT License (MIT)
  *
- * Copyright (c) 2022, Jean-David Gadina - www.xs-labs.com
+ * Copyright (c) 2023, Jean-David Gadina - www.xs-labs.com
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the Software), to deal
@@ -94,7 +94,7 @@ public class TableRowView: NSTableRowView
         if self.mouseOver
         {
             let color = NSColor.controlAccentColor.withAlphaComponent( 0.2 )
-            let path  = NSBezierPath( roundedRect: rect, xRadius: 6, yRadius: 6 )
+            let path  = NSBezierPath( roundedRect: self.bounds, xRadius: 6, yRadius: 6 )
 
             color.setFill()
             path.fill()
@@ -109,7 +109,7 @@ public class TableRowView: NSTableRowView
             }
 
             let color = alternate ? colors[ 1 ] : colors[ 0 ]
-            let path  = NSBezierPath( roundedRect: rect, xRadius: 6, yRadius: 6 )
+            let path  = NSBezierPath( roundedRect: self.bounds, xRadius: 6, yRadius: 6 )
 
             color.setFill()
             path.fill()
@@ -119,7 +119,7 @@ public class TableRowView: NSTableRowView
     public override func drawSelection( in rect: NSRect )
     {
         let color = NSColor.controlAccentColor
-        let path  = NSBezierPath( roundedRect: rect, xRadius: 6, yRadius: 6 )
+        let path  = NSBezierPath( roundedRect: self.bounds, xRadius: 6, yRadius: 6 )
 
         color.setFill()
         path.fill()
